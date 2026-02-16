@@ -4,23 +4,23 @@ import { useRef } from "react";
 const steps = [
   {
     number: "01",
-    title: "Audit",
-    description: "We map your workflows, identify inefficiencies, and quantify the cost of manual operations.",
+    title: "We Learn Your Business",
+    description: "We sit down with your team, understand how you work, and find the tasks that are eating up the most time and money.",
   },
   {
     number: "02",
-    title: "Design",
-    description: "Custom AI agent architecture tailored to your tech stack, data flows, and business logic.",
+    title: "We Build Your Solution",
+    description: "We create digital workers custom-fitted to your processes — they work with the tools you already use.",
   },
   {
     number: "03",
-    title: "Deploy",
-    description: "Seamless integration into your existing systems. No disruption. Full testing before go-live.",
+    title: "We Set It Live",
+    description: "Your new digital workers start handling tasks alongside your team. No disruption, no learning curve for you.",
   },
   {
     number: "04",
-    title: "Optimize",
-    description: "Continuous monitoring, performance tuning, and expansion. Your AI workforce gets smarter over time.",
+    title: "We Keep Improving",
+    description: "We monitor performance, fine-tune results, and expand to new tasks as your business grows.",
   },
 ];
 
@@ -41,10 +41,10 @@ const HowItWorksSection = () => {
             Process
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            From audit to autonomous.
+            How we get you results.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            A proven four-phase methodology. Deployed in weeks, not months.
+            Four simple steps. Up and running in weeks, not months.
           </p>
         </motion.div>
 

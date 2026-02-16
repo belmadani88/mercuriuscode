@@ -16,10 +16,10 @@ const CTASection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">
-            Ready to build your AI workforce?
+            Ready to free up your team?
           </h2>
           <p className="text-body-lg text-text-secondary max-w-xl mx-auto mb-10">
-            Book a 30-minute strategy call. We'll audit your workflows, identify automation opportunities, and show you the ROI.
+            Book a free 30-minute call. We'll look at where your team spends the most time, and show you what we can take off their plate.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
