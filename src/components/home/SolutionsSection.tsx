@@ -5,26 +5,26 @@ import { Zap, HeadphonesIcon, Settings, Search } from "lucide-react";
 const solutions = [
   {
     icon: Zap,
-    title: "AI Sales Agents",
-    description: "Qualify leads, nurture prospects, and close deals around the clock. Your pipeline never sleeps.",
-    metrics: "3x pipeline velocity",
+    title: "Sales Assistant",
+    description: "Finds potential customers, sends follow-ups, and books meetings for your team — day and night, without missing a lead.",
+    metrics: "3x more leads",
   },
   {
     icon: HeadphonesIcon,
-    title: "AI Support Agents",
-    description: "Resolve tickets, handle inquiries, and escalate intelligently. Consistent quality at any scale.",
-    metrics: "85% resolution rate",
+    title: "Customer Support",
+    description: "Answers customer questions instantly, solves common problems, and hands off tricky issues to your team with full context.",
+    metrics: "85% handled automatically",
   },
   {
     icon: Settings,
-    title: "AI Operations Agents",
-    description: "Process data, manage workflows, and coordinate systems. Operational precision without overhead.",
-    metrics: "60% cost reduction",
+    title: "Operations Helper",
+    description: "Moves data between your tools, creates reports, and keeps your workflows running smoothly — no manual effort needed.",
+    metrics: "60% less admin work",
   },
   {
     icon: Search,
-    title: "AI Research Agents",
-    description: "Analyze markets, monitor competitors, and surface insights. Decisions backed by real-time data.",
+    title: "Research Assistant",
+    description: "Monitors your market, tracks competitors, and delivers key insights so you can make faster, smarter decisions.",
     metrics: "10x faster insights",
   },
 ];
@@ -46,10 +46,10 @@ const SolutionsSection = () => {
             Solutions
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            AI agents built for every function.
+            Digital workers for every part of your business.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Not chatbots. Not templates. Custom-built autonomous agents designed for your specific workflows.
+            Think of them as tireless team members. They learn your processes, use your tools, and get things done — just like a new hire, but faster and more affordable.
           </p>
         </motion.div>
 

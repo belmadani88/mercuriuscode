@@ -5,23 +5,23 @@ import { Shield, Lock, RefreshCw, Blocks } from "lucide-react";
 const trustItems = [
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "SOC 2 compliant infrastructure. End-to-end encryption. Your data never leaves your environment.",
+    title: "Your Data Is Safe",
+    description: "Bank-level security. Your information stays protected and never leaves your systems.",
   },
   {
     icon: Lock,
-    title: "Data Privacy",
-    description: "GDPR and CCPA ready. NDA available before engagement. Zero data retention on our side.",
+    title: "Privacy First",
+    description: "We follow all major privacy regulations. Happy to sign an NDA before we even start talking.",
   },
   {
     icon: Blocks,
-    title: "Seamless Integration",
-    description: "Works with your existing stack. Salesforce, HubSpot, Slack, Notion, and 200+ integrations.",
+    title: "Works With Your Tools",
+    description: "Connects to the software you already use — Salesforce, HubSpot, Slack, Notion, and 200+ more.",
   },
   {
     icon: RefreshCw,
-    title: "Continuous Optimization",
-    description: "Weekly performance reports. Monthly strategy reviews. Your AI workforce improves constantly.",
+    title: "Always Getting Better",
+    description: "We send regular reports and keep improving your digital workers so results grow over time.",
   },
 ];
 
@@ -42,10 +42,10 @@ const TrustSection = () => {
             Trust & Security
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            Enterprise-ready from day one.
+            Built to earn your trust.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Built for companies that take security, compliance, and reliability seriously.
+            We know you need reliability and security. That's why we built it into everything we do.
           </p>
         </motion.div>
 

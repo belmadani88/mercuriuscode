@@ -32,25 +32,25 @@ const CaseStudySection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              company: "Series B SaaS",
+              company: "Growing Tech Company",
               industry: "FinTech",
               metric: "340%",
-              label: "Increase in qualified pipeline",
-              description: "AI Sales Agents replaced 4 SDRs and tripled outbound conversion rates in 90 days.",
+              label: "More sales meetings booked",
+              description: "Our digital sales assistant took over lead follow-up and tripled the number of demos booked in 90 days.",
             },
             {
-              company: "E-commerce Brand",
+              company: "Online Retailer",
               industry: "Retail",
               metric: "67%",
-              label: "Reduction in support costs",
-              description: "AI Support Agents handled 12,000 monthly tickets with 94% satisfaction rate.",
+              label: "Lower support costs",
+              description: "A digital support worker handled 12,000 customer questions per month — with 94% customer satisfaction.",
             },
             {
               company: "Logistics Company",
               industry: "Supply Chain",
               metric: "$1.2M",
-              label: "Saved annually",
-              description: "AI Operations Agents automated dispatch, routing, and compliance reporting.",
+              label: "Saved every year",
+              description: "Automated scheduling, route planning, and compliance paperwork — saving the equivalent of 15 full-time employees.",
             },
           ].map((study, i) => (
             <motion.div

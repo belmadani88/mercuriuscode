@@ -2,12 +2,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const comparisons = [
-  { metric: "Annual Cost", human: "$85,000+", ai: "$12,000–$24,000" },
-  { metric: "Availability", human: "8 hrs/day, 5 days/week", ai: "24/7/365" },
-  { metric: "Ramp-Up Time", human: "3–6 months", ai: "2–4 weeks" },
-  { metric: "Error Rate", human: "Variable", ai: "< 2% with optimization" },
-  { metric: "Scalability", human: "Linear (hire more)", ai: "Instant (deploy more)" },
-  { metric: "Training Cost", human: "$5,000–$15,000", ai: "Included" },
+  { metric: "Yearly Cost", human: "$85,000+", ai: "$12,000–$24,000" },
+  { metric: "Working Hours", human: "8 hrs/day, weekdays", ai: "24/7, never calls in sick" },
+  { metric: "Ready to Work", human: "3–6 months training", ai: "2–4 weeks setup" },
+  { metric: "Mistakes", human: "Varies by person", ai: "Under 2%, improving over time" },
+  { metric: "Need More Help?", human: "Hire & train again", ai: "Instantly add more" },
+  { metric: "Onboarding Cost", human: "$5,000–$15,000", ai: "Included" },
 ];
 
 const ROISection = () => {
@@ -27,10 +27,10 @@ const ROISection = () => {
             ROI
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            The math is simple.
+            See how much you could save.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Compare the cost and capability of a human hire versus an AI agent.
+            Here's what it looks like when you compare a traditional hire to a digital worker.
           </p>
         </motion.div>
 
@@ -42,8 +42,8 @@ const ROISection = () => {
         >
           <div className="grid grid-cols-3 border-b border-border">
             <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary">Metric</div>
-            <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary text-center">Human Employee</div>
-            <div className="p-5 md:p-6 text-body-sm font-medium text-primary text-center">AI Agent</div>
+            <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary text-center">Traditional Hire</div>
+            <div className="p-5 md:p-6 text-body-sm font-medium text-primary text-center">Digital Worker</div>
           </div>
           {comparisons.map((row, i) => (
             <div

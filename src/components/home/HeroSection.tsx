@@ -20,7 +20,7 @@ const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-caption font-medium text-text-secondary">
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-              AI Workforce Architects
+              Smarter teams, less busywork
             </span>
           </motion.div>
 
@@ -30,8 +30,8 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-display-sm lg:text-display font-bold text-foreground mb-6"
           >
-            Your next hire isn't{" "}
-            <span className="text-gradient">human.</span>
+            We build digital workers{" "}
+            <span className="text-gradient">for your business.</span>
           </motion.h1>
 
           <motion.p
@@ -40,7 +40,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-body-lg md:text-xl text-text-secondary max-w-2xl mb-10 leading-relaxed"
           >
-            We design and deploy custom AI agents that work inside your business 24/7 — automating sales, operations, support, and research at a fraction of the cost.
+            Imagine having extra team members who handle your repetitive tasks — emails, data entry, customer questions, research — around the clock, so your real team can focus on what matters.
           </motion.p>
 
           <motion.div
@@ -71,15 +71,15 @@ const HeroSection = () => {
             className="flex flex-wrap items-center gap-8 text-text-tertiary text-body-sm"
           >
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-foreground">500+</span> agents deployed
+              <span className="font-semibold text-foreground">500+</span> businesses helped
             </div>
             <div className="w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-foreground">40%</span> avg. cost reduction
+              <span className="font-semibold text-foreground">40%</span> avg. cost saved
             </div>
             <div className="w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-foreground">3x</span> faster operations
+              <span className="font-semibold text-foreground">3x</span> faster results
             </div>
           </motion.div>
         </div>
