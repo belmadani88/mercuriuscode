@@ -62,9 +62,9 @@ const Footer = () => {
             © 2026 Archon AI. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-caption text-text-tertiary hover:text-text-secondary cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="text-caption text-text-tertiary hover:text-text-secondary cursor-pointer transition-colors">Terms of Service</span>
-            <span className="text-caption text-text-tertiary hover:text-text-secondary cursor-pointer transition-colors">Security</span>
+            <Link to="/privacy" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Terms of Service</Link>
+            <Link to="/security" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Security</Link>
           </div>
         </div>
       </div>
