@@ -1,177 +1,187 @@
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float } from "@react-three/drei";
 import * as THREE from "three";
 
-/* ── Glowing node (represents a digital worker) ── */
+/* ── Node: glowing sphere representing a digital worker ── */
 const WorkerNode = ({
   position,
-  scale = 0.12,
-  color = "#00848C",
+  radius = 0.12,
+  color,
   speed = 1,
   emissiveIntensity = 0.6,
+  floatAmplitude = 0.06,
+  phaseOffset = 0,
 }: {
   position: [number, number, number];
-  scale?: number;
-  color?: string;
+  radius?: number;
+  color: string;
   speed?: number;
   emissiveIntensity?: number;
+  floatAmplitude?: number;
+  phaseOffset?: number;
 }) => {
-  const ref = useRef<THREE.Mesh>(null!);
-  const glowRef = useRef<THREE.Mesh>(null!);
+  const meshRef = useRef<THREE.Mesh>(null!);
+  const haloRef = useRef<THREE.Mesh>(null!);
+  const baseY = position[1];
 
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime();
-    const pulse = 1 + Math.sin(t * speed * 2) * 0.15;
-    ref.current.scale.setScalar(scale * pulse);
-    if (glowRef.current) {
-      glowRef.current.scale.setScalar(scale * pulse * 3);
-    }
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+    const pulse = 1 + Math.sin(t * speed * 2 + phaseOffset) * 0.12;
+    meshRef.current.scale.setScalar(radius * pulse);
+    meshRef.current.position.y = baseY + Math.sin(t * speed * 0.7 + phaseOffset) * floatAmplitude;
+
+    const halo = haloRef.current.material as THREE.MeshBasicMaterial;
+    halo.opacity = 0.04 + Math.sin(t * speed + phaseOffset) * 0.02;
+    haloRef.current.scale.setScalar(radius * 3.5 * pulse);
+    haloRef.current.position.y = meshRef.current.position.y;
   });
 
   return (
-    <Float speed={speed * 0.6} rotationIntensity={0} floatIntensity={0.3} floatingRange={[-0.05, 0.05]}>
-      <group position={position}>
-        {/* Core */}
-        <mesh ref={ref} scale={scale}>
-          <sphereGeometry args={[1, 24, 24]} />
-          <meshStandardMaterial
-            color={color}
-            emissive={color}
-            emissiveIntensity={emissiveIntensity}
-            roughness={0.2}
-            metalness={0.8}
-          />
-        </mesh>
-        {/* Glow halo */}
-        <mesh ref={glowRef} scale={scale * 3}>
-          <sphereGeometry args={[1, 16, 16]} />
-          <meshBasicMaterial color={color} transparent opacity={0.06} />
-        </mesh>
-      </group>
-    </Float>
+    <group position={[position[0], position[1], position[2]]}>
+      <mesh ref={meshRef}>
+        <sphereGeometry args={[1, 24, 24]} />
+        <meshStandardMaterial
+          color={color}
+          emissive={color}
+          emissiveIntensity={emissiveIntensity}
+          roughness={0.25}
+          metalness={0.75}
+        />
+      </mesh>
+      <mesh ref={haloRef}>
+        <sphereGeometry args={[1, 16, 16]} />
+        <meshBasicMaterial color={color} transparent opacity={0.05} depthWrite={false} />
+      </mesh>
+    </group>
   );
 };
 
-/* ── Animated data flow line between two points ── */
-const DataFlow = ({
+/* ── Edge: thin line between two nodes using BufferGeometry ── */
+const Edge = ({
   start,
   end,
   color = "#00848C",
-  speed = 1,
 }: {
   start: [number, number, number];
   end: [number, number, number];
   color?: string;
-  speed?: number;
 }) => {
-  const ref = useRef<THREE.Mesh>(null!);
+  const ref = useRef<THREE.LineSegments>(null!);
+  const geometry = useMemo(() => {
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute([...start, ...end], 3)
+    );
+    return geo;
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const { midPoint, length, rotation } = useMemo(() => {
-    const s = new THREE.Vector3(...start);
-    const e = new THREE.Vector3(...end);
-    const mid = s.clone().add(e).multiplyScalar(0.5);
-    const dir = e.clone().sub(s);
-    const len = dir.length();
-    const rot = new THREE.Euler(0, 0, Math.atan2(dir.y, dir.x));
-    return { midPoint: mid, length: len, rotation: rot };
-  }, [start, end]);
-
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime();
-    if (ref.current) {
-      (ref.current.material as THREE.MeshBasicMaterial).opacity =
-        0.08 + Math.sin(t * speed * 1.5) * 0.04;
-    }
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+    (ref.current.material as THREE.LineBasicMaterial).opacity =
+      0.06 + Math.sin(t * 0.8) * 0.03;
   });
 
   return (
-    <mesh ref={ref} position={midPoint} rotation={rotation}>
-      <planeGeometry args={[length, 0.008]} />
-      <meshBasicMaterial color={color} transparent opacity={0.1} side={THREE.DoubleSide} />
-    </mesh>
+    <lineSegments ref={ref} geometry={geometry}>
+      <lineBasicMaterial color={color} transparent opacity={0.08} depthWrite={false} />
+    </lineSegments>
   );
 };
 
-/* ── Pulsing data packet traveling along a path ── */
-const DataPacket = ({
+/* ── Packet: small sphere traveling along an edge ── */
+const Packet = ({
   start,
   end,
-  speed = 0.4,
+  speed = 0.35,
   color = "#FCCF17",
-  delay = 0,
+  phaseOffset = 0,
 }: {
   start: [number, number, number];
   end: [number, number, number];
   speed?: number;
   color?: string;
-  delay?: number;
+  phaseOffset?: number;
 }) => {
   const ref = useRef<THREE.Mesh>(null!);
-  const s = useMemo(() => new THREE.Vector3(...start), [start]);
-  const e = useMemo(() => new THREE.Vector3(...end), [end]);
+  const sv = useMemo(() => new THREE.Vector3(...start), []); // eslint-disable-line react-hooks/exhaustive-deps
+  const ev = useMemo(() => new THREE.Vector3(...end), []); // eslint-disable-line react-hooks/exhaustive-deps
+  const tmp = useMemo(() => new THREE.Vector3(), []);
 
-  useFrame((state) => {
-    const t = ((state.clock.getElapsedTime() + delay) * speed) % 1;
-    const pos = s.clone().lerp(e.clone(), t);
-    ref.current.position.copy(pos);
-    ref.current.scale.setScalar(0.03 + Math.sin(t * Math.PI) * 0.02);
-    (ref.current.material as THREE.MeshBasicMaterial).opacity =
-      Math.sin(t * Math.PI) * 0.8;
+  useFrame(({ clock }) => {
+    const t = ((clock.getElapsedTime() * speed + phaseOffset) % 1 + 1) % 1;
+    tmp.lerpVectors(sv, ev, t);
+    ref.current.position.copy(tmp);
+
+    const fade = Math.sin(t * Math.PI);
+    ref.current.scale.setScalar(0.025 + fade * 0.02);
+    (ref.current.material as THREE.MeshBasicMaterial).opacity = fade * 0.85;
   });
 
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[1, 12, 12]} />
-      <meshBasicMaterial color={color} transparent opacity={0.5} />
+      <sphereGeometry args={[1, 10, 10]} />
+      <meshBasicMaterial color={color} transparent opacity={0} depthWrite={false} />
     </mesh>
   );
 };
 
-/* ── Orbital ring (represents a system boundary) ── */
-const OrbitalRing = ({
+/* ── Orbital ring ── */
+const Ring = ({
   position,
   radius = 1,
-  speed = 0.3,
+  speed = 0.28,
   color = "#00848C",
+  tiltX = 1.2,
 }: {
   position: [number, number, number];
   radius?: number;
   speed?: number;
   color?: string;
+  tiltX?: number;
 }) => {
   const ref = useRef<THREE.Mesh>(null!);
 
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime();
-    ref.current.rotation.x = Math.PI / 2.5 + Math.sin(t * speed) * 0.1;
-    ref.current.rotation.z = t * speed * 0.5;
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+    ref.current.rotation.x = tiltX + Math.sin(t * speed * 0.6) * 0.08;
+    ref.current.rotation.z = t * speed * 0.4;
+    (ref.current.material as THREE.MeshBasicMaterial).opacity =
+      0.1 + Math.sin(t * speed) * 0.04;
   });
 
   return (
     <mesh ref={ref} position={position}>
-      <torusGeometry args={[radius, 0.006, 16, 100]} />
-      <meshBasicMaterial color={color} transparent opacity={0.15} />
+      <torusGeometry args={[radius, 0.005, 16, 120]} />
+      <meshBasicMaterial color={color} transparent opacity={0.12} depthWrite={false} />
     </mesh>
   );
 };
 
-/* ── Scene composition ── */
-const nodes: { pos: [number, number, number]; color: string; scale: number; speed: number; emissive: number }[] = [
-  // Central hub (main digital worker)
-  { pos: [2.5, 0.2, 0], color: "#00848C", scale: 0.18, speed: 0.8, emissive: 0.8 },
-  // Satellite workers
-  { pos: [3.5, 1.2, -0.5], color: "#037272", scale: 0.1, speed: 1.2, emissive: 0.5 },
-  { pos: [1.5, -0.8, 0.3], color: "#037272", scale: 0.1, speed: 1, emissive: 0.5 },
-  { pos: [3.8, -0.5, -0.8], color: "#00848C", scale: 0.08, speed: 1.4, emissive: 0.4 },
-  { pos: [1.8, 1.0, -0.3], color: "#037272", scale: 0.09, speed: 0.9, emissive: 0.4 },
+/* ── Scene ── */
+const nodes: {
+  pos: [number, number, number];
+  color: string;
+  radius: number;
+  speed: number;
+  emissive: number;
+  phase: number;
+  float: number;
+}[] = [
+  // Central hub
+  { pos: [2.5, 0.2, 0],    color: "#00848C", radius: 0.18, speed: 0.8,  emissive: 0.9, phase: 0,    float: 0.08 },
+  // Inner workers
+  { pos: [3.5, 1.2, -0.4], color: "#037272", radius: 0.1,  speed: 1.2,  emissive: 0.55, phase: 1.1, float: 0.06 },
+  { pos: [1.6, -0.9, 0.3], color: "#037272", radius: 0.1,  speed: 1.0,  emissive: 0.5,  phase: 2.3, float: 0.05 },
+  { pos: [3.8, -0.6, -0.7],color: "#00848C", radius: 0.08, speed: 1.4,  emissive: 0.45, phase: 0.7, float: 0.06 },
+  { pos: [1.9, 1.0, -0.3], color: "#037272", radius: 0.09, speed: 0.9,  emissive: 0.45, phase: 1.8, float: 0.05 },
   // Outer nodes
-  { pos: [4.5, 0.8, -1.2], color: "#037272", scale: 0.06, speed: 1.1, emissive: 0.3 },
-  { pos: [0.8, -1.5, 0.5], color: "#00848C", scale: 0.06, speed: 1.3, emissive: 0.3 },
-  { pos: [4.2, -1.3, -0.3], color: "#037272", scale: 0.07, speed: 1, emissive: 0.35 },
-  // Accent nodes
-  { pos: [3.0, 1.8, -0.8], color: "#FCCF17", scale: 0.05, speed: 1.5, emissive: 1 },
-  { pos: [1.2, 0.3, 0.2], color: "#FCCF17", scale: 0.04, speed: 1.6, emissive: 0.8 },
+  { pos: [4.6, 0.7, -1.1], color: "#037272", radius: 0.06, speed: 1.1,  emissive: 0.35, phase: 0.4, float: 0.04 },
+  { pos: [0.9, -1.5, 0.4], color: "#00848C", radius: 0.06, speed: 1.3,  emissive: 0.3,  phase: 2.9, float: 0.04 },
+  { pos: [4.2, -1.4, -0.3],color: "#037272", radius: 0.07, speed: 1.0,  emissive: 0.35, phase: 1.5, float: 0.04 },
+  // Golden accent nodes
+  { pos: [3.0, 1.9, -0.7], color: "#FCCF17", radius: 0.05, speed: 1.5,  emissive: 1.2,  phase: 3.3, float: 0.05 },
+  { pos: [1.3, 0.3, 0.2],  color: "#FCCF17", radius: 0.04, speed: 1.6,  emissive: 1.0,  phase: 0.9, float: 0.04 },
 ];
 
 const connections: [number, number][] = [
@@ -180,61 +190,62 @@ const connections: [number, number][] = [
   [1, 4], [4, 8], [2, 9],
 ];
 
-const HeroScene = () => {
-  return (
-    <div className="absolute inset-0 z-0">
-      <Canvas
-        camera={{ position: [0, 0, 5], fov: 45 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, alpha: true }}
-        style={{ background: "transparent" }}
-      >
-        <ambientLight intensity={0.15} />
-        <pointLight position={[2.5, 0.2, 2]} intensity={0.6} color="#00848C" distance={8} />
-        <pointLight position={[4, 1, 1]} intensity={0.2} color="#FCCF17" distance={6} />
-        <pointLight position={[1, -1, 2]} intensity={0.15} color="#037272" distance={5} />
+const SceneContent = () => (
+  <>
+    <ambientLight intensity={0.12} />
+    <pointLight position={[2.5, 0.2, 2.5]} intensity={0.7} color="#00848C" distance={9} decay={2} />
+    <pointLight position={[4.2, 1.5, 1]}   intensity={0.25} color="#FCCF17" distance={6} decay={2} />
+    <pointLight position={[1.2, -1.2, 2]}   intensity={0.18} color="#037272" distance={5} decay={2} />
 
-        {/* Worker nodes */}
-        {nodes.map((n, i) => (
-          <WorkerNode
-            key={i}
-            position={n.pos}
-            color={n.color}
-            scale={n.scale}
-            speed={n.speed}
-            emissiveIntensity={n.emissive}
-          />
-        ))}
+    {nodes.map((n, i) => (
+      <WorkerNode
+        key={i}
+        position={n.pos}
+        color={n.color}
+        radius={n.radius}
+        speed={n.speed}
+        emissiveIntensity={n.emissive}
+        floatAmplitude={n.float}
+        phaseOffset={n.phase}
+      />
+    ))}
 
-        {/* Connection lines */}
-        {connections.map(([a, b], i) => (
-          <DataFlow
-            key={`line-${i}`}
-            start={nodes[a].pos}
-            end={nodes[b].pos}
-            color="#00848C"
-            speed={0.8 + i * 0.1}
-          />
-        ))}
+    {connections.map(([a, b], i) => (
+      <Edge
+        key={`e-${i}`}
+        start={nodes[a].pos}
+        end={nodes[b].pos}
+        color="#00848C"
+      />
+    ))}
 
-        {/* Data packets flowing between nodes */}
-        {connections.map(([a, b], i) => (
-          <DataPacket
-            key={`packet-${i}`}
-            start={nodes[a].pos}
-            end={nodes[b].pos}
-            speed={0.25 + (i % 3) * 0.1}
-            delay={i * 1.2}
-            color={i % 4 === 0 ? "#FCCF17" : "#00848C"}
-          />
-        ))}
+    {connections.map(([a, b], i) => (
+      <Packet
+        key={`p-${i}`}
+        start={nodes[a].pos}
+        end={nodes[b].pos}
+        speed={0.22 + (i % 4) * 0.07}
+        phaseOffset={i * 0.38}
+        color={i % 4 === 0 ? "#FCCF17" : "#00C2CB"}
+      />
+    ))}
 
-        {/* Orbital rings around central hub */}
-        <OrbitalRing position={[2.5, 0.2, 0]} radius={1.2} speed={0.25} color="#00848C" />
-        <OrbitalRing position={[2.5, 0.2, 0]} radius={0.75} speed={0.35} color="#037272" />
-      </Canvas>
-    </div>
-  );
-};
+    <Ring position={[2.5, 0.2, 0]} radius={1.2}  speed={0.22} color="#00848C" tiltX={1.2} />
+    <Ring position={[2.5, 0.2, 0]} radius={0.75} speed={0.33} color="#037272" tiltX={1.4} />
+  </>
+);
+
+const HeroScene = () => (
+  <div className="absolute inset-0">
+    <Canvas
+      camera={{ position: [0, 0, 5.5], fov: 42 }}
+      dpr={[1, 1.5]}
+      gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+      style={{ background: "transparent" }}
+    >
+      <SceneContent />
+    </Canvas>
+  </div>
+);
 
 export default HeroScene;
