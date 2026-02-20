@@ -27,7 +27,7 @@ const Privacy = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">1. Introduction</h2>
               <p className="text-body text-text-secondary mb-4">
-                Archon AI ("Archon," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your data when you visit our website, use our services, or interact with our AI agents.
+                Mercurius Code ("we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your data when you visit our website, use our services, or interact with our AI agents.
               </p>
               <p className="text-body text-text-secondary">
                 By accessing our services, you agree to the collection and use of information in accordance with this policy. If you do not agree with our practices, please do not use our services.
@@ -107,7 +107,7 @@ const Privacy = () => {
                 <li>Withdraw consent at any time</li>
               </ul>
               <p className="text-body text-text-secondary mt-4">
-                To exercise any of these rights, contact us at <span className="text-primary">privacy@archon.ai</span>.
+                To exercise any of these rights, contact us at <span className="text-primary">privacy@mercuriuscode.com</span>.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ const Privacy = () => {
               <h2 className="text-heading-sm font-bold text-foreground mb-3">Questions?</h2>
               <p className="text-body text-text-secondary">
                 If you have questions about this Privacy Policy or our data practices, contact us at{" "}
-                <span className="text-primary">privacy@archon.ai</span> or write to us at Archon AI, San Francisco, CA.
+                <span className="text-primary">privacy@mercuriuscode.com</span> or write to us at Mercurius Code.
               </p>
             </div>
 

@@ -23,7 +23,7 @@ const About = () => {
               We're building the future of work.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Archon exists to help businesses operate at their full potential — by deploying AI agents that handle the work machines should do, so humans can focus on what humans do best.
+              Mercurius Code exists to help businesses operate at their full potential — by deploying AI agents that handle the work machines should do, so humans can focus on what humans do best.
             </p>
           </motion.div>
         </div>

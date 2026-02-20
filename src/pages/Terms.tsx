@@ -27,7 +27,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">1. Acceptance of Terms</h2>
               <p className="text-body text-text-secondary mb-4">
-                By accessing or using the services provided by Archon AI ("Archon," "we," "us," or "our"), including our website, AI agents, consulting services, and related tools (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms").
+                By accessing or using the services provided by Mercurius Code ("we," "us," or "our"), including our website, AI agents, consulting services, and related tools (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms").
               </p>
               <p className="text-body text-text-secondary">
                 If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind such entity. If you do not agree to these Terms, do not use our Services.
@@ -37,7 +37,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">2. Description of Services</h2>
               <p className="text-body text-text-secondary">
-                Archon provides custom AI agent design, development, deployment, and ongoing optimization services. Our Services include workflow auditing, AI workforce architecture, integration with third-party tools, performance monitoring, and strategic consulting. Specific deliverables, timelines, and scope are defined in individual service agreements or statements of work ("SOW").
+                Mercurius Code provides custom AI agent design, development, deployment, and ongoing optimization services. Our Services include workflow auditing, AI workforce architecture, integration with third-party tools, performance monitoring, and strategic consulting. Specific deliverables, timelines, and scope are defined in individual service agreements or statements of work ("SOW").
               </p>
             </div>
 
@@ -70,7 +70,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">5. Intellectual Property</h2>
               <p className="text-body text-text-secondary mb-4">
-                <strong className="text-foreground">Archon's IP:</strong> All proprietary tools, frameworks, methodologies, models, and software developed by Archon remain our exclusive property. You receive a non-exclusive, non-transferable license to use our deliverables for your internal business operations.
+                <strong className="text-foreground">Mercurius Code's IP:</strong> All proprietary tools, frameworks, methodologies, models, and software developed by Mercurius Code remain our exclusive property. You receive a non-exclusive, non-transferable license to use our deliverables for your internal business operations.
               </p>
               <p className="text-body text-text-secondary">
                 <strong className="text-foreground">Your Data:</strong> You retain full ownership of your data. We use your data solely to provide and improve our Services, as outlined in our Privacy Policy. Custom configurations and workflows developed specifically for you are yours upon full payment.
@@ -120,7 +120,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">10. Indemnification</h2>
               <p className="text-body text-text-secondary">
-                You agree to indemnify and hold harmless Archon, its officers, employees, and agents from any claims, damages, or expenses arising from your use of the Services, violation of these Terms, or infringement of any third-party rights.
+                You agree to indemnify and hold harmless Mercurius Code, its officers, employees, and agents from any claims, damages, or expenses arising from your use of the Services, violation of these Terms, or infringement of any third-party rights.
               </p>
             </div>
 
@@ -142,7 +142,7 @@ const Terms = () => {
               <h2 className="text-heading-sm font-bold text-foreground mb-3">Questions about these terms?</h2>
               <p className="text-body text-text-secondary">
                 Contact our legal team at{" "}
-                <span className="text-primary">legal@archon.ai</span> or write to Archon AI, San Francisco, CA.
+                <span className="text-primary">legal@mercuriuscode.com</span> or write to Mercurius Code.
               </p>
             </div>
 
