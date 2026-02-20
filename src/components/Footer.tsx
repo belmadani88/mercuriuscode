@@ -29,9 +29,9 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">A</span>
+                <span className="text-primary-foreground font-bold text-sm">M</span>
               </div>
-              <span className="font-semibold text-foreground text-lg tracking-tight">Archon</span>
+              <span className="font-semibold text-foreground text-lg tracking-tight">Mercurius Code</span>
             </Link>
             <p className="text-text-secondary text-body-sm max-w-xs">
               AI Workforce Architects. We build autonomous AI agents that operate inside your business 24/7.
@@ -59,7 +59,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-caption text-text-tertiary">
-            © 2026 Archon AI. All rights reserved.
+            © 2026 Mercurius Code. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacy" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Privacy Policy</Link>

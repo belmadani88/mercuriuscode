@@ -16,7 +16,7 @@ const caseStudies = [
       { label: "Time to Deploy", value: "6 weeks" },
       { label: "Meetings Booked/Month", value: "180+" },
     ],
-    testimonial: "Archon replaced our outbound team with agents that outperform humans in every metric. We redirected $350K annually to product development.",
+    testimonial: "Mercurius Code replaced our outbound team with agents that outperform humans in every metric. We redirected $350K annually to product development.",
     author: "Sarah Chen, COO",
   },
   {
@@ -44,7 +44,7 @@ const caseStudies = [
       { label: "Compliance Time", value: "-80%" },
       { label: "Dispatch Efficiency", value: "+55%" },
     ],
-    testimonial: "Our operations run 24/7 now with fewer errors than we ever achieved with manual processes. Archon transformed our entire logistics operation.",
+    testimonial: "Our operations run 24/7 now with fewer errors than we ever achieved with manual processes. Mercurius Code transformed our entire logistics operation.",
     author: "David Park, VP Operations",
   },
 ];

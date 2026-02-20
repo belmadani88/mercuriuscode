@@ -94,7 +94,7 @@ const Contact = () => {
               <div className="space-y-4 pt-4">
                 <div className="flex items-center gap-3 text-body-sm text-text-secondary">
                   <Mail className="w-4 h-4 text-text-tertiary" />
-                  hello@archon.ai
+                  hello@mercuriuscode.com
                 </div>
                 <div className="flex items-center gap-3 text-body-sm text-text-secondary">
                   <MapPin className="w-4 h-4 text-text-tertiary" />
