@@ -81,7 +81,7 @@ const Contact = () => {
                     "30-minute focused strategy discussion",
                     "Workflow audit and automation opportunity mapping",
                     "Custom ROI projection for your business",
-                    "Clear next steps — no pressure, no pitch",
+                    "Clear next steps, no pressure, no pitch",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-body text-text-secondary">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />

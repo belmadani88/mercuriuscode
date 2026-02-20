@@ -101,7 +101,7 @@ const CaseStudies = () => {
                   </div>
                   <blockquote className="border-l-2 border-primary pl-4">
                     <p className="text-body-sm text-text-secondary italic mb-2">"{cs.testimonial}"</p>
-                    <cite className="text-caption text-text-tertiary not-italic">— {cs.author}</cite>
+                    <cite className="text-caption text-text-tertiary not-italic">- {cs.author}</cite>
                   </blockquote>
                 </div>
               </div>

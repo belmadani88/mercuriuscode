@@ -48,7 +48,7 @@ const Security = () => {
               Security you can trust.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Your data and operations are critical. We've built our entire platform with security at its core — not as an afterthought.
+              Your data and operations are critical. We've built our entire platform with security at its core, not as an afterthought.
             </p>
           </motion.div>
         </div>

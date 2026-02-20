@@ -109,7 +109,7 @@ const HowItWorks = () => {
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free audit.</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We'll map your workflows, identify opportunities, and show you the ROI — before you commit.</p>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We'll map your workflows, identify opportunities, and show you the ROI before you commit.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
             Book Strategy Call <ArrowRight size={16} />
           </Link>

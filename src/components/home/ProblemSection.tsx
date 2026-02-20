@@ -8,7 +8,7 @@ const problems = [
     icon: TrendingDown,
     stat: "$4.7M",
     label: "Wasted every year on work that could be automated",
-    description: "Copy-pasting data, writing the same emails, chasing follow-ups — it all adds up to millions in lost productivity.",
+    description: "Copy-pasting data, writing the same emails, chasing follow-ups. It all adds up to millions in lost productivity.",
   },
   {
     icon: Clock,
@@ -44,7 +44,7 @@ const ProblemSection = () => {
             Your team is drowning in busywork.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Every business has tasks that eat up time but don't need human creativity. We take those off your plate — permanently.
+            Every business has tasks that eat up time but don't need human creativity. We take those off your plate, permanently.
           </p>
         </motion.div>
 

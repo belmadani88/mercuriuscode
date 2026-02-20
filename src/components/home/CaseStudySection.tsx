@@ -43,14 +43,14 @@ const CaseStudySection = () => {
               industry: "Retail",
               metric: "67%",
               label: "Lower support costs",
-              description: "A digital support worker handled 12,000 customer questions per month — with 94% customer satisfaction.",
+              description: "A digital support worker handled 12,000 customer questions per month with 94% customer satisfaction.",
             },
             {
               company: "Logistics Company",
               industry: "Supply Chain",
               metric: "$1.2M",
               label: "Saved every year",
-              description: "Automated scheduling, route planning, and compliance paperwork — saving the equivalent of 15 full-time employees.",
+              description: "Automated scheduling, route planning, and compliance paperwork, saving the equivalent of 15 full-time employees.",
             },
           ].map((study, i) => (
             <motion.div

@@ -128,7 +128,7 @@ const HeroSection = () => {
             className="text-muted-foreground max-w-sm mb-10 leading-relaxed"
             style={{ fontSize: "clamp(1rem, 1vw + 0.8rem, 1.125rem)" }}
           >
-            Autonomous agents that handle your repetitive work around the clock — so your team can focus on what actually moves the needle.
+            Autonomous agents that handle your repetitive work around the clock, so your team can focus on what actually moves the needle.
           </motion.p>
 
           {/* CTAs */}

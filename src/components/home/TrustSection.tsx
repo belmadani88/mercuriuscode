@@ -16,7 +16,7 @@ const trustItems = [
   {
     icon: Blocks,
     title: "Works With Your Tools",
-    description: "Connects to the software you already use — Salesforce, HubSpot, Slack, Notion, and 200+ more.",
+    description: "Connects to the software you already use: Salesforce, HubSpot, Slack, Notion, and 200+ more.",
   },
   {
     icon: RefreshCw,
