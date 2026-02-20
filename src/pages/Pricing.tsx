@@ -61,7 +61,7 @@ const tiers = [
 const faqs = [
   {
     q: "How long does deployment take?",
-    a: "Typical deployments take 4–8 weeks from audit to go-live. Simple single-agent deployments can be faster.",
+    a: "Typical deployments take 4 to 8 weeks from audit to go-live. Simple single-agent deployments can be faster.",
   },
   {
     q: "What if the AI agent makes mistakes?",

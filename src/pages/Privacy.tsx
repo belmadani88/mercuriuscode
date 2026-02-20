@@ -103,7 +103,7 @@ const Privacy = () => {
                 <li>Correct inaccurate or incomplete information</li>
                 <li>Request deletion of your personal data</li>
                 <li>Object to or restrict processing of your data</li>
-                <li>Data portability — receive your data in a structured format</li>
+                <li>Data portability: receive your data in a structured format</li>
                 <li>Withdraw consent at any time</li>
               </ul>
               <p className="text-body text-text-secondary mt-4">

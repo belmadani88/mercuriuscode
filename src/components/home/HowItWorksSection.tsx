@@ -10,7 +10,7 @@ const steps = [
   {
     number: "02",
     title: "We Build Your Solution",
-    description: "We create digital workers custom-fitted to your processes — they work with the tools you already use.",
+    description: "We create digital workers custom-fitted to your processes. They work with the tools you already use.",
   },
   {
     number: "03",

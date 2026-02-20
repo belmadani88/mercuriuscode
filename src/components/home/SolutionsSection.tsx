@@ -6,7 +6,7 @@ const solutions = [
   {
     icon: Zap,
     title: "Sales Assistant",
-    description: "Finds potential customers, sends follow-ups, and books meetings for your team — day and night, without missing a lead.",
+    description: "Finds potential customers, sends follow-ups, and books meetings for your team, day and night, without missing a lead.",
     metrics: "3x more leads",
   },
   {
@@ -18,7 +18,7 @@ const solutions = [
   {
     icon: Settings,
     title: "Operations Helper",
-    description: "Moves data between your tools, creates reports, and keeps your workflows running smoothly — no manual effort needed.",
+    description: "Moves data between your tools, creates reports, and keeps your workflows running smoothly with no manual effort needed.",
     metrics: "60% less admin work",
   },
   {
@@ -49,7 +49,7 @@ const SolutionsSection = () => {
             Digital workers for every part of your business.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Think of them as tireless team members. They learn your processes, use your tools, and get things done — just like a new hire, but faster and more affordable.
+            Think of them as tireless team members. They learn your processes, use your tools, and get things done. Just like a new hire, but faster and more affordable.
           </p>
         </motion.div>
 
