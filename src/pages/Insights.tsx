@@ -1,44 +1,43 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 const articles = [
   {
     category: "AI Strategy",
-    title: "Why Your Next Hire Should Be an AI Agent",
-    excerpt: "The economics of AI workforce deployment have fundamentally shifted. Here's the analysis that proves it.",
+    title: "Why Your Next Hire Should Be a Digital Worker",
+    excerpt: "The economics of deploying a digital workforce have shifted fundamentally. Here is the analysis that makes the case.",
     readTime: "8 min read",
   },
   {
     category: "ROI Analysis",
     title: "The True Cost of Manual Operations in 2026",
-    excerpt: "We audited 50 mid-market companies. The average cost of operational inefficiency is staggering.",
+    excerpt: "We audited 50 mid-market companies. The cost of operational inefficiency is higher than most leadership teams realize.",
     readTime: "12 min read",
   },
   {
     category: "Technical",
     title: "How We Architect Multi-Agent Systems",
-    excerpt: "A deep dive into our methodology for designing AI agents that work together as a coordinated workforce.",
+    excerpt: "A look inside our methodology for designing digital workers that operate together as a coordinated workforce.",
     readTime: "15 min read",
   },
   {
     category: "Workflow Automation",
-    title: "Beyond Chatbots: What Real AI Automation Looks Like",
-    excerpt: "The market is flooded with chatbot wrappers. Here's how to identify genuine AI workforce solutions.",
+    title: "Beyond Chatbots: What Real Automation Looks Like",
+    excerpt: "The market is crowded with chatbot wrappers. Here is how to tell the difference between a tool and a genuine digital worker.",
     readTime: "6 min read",
   },
   {
-    category: "AI vs Hiring",
-    title: "AI Agents vs Traditional Hiring: A CFO's Guide",
-    excerpt: "A financial framework for evaluating when to hire humans versus deploying AI agents.",
+    category: "Business Strategy",
+    title: "Digital Workers vs Traditional Hiring: A CFO's Framework",
+    excerpt: "A financial model for evaluating when to hire people versus deploying digital workers for the same function.",
     readTime: "10 min read",
   },
   {
-    category: "Technical",
-    title: "Enterprise AI Security: What You Need to Know",
-    excerpt: "Data privacy, compliance, and governance considerations for deploying AI agents in regulated industries.",
+    category: "Security",
+    title: "Enterprise AI Security: What Decision-Makers Need to Know",
+    excerpt: "Data privacy, compliance, and governance considerations for deploying digital workers in regulated industries.",
     readTime: "9 min read",
   },
 ];
@@ -52,10 +51,10 @@ const Insights = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">Insights</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Thinking about AI workforce strategy.
+              Perspectives on the future of work.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Research, analysis, and frameworks from the team building AI agents for growth-stage companies.
+              Research, analysis, and practical frameworks from the team building digital workforces for growth-stage companies.
             </p>
           </motion.div>
         </div>

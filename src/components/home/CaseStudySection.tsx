@@ -21,7 +21,7 @@ const CaseStudySection = () => {
               Results
             </span>
             <h2 className="text-heading md:text-display-sm font-bold text-foreground">
-              Proven outcomes.
+              Real results from real deployments.
             </h2>
           </div>
           <Link to="/case-studies" className="hidden md:flex items-center gap-1 text-body-sm font-medium text-primary hover:text-primary/80 transition-colors">
@@ -32,25 +32,25 @@ const CaseStudySection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              company: "Growing Tech Company",
-              industry: "FinTech",
+              company: "Series B FinTech",
+              industry: "Financial Services",
               metric: "340%",
-              label: "More sales meetings booked",
-              description: "Our digital sales assistant took over lead follow-up and tripled the number of demos booked in 90 days.",
+              label: "Pipeline increase in 90 days",
+              description: "Replaced manual outbound with a digital sales worker. Meeting volume tripled while cost-per-lead dropped by 65%.",
             },
             {
-              company: "Online Retailer",
+              company: "E-Commerce Brand",
               industry: "Retail",
               metric: "67%",
-              label: "Lower support costs",
-              description: "A digital support worker handled 12,000 customer questions per month with 94% customer satisfaction.",
+              label: "Reduction in support costs",
+              description: "A digital support worker resolved 85% of 12,000 monthly tickets automatically, with a 94% customer satisfaction score.",
             },
             {
-              company: "Logistics Company",
+              company: "National Logistics Firm",
               industry: "Supply Chain",
               metric: "$1.2M",
-              label: "Saved every year",
-              description: "Automated scheduling, route planning, and compliance paperwork, saving the equivalent of 15 full-time employees.",
+              label: "Saved annually",
+              description: "Automated dispatch coordination, route optimization, and compliance documentation across three regional offices.",
             },
           ].map((study, i) => (
             <motion.div

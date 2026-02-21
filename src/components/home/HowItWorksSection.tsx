@@ -4,23 +4,23 @@ import { useRef } from "react";
 const steps = [
   {
     number: "01",
-    title: "We Learn Your Business",
-    description: "We sit down with your team, understand how you work, and find the tasks that are eating up the most time and money.",
+    title: "Audit Your Workflows",
+    description: "We map your operations, identify the highest-impact automation opportunities, and build a business case with projected ROI.",
   },
   {
     number: "02",
-    title: "We Build Your Solution",
-    description: "We create digital workers custom-fitted to your processes. They work with the tools you already use.",
+    title: "Design the Solution",
+    description: "We architect digital workers tailored to your processes, tools, and data. No templates. Everything custom.",
   },
   {
     number: "03",
-    title: "We Set It Live",
-    description: "Your new digital workers start handling tasks alongside your team. No disruption, no learning curve for you.",
+    title: "Deploy With Zero Disruption",
+    description: "Your digital workers go live alongside your team. No downtime, no retraining. They start producing value from day one.",
   },
   {
     number: "04",
-    title: "We Keep Improving",
-    description: "We monitor performance, fine-tune results, and expand to new tasks as your business grows.",
+    title: "Optimize Continuously",
+    description: "We monitor performance weekly, refine accuracy, and expand coverage as your business evolves. Results compound over time.",
   },
 ];
 
@@ -41,10 +41,10 @@ const HowItWorksSection = () => {
             Process
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            How we get you results.
+            From first call to measurable results in weeks.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Four simple steps. Up and running in weeks, not months.
+            A structured, four-phase process designed for speed, precision, and minimal disruption to your team.
           </p>
         </motion.div>
 

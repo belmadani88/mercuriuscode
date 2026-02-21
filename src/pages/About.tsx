@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const values = [
-  { title: "Precision Over Volume", description: "We build fewer agents, better. Every deployment is custom-engineered for measurable impact." },
-  { title: "Outcomes Over Activity", description: "We don't bill for hours. We deliver results. Our success is measured by your ROI." },
-  { title: "Transparency Over Hype", description: "No black boxes. We explain every decision, every model choice, every tradeoff." },
-  { title: "Partnership Over Transactions", description: "We embed with your team. Your success is our business model." },
+  { title: "Precision Over Volume", description: "We take on fewer clients and deliver deeper impact. Every deployment is custom-engineered to produce measurable results." },
+  { title: "Outcomes Over Activity", description: "We don't bill for time. We deliver outcomes. Our success is directly tied to the ROI you see." },
+  { title: "Transparency Over Hype", description: "No black boxes. We explain every model choice, every design decision, and every tradeoff in plain language." },
+  { title: "Partnership Over Transactions", description: "We work alongside your team, not above it. Your growth is our business model." },
 ];
 
 const About = () => {
@@ -18,12 +18,12 @@ const About = () => {
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">About</span>
+            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">About Mercurius Code</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              We're building the future of work.
+              We help businesses operate at their full potential.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Mercurius Code exists to help businesses operate at their full potential — by deploying AI agents that handle the work machines should do, so humans can focus on what humans do best.
+              Mercurius Code designs and deploys intelligent digital workers that handle the repetitive, high-volume operations inside your business, so your people can focus on strategy, creativity, and growth.
             </p>
           </motion.div>
         </div>
@@ -35,20 +35,44 @@ const About = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-heading font-bold text-foreground mb-4">Our Vision</h2>
               <p className="text-body-lg text-text-secondary mb-4">
-                Every business will have an AI workforce within the next decade. The companies that move first will have an insurmountable advantage.
+                Within the next decade, every competitive business will operate with an AI-powered workforce. The companies that move early will build advantages that compound over time.
               </p>
               <p className="text-body text-text-secondary">
-                We're not building another AI tool. We're architecting the infrastructure that makes businesses autonomous — where AI agents handle sales, operations, support, and research with the precision of your best employees and the tirelessness of machines.
+                We are not building another chatbot or SaaS tool. We are designing the operational infrastructure that makes businesses genuinely autonomous, where digital workers handle sales, support, operations, and research with the precision of your best employees and the consistency of machines.
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
               <h2 className="text-heading font-bold text-foreground mb-4">Our Approach</h2>
               <p className="text-body-lg text-text-secondary mb-4">
-                We don't do templates. We don't do chatbots. We don't do generic.
+                We do not use templates. We do not deploy generic solutions. Every engagement starts from first principles.
               </p>
               <p className="text-body text-text-secondary">
-                Every AI agent we build is custom-designed for your specific workflows, data, and business logic. We audit first. We architect second. We deploy third. And we optimize continuously. This is infrastructure, not software.
+                Each digital worker is designed around your specific workflows, data, and business logic. We audit first. We architect second. We deploy third. Then we optimize continuously. This is operational infrastructure, not off-the-shelf software.
               </p>
+            </motion.div>
+          </div>
+
+          {/* Founder */}
+          <div className="mb-24">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="surface-card p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start"
+            >
+              <div className="w-20 h-20 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl font-bold text-primary">OB</span>
+              </div>
+              <div>
+                <span className="text-caption font-medium text-primary uppercase tracking-wider mb-2 block">Founder</span>
+                <h2 className="text-heading font-bold text-foreground mb-2">Oussama Bel Madani</h2>
+                <p className="text-body text-text-secondary mb-4">
+                  Oussama founded Mercurius Code with a clear conviction: most businesses are not short on talent, they are short on leverage. The repetitive work that consumes teams today can be handled by intelligent systems, freeing people to focus on what actually drives growth.
+                </p>
+                <p className="text-body-sm text-text-secondary">
+                  His approach combines deep technical expertise with a relentless focus on business outcomes. Every engagement at Mercurius Code begins with the same question: where can we create the most measurable impact, the fastest?
+                </p>
+              </div>
             </motion.div>
           </div>
 
@@ -75,8 +99,8 @@ const About = () => {
 
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
-          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Let's build your AI workforce.</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Start with a conversation. We'll show you what's possible.</p>
+          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Ready to see what's possible?</h2>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Start with a conversation. We will audit your workflows and show you exactly where digital workers can deliver the highest return.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
             Book Strategy Call <ArrowRight size={16} />
           </Link>

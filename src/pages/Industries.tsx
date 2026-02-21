@@ -6,39 +6,39 @@ import { ArrowRight } from "lucide-react";
 
 const industries = [
   {
-    name: "FinTech & Financial Services",
+    name: "FinTech and Financial Services",
     pains: ["Manual compliance reporting", "Slow customer onboarding", "Repetitive back-office operations"],
     useCases: ["Automated KYC/AML screening", "AI-driven fraud detection", "Intelligent document processing"],
     metric: "70% faster onboarding",
   },
   {
-    name: "E-Commerce & Retail",
-    pains: ["Scaling support with growth", "Cart abandonment", "Inventory forecasting errors"],
-    useCases: ["24/7 AI customer support", "Personalized re-engagement", "Demand prediction agents"],
-    metric: "45% reduction in support costs",
+    name: "E-Commerce and Retail",
+    pains: ["Support costs scaling with growth", "Cart abandonment recovery", "Inventory forecasting errors"],
+    useCases: ["24/7 intelligent customer support", "Personalized re-engagement", "Demand prediction and planning"],
+    metric: "45% lower support costs",
   },
   {
-    name: "SaaS & Technology",
+    name: "SaaS and Technology",
     pains: ["Lead qualification bottlenecks", "Churn prediction gaps", "Manual data pipeline management"],
-    useCases: ["AI SDR agents", "Proactive churn prevention", "Automated data ops"],
+    useCases: ["Automated SDR workflows", "Proactive churn prevention", "Self-managing data operations"],
     metric: "3x pipeline velocity",
   },
   {
-    name: "Logistics & Supply Chain",
-    pains: ["Route optimization complexity", "Compliance documentation", "Dispatch coordination overhead"],
-    useCases: ["AI dispatch coordination", "Automated compliance reporting", "Predictive maintenance agents"],
+    name: "Logistics and Supply Chain",
+    pains: ["Route optimization complexity", "Compliance documentation load", "Dispatch coordination overhead"],
+    useCases: ["Intelligent dispatch coordination", "Automated compliance reporting", "Predictive maintenance alerts"],
     metric: "$1.2M annual savings",
   },
   {
-    name: "Healthcare & Life Sciences",
-    pains: ["Administrative burden on clinicians", "Appointment scheduling inefficiency", "Research data processing"],
-    useCases: ["Clinical documentation agents", "Intelligent scheduling", "Literature review automation"],
+    name: "Healthcare and Life Sciences",
+    pains: ["Administrative burden on clinicians", "Scheduling inefficiency", "Research data processing delays"],
+    useCases: ["Clinical documentation automation", "Intelligent appointment scheduling", "Literature review acceleration"],
     metric: "40% admin reduction",
   },
   {
     name: "Professional Services",
-    pains: ["Research-intensive workflows", "Proposal generation time", "Knowledge management gaps"],
-    useCases: ["AI research assistants", "Automated proposal drafting", "Institutional knowledge agents"],
+    pains: ["Research-intensive workflows", "Slow proposal generation", "Knowledge management gaps"],
+    useCases: ["AI-powered research assistants", "Automated proposal drafting", "Institutional knowledge systems"],
     metric: "5x faster research",
   },
 ];
@@ -52,10 +52,10 @@ const Industries = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">Industries</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              AI agents built for your industry.
+              Purpose-built for your industry.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Every industry has unique workflows, compliance requirements, and operational challenges. We build accordingly.
+              Every industry has unique workflows, compliance requirements, and operational patterns. We design digital workers that reflect those realities.
             </p>
           </motion.div>
         </div>
@@ -108,7 +108,7 @@ const Industries = () => {
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Don't see your industry?</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We build custom. Tell us about your workflows and we'll design the right solution.</p>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every engagement is custom. Tell us about your workflows and we will design the right solution from the ground up.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
             Book Strategy Call <ArrowRight size={16} />
           </Link>

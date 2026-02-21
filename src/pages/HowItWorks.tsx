@@ -7,50 +7,50 @@ import { ArrowRight } from "lucide-react";
 const steps = [
   {
     phase: "Phase 1",
-    title: "Discovery & Audit",
-    duration: "Week 1–2",
+    title: "Discovery and Audit",
+    duration: "Week 1 to 2",
     details: [
       "Map all existing workflows and processes",
-      "Identify automation opportunities with ROI estimates",
-      "Evaluate current tech stack and integration points",
+      "Identify automation opportunities with projected ROI",
+      "Evaluate your current tech stack and integration points",
       "Define success metrics and KPIs",
       "Deliver a comprehensive AI Workforce Blueprint",
     ],
   },
   {
     phase: "Phase 2",
-    title: "Architecture & Design",
-    duration: "Week 2–4",
+    title: "Architecture and Design",
+    duration: "Week 2 to 4",
     details: [
-      "Design custom agent architecture",
-      "Select optimal AI models for each task",
+      "Design custom digital worker architecture",
+      "Select optimal AI models for each function",
       "Plan data flows and security protocols",
-      "Create integration blueprints",
+      "Create integration blueprints for your systems",
       "Define governance and escalation rules",
     ],
   },
   {
     phase: "Phase 3",
-    title: "Build & Deploy",
-    duration: "Week 4–8",
+    title: "Build and Deploy",
+    duration: "Week 4 to 8",
     details: [
-      "Develop and train custom AI agents",
-      "Integrate with existing systems",
-      "Comprehensive testing and QA",
-      "Staged rollout with monitoring",
-      "Team training and documentation",
+      "Develop and train custom digital workers",
+      "Integrate with your existing systems",
+      "Run comprehensive testing and quality assurance",
+      "Execute staged rollout with real-time monitoring",
+      "Provide team training and documentation",
     ],
   },
   {
     phase: "Phase 4",
-    title: "Optimize & Scale",
+    title: "Optimize and Scale",
     duration: "Ongoing",
     details: [
       "Continuous performance monitoring",
-      "Weekly optimization cycles",
-      "Monthly strategy reviews",
-      "Expansion to new workflows",
-      "Quarterly ROI reporting",
+      "Weekly optimization and accuracy improvements",
+      "Monthly strategy reviews with your team",
+      "Expansion to new workflows and departments",
+      "Quarterly ROI reporting and benchmarking",
     ],
   },
 ];
@@ -62,12 +62,12 @@ const HowItWorks = () => {
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">Process</span>
+            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">Our Process</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              A proven methodology.
+              A structured path from audit to results.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              From discovery to deployment in weeks. Our four-phase process ensures precision, security, and measurable results.
+              From first conversation to measurable outcomes in weeks. Our four-phase methodology ensures precision, security, and accountability at every step.
             </p>
           </motion.div>
         </div>
@@ -108,10 +108,10 @@ const HowItWorks = () => {
 
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
-          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free audit.</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We'll map your workflows, identify opportunities, and show you the ROI before you commit.</p>
+          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free workflow audit.</h2>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We will map your operations, identify the highest-value opportunities, and show you the projected ROI before you commit to anything.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book Strategy Call <ArrowRight size={16} />
+            Schedule Your Free Audit <ArrowRight size={16} />
           </Link>
         </div>
       </section>

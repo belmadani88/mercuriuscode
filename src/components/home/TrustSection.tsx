@@ -5,23 +5,23 @@ import { Shield, Lock, RefreshCw, Blocks } from "lucide-react";
 const trustItems = [
   {
     icon: Shield,
-    title: "Your Data Is Safe",
-    description: "Bank-level security. Your information stays protected and never leaves your systems.",
+    title: "Enterprise-Grade Security",
+    description: "AES-256 encryption, SOC 2 compliance, and strict access controls. Your data never leaves your environment.",
   },
   {
     icon: Lock,
-    title: "Privacy First",
-    description: "We follow all major privacy regulations. Happy to sign an NDA before we even start talking.",
+    title: "Privacy by Design",
+    description: "Fully compliant with GDPR, CCPA, and industry-specific regulations. NDA available before any engagement.",
   },
   {
     icon: Blocks,
-    title: "Works With Your Tools",
-    description: "Connects to the software you already use: Salesforce, HubSpot, Slack, Notion, and 200+ more.",
+    title: "Seamless Integration",
+    description: "Connects with Salesforce, HubSpot, Slack, Notion, SAP, and 200+ other tools your team already relies on.",
   },
   {
     icon: RefreshCw,
-    title: "Always Getting Better",
-    description: "We send regular reports and keep improving your digital workers so results grow over time.",
+    title: "Continuous Optimization",
+    description: "Weekly performance reviews, ongoing accuracy improvements, and proactive scaling as your needs grow.",
   },
 ];
 
@@ -42,10 +42,10 @@ const TrustSection = () => {
             Trust & Security
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            Built to earn your trust.
+            Security and reliability, by default.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            We know you need reliability and security. That's why we built it into everything we do.
+            We handle sensitive business data every day. Our infrastructure is built to the same standards as the financial institutions we serve.
           </p>
         </motion.div>
 
