@@ -7,20 +7,20 @@ const problems = [
   {
     icon: TrendingDown,
     stat: "$4.7M",
-    label: "Wasted every year on work that could be automated",
-    description: "Copy-pasting data, writing the same emails, chasing follow-ups. It all adds up to millions in lost productivity.",
+    label: "Average annual cost of manual operations",
+    description: "Data entry, follow-ups, reporting, approvals. Across departments, these small inefficiencies compound into millions in lost output.",
   },
   {
     icon: Clock,
     stat: "68%",
-    label: "Of your team's time goes to repetitive tasks",
-    description: "Your best people are buried in busywork instead of growing the business.",
+    label: "Of employee time spent on repeatable work",
+    description: "Research consistently shows that most knowledge workers spend the majority of their day on tasks that follow a pattern, not on strategic thinking.",
   },
   {
     icon: AlertTriangle,
-    stat: "23hrs",
-    label: "Lost per person, per week",
-    description: "That's 3 full working days every week spent on tasks a digital worker could handle.",
+    stat: "23 hrs",
+    label: "Per person, per week on low-value tasks",
+    description: "Nearly three full working days, every week, consumed by work that a well-designed digital worker can handle with higher accuracy.",
   },
 ];
 
@@ -41,10 +41,10 @@ const ProblemSection = () => {
             The Problem
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            Your team is drowning in busywork.
+            Your team is spending time on the wrong things.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Every business has tasks that eat up time but don't need human creativity. We take those off your plate, permanently.
+            Every business has work that follows a pattern. Repetitive, predictable, and necessary. We automate it so your people can do what they were actually hired to do.
           </p>
         </motion.div>
 

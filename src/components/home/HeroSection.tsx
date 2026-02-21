@@ -94,7 +94,7 @@ const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm px-4 py-1.5 text-caption font-medium text-primary">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              AI-Powered Automation
+              Intelligent Automation for Growth
             </span>
           </motion.div>
 
@@ -111,13 +111,13 @@ const HeroSection = () => {
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >
-            We build
+            Your team
             <br />
-            digital workers
+            deserves to focus
             <br />
-            <span className="text-gradient">for your</span>
+            <span className="text-gradient">on what</span>
             <br />
-            <span className="text-gradient">business.</span>
+            <span className="text-gradient">matters most.</span>
           </motion.h1>
 
           {/* Subline */}
@@ -128,7 +128,7 @@ const HeroSection = () => {
             className="text-muted-foreground max-w-sm mb-10 leading-relaxed"
             style={{ fontSize: "clamp(1rem, 1vw + 0.8rem, 1.125rem)" }}
           >
-            Autonomous agents that handle your repetitive work around the clock, so your team can focus on what actually moves the needle.
+            We design and deploy digital workers that take over your repetitive operations, so your people can focus on growth, strategy, and the work only humans can do.
           </motion.p>
 
           {/* CTAs */}
@@ -173,24 +173,29 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="border-t border-border/30 pt-7"
           >
-            <p className="text-muted-foreground/50 text-xs uppercase tracking-[0.14em] font-medium mb-4">
-              Trusted by 500+ businesses worldwide
-            </p>
-            <div className="flex flex-wrap items-center gap-x-7 gap-y-2">
-              {["Accenture", "Deloitte", "McKinsey", "Bain & Co", "BCG"].map((name, i) => (
-                <motion.span
-                  key={name}
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+              {[
+                { value: "50+", label: "Deployments" },
+                { value: "4-8 wks", label: "Avg. Launch" },
+                { value: "92%", label: "Client Retention" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.45, delay: 0.85 + i * 0.08 }}
-                  className="text-xs font-semibold tracking-widest uppercase select-none"
-                  style={{
-                    color: "hsl(237 20% 45% / 0.45)",
-                    fontFamily: "'Space Grotesk', sans-serif",
-                  }}
+                  transition={{ duration: 0.45, delay: 0.85 + i * 0.12 }}
+                  className="flex flex-col"
                 >
-                  {name}
-                </motion.span>
+                  <span
+                    className="text-sm font-bold tracking-tight text-foreground/70"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {stat.value}
+                  </span>
+                  <span className="text-xs text-muted-foreground/50 tracking-wide uppercase">
+                    {stat.label}
+                  </span>
+                </motion.div>
               ))}
             </div>
           </motion.div>

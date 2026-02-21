@@ -7,11 +7,11 @@ import { ArrowRight, Check } from "lucide-react";
 const tiers = [
   {
     name: "Foundation",
-    description: "For companies starting their AI workforce journey.",
+    description: "Ideal for companies deploying their first digital worker.",
     price: "From $2,500",
     period: "/month",
     features: [
-      "1 custom AI agent",
+      "1 custom digital worker",
       "Core workflow automation",
       "Standard integrations",
       "Weekly performance reports",
@@ -23,33 +23,33 @@ const tiers = [
   },
   {
     name: "Growth",
-    description: "For scaling companies with multiple automation needs.",
+    description: "For scaling companies with automation needs across multiple departments.",
     price: "From $6,000",
     period: "/month",
     features: [
-      "Up to 4 custom AI agents",
+      "Up to 4 custom digital workers",
       "Multi-department deployment",
-      "Advanced integrations & APIs",
+      "Advanced integrations and APIs",
       "Real-time analytics dashboard",
       "Priority support with SLA",
       "Bi-weekly strategy calls",
-      "Custom training & documentation",
+      "Custom training and documentation",
     ],
     cta: "Book Strategy Call",
     highlighted: true,
   },
   {
     name: "Enterprise",
-    description: "For organizations requiring full AI workforce deployment.",
+    description: "For organizations requiring a full-scale digital workforce.",
     price: "Custom",
     period: "",
     features: [
-      "Unlimited AI agents",
+      "Unlimited digital workers",
       "Enterprise-wide deployment",
       "Custom model training",
       "Dedicated success manager",
       "24/7 priority support",
-      "Custom security & compliance",
+      "Custom security and compliance",
       "On-premise deployment option",
       "Executive quarterly reviews",
     ],
@@ -61,23 +61,23 @@ const tiers = [
 const faqs = [
   {
     q: "How long does deployment take?",
-    a: "Typical deployments take 4 to 8 weeks from audit to go-live. Simple single-agent deployments can be faster.",
+    a: "Most deployments take 4 to 8 weeks from audit to go-live. Single-agent deployments with straightforward integrations can launch faster.",
   },
   {
-    q: "What if the AI agent makes mistakes?",
-    a: "All agents include configurable confidence thresholds and human escalation rules. Error rates are typically under 2% after optimization.",
+    q: "What if the digital worker makes a mistake?",
+    a: "Every digital worker includes configurable confidence thresholds and human escalation rules. After the optimization period, error rates are typically under 2%.",
   },
   {
-    q: "Do you offer a pilot program?",
-    a: "Yes. We recommend starting with a single agent to prove ROI before scaling across departments.",
+    q: "Can we start with a pilot before committing?",
+    a: "Yes. We recommend starting with a single digital worker to prove ROI before expanding across departments. Most clients see clear results within 30 days.",
   },
   {
-    q: "Can I cancel anytime?",
-    a: "Yes. We offer month-to-month contracts after an initial 3-month commitment. You own all custom configurations.",
+    q: "Can we cancel at any time?",
+    a: "Yes. After an initial 3-month engagement, all contracts are month-to-month. You retain full ownership of all custom configurations and workflows.",
   },
   {
     q: "How do you handle data security?",
-    a: "SOC 2 compliant. End-to-end encryption. Your data never leaves your environment. NDA available before engagement.",
+    a: "SOC 2 compliant infrastructure. End-to-end encryption. Your data never leaves your environment. We offer NDA signing before any engagement begins.",
   },
 ];
 
@@ -93,7 +93,7 @@ const Pricing = () => {
               Invest in outcomes, not headcount.
             </h1>
             <p className="text-body-lg text-text-secondary">
-              Transparent pricing. Measurable ROI. No long-term lock-in.
+              Clear pricing. Measurable ROI. No long-term lock-in.
             </p>
           </motion.div>
         </div>

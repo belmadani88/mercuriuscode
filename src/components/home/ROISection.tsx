@@ -2,12 +2,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const comparisons = [
-  { metric: "Yearly Cost", human: "$85,000+", ai: "$12,000–$24,000" },
-  { metric: "Working Hours", human: "8 hrs/day, weekdays", ai: "24/7, never calls in sick" },
-  { metric: "Ready to Work", human: "3–6 months training", ai: "2–4 weeks setup" },
-  { metric: "Mistakes", human: "Varies by person", ai: "Under 2%, improving over time" },
-  { metric: "Need More Help?", human: "Hire & train again", ai: "Instantly add more" },
-  { metric: "Onboarding Cost", human: "$5,000–$15,000", ai: "Included" },
+  { metric: "Annual Cost", human: "$85,000+", ai: "$12,000 to $24,000" },
+  { metric: "Availability", human: "8 hrs/day, weekdays", ai: "24/7, 365 days a year" },
+  { metric: "Time to Productivity", human: "3 to 6 months", ai: "2 to 4 weeks" },
+  { metric: "Error Rate", human: "Variable", ai: "Under 2%, improving continuously" },
+  { metric: "Scalability", human: "Hire and retrain", ai: "Deploy instantly" },
+  { metric: "Onboarding Cost", human: "$5,000 to $15,000", ai: "Included in setup" },
 ];
 
 const ROISection = () => {
@@ -27,10 +27,10 @@ const ROISection = () => {
             ROI
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            See how much you could save.
+            The economics are clear.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Here's what it looks like when you compare a traditional hire to a digital worker.
+            A side-by-side comparison of what it costs to staff a role traditionally versus deploying a digital worker for the same function.
           </p>
         </motion.div>
 

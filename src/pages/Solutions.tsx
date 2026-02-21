@@ -8,38 +8,38 @@ const solutions = [
   {
     icon: Zap,
     title: "AI Sales Agents",
-    problem: "Your sales team spends 70% of their time on prospecting, data entry, and follow-ups instead of closing.",
-    solution: "Autonomous agents that qualify leads, personalize outreach, nurture prospects, and book meetings 24/7.",
+    problem: "Your sales team spends most of its time on prospecting, data entry, and follow-ups instead of closing deals.",
+    solution: "Digital workers that qualify leads, personalize outreach, nurture prospects, and book meetings around the clock, without adding headcount.",
     integrations: ["Salesforce", "HubSpot", "LinkedIn", "Outreach", "Pipedrive"],
-    roi: "3x pipeline velocity. 60% reduction in cost-per-lead.",
-    caseStudy: "Series B SaaS: Replaced 4 SDRs, tripled outbound conversions in 90 days.",
+    roi: "3x pipeline velocity. 60% lower cost-per-lead.",
+    caseStudy: "Series B SaaS company: Replaced four SDRs and tripled outbound conversions in 90 days.",
   },
   {
     icon: HeadphonesIcon,
     title: "AI Support Agents",
-    problem: "Support costs scale linearly with growth. Quality drops as volume increases. Response times suffer.",
-    solution: "AI agents that resolve tickets, handle multi-channel inquiries, and escalate with full context instantly.",
+    problem: "Support costs grow linearly with your business. As volume increases, quality and response times decline.",
+    solution: "Digital workers that resolve tickets, handle multi-channel inquiries, and escalate complex issues with full context, instantly.",
     integrations: ["Zendesk", "Intercom", "Freshdesk", "Slack", "Email"],
     roi: "85% auto-resolution rate. 67% reduction in support costs.",
-    caseStudy: "E-commerce brand: Handled 12,000 monthly tickets with 94% satisfaction rate.",
+    caseStudy: "E-commerce brand: Handled 12,000 monthly tickets with a 94% customer satisfaction rate.",
   },
   {
     icon: Settings,
     title: "AI Operations Agents",
-    problem: "Manual data processing, reporting, and workflow coordination consume your ops team's bandwidth.",
-    solution: "Agents that process data, manage workflows, generate reports, and coordinate across systems autonomously.",
+    problem: "Manual data processing, reporting, and cross-team coordination consume your operations team's capacity.",
+    solution: "Digital workers that process data, manage workflows, generate reports, and coordinate across systems without human involvement.",
     integrations: ["Notion", "Airtable", "Google Workspace", "SAP", "NetSuite"],
     roi: "60% operational cost reduction. 90% fewer processing errors.",
-    caseStudy: "Logistics company: Automated dispatch, routing, and compliance — saving $1.2M annually.",
+    caseStudy: "National logistics firm: Automated dispatch, routing, and compliance, saving $1.2M annually.",
   },
   {
     icon: Search,
     title: "AI Research Agents",
-    problem: "Market research, competitive analysis, and data gathering take weeks and deliver stale insights.",
-    solution: "Continuous intelligence agents that monitor markets, analyze competitors, and surface actionable insights in real-time.",
+    problem: "Market research, competitive analysis, and data gathering take weeks and deliver stale results by the time they arrive.",
+    solution: "Digital workers that continuously monitor markets, analyze competitors, and deliver actionable insights in real time.",
     integrations: ["Bloomberg", "Crunchbase", "Custom APIs", "Web scraping", "Internal databases"],
     roi: "10x faster insight generation. Real-time competitive intelligence.",
-    caseStudy: "VC fund: Automated deal sourcing and due diligence research across 5,000+ companies.",
+    caseStudy: "VC fund: Automated deal sourcing and due diligence across 5,000+ companies.",
   },
 ];
 
@@ -52,10 +52,10 @@ const Solutions = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">Solutions</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Custom AI agents for every business function.
+              Digital workers designed for your specific workflows.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Not chatbots. Not templates. Autonomous agents engineered for your specific workflows, data, and objectives.
+              Not chatbots. Not templates. Autonomous digital workers engineered around your data, your processes, and your business objectives.
             </p>
           </motion.div>
         </div>
@@ -101,7 +101,7 @@ const Solutions = () => {
                     <p className="text-body text-accent font-medium">{sol.roi}</p>
                   </div>
                   <div className="p-4 rounded-lg bg-secondary/50 border border-border">
-                    <h4 className="text-caption font-semibold text-text-secondary mb-1">Case Study</h4>
+                    <h4 className="text-caption font-semibold text-text-secondary mb-1">Client Result</h4>
                     <p className="text-body-sm text-foreground">{sol.caseStudy}</p>
                   </div>
                 </div>
@@ -113,8 +113,8 @@ const Solutions = () => {
 
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
-          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Need a custom solution?</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every business is different. Let's design the AI workforce that fits yours.</p>
+          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Need something different?</h2>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every business operates differently. Tell us about your workflows and we will design the right digital workforce for you.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
             Book Strategy Call <ArrowRight size={16} />
           </Link>

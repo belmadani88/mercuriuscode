@@ -5,26 +5,26 @@ import { Zap, HeadphonesIcon, Settings, Search } from "lucide-react";
 const solutions = [
   {
     icon: Zap,
-    title: "Sales Assistant",
-    description: "Finds potential customers, sends follow-ups, and books meetings for your team, day and night, without missing a lead.",
-    metrics: "3x more leads",
+    title: "Sales",
+    description: "Qualifies leads, personalizes outreach, follows up with prospects, and books meetings around the clock. Your pipeline stays full without adding headcount.",
+    metrics: "3x pipeline growth",
   },
   {
     icon: HeadphonesIcon,
     title: "Customer Support",
-    description: "Answers customer questions instantly, solves common problems, and hands off tricky issues to your team with full context.",
-    metrics: "85% handled automatically",
+    description: "Resolves common inquiries instantly across every channel. Complex issues are escalated with full context, so your team picks up right where it matters.",
+    metrics: "85% auto-resolution",
   },
   {
     icon: Settings,
-    title: "Operations Helper",
-    description: "Moves data between your tools, creates reports, and keeps your workflows running smoothly with no manual effort needed.",
+    title: "Operations",
+    description: "Syncs data across systems, generates reports, and keeps workflows on track. No more manual handoffs or spreadsheet errors slowing your team down.",
     metrics: "60% less admin work",
   },
   {
     icon: Search,
-    title: "Research Assistant",
-    description: "Monitors your market, tracks competitors, and delivers key insights so you can make faster, smarter decisions.",
+    title: "Research",
+    description: "Continuously scans your market, tracks competitors, and surfaces the insights that matter. Decisions get faster when the data comes to you.",
     metrics: "10x faster insights",
   },
 ];
@@ -46,10 +46,10 @@ const SolutionsSection = () => {
             Solutions
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            Digital workers for every part of your business.
+            One platform. Every department covered.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Think of them as tireless team members. They learn your processes, use your tools, and get things done. Just like a new hire, but faster and more affordable.
+            Each digital worker is built specifically for your workflows. They integrate with the tools you already use and start delivering results within weeks, not quarters.
           </p>
         </motion.div>
 

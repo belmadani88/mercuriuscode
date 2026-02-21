@@ -34,7 +34,7 @@ const Footer = () => {
               <span className="font-semibold text-foreground text-lg tracking-tight">Mercurius Code</span>
             </Link>
             <p className="text-text-secondary text-body-sm max-w-xs">
-              AI Workforce Architects. We build autonomous AI agents that operate inside your business 24/7.
+              We design and deploy intelligent digital workers that operate inside your business around the clock.
             </p>
           </div>
 
