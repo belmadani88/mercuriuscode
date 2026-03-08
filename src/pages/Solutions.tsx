@@ -11,8 +11,7 @@ const solutions = [
     problem: "Your sales team spends most of its time on prospecting, data entry, and follow-ups instead of closing deals.",
     solution: "Digital workers that qualify leads, personalize outreach, nurture prospects, and book meetings around the clock, without adding headcount.",
     integrations: ["Salesforce", "HubSpot", "LinkedIn", "Outreach", "Pipedrive"],
-    roi: "3x pipeline velocity. 60% lower cost-per-lead.",
-    caseStudy: "Series B SaaS company: Replaced four SDRs and tripled outbound conversions in 90 days.",
+    outcomes: ["Up to 3x pipeline velocity", "Significantly lower cost-per-lead", "Consistent follow-up, 24/7"],
   },
   {
     icon: HeadphonesIcon,
@@ -20,8 +19,7 @@ const solutions = [
     problem: "Support costs grow linearly with your business. As volume increases, quality and response times decline.",
     solution: "Digital workers that resolve tickets, handle multi-channel inquiries, and escalate complex issues with full context, instantly.",
     integrations: ["Zendesk", "Intercom", "Freshdesk", "Slack", "Email"],
-    roi: "85% auto-resolution rate. 67% reduction in support costs.",
-    caseStudy: "E-commerce brand: Handled 12,000 monthly tickets with a 94% customer satisfaction rate.",
+    outcomes: ["Up to 85% auto-resolution rate", "Sub-minute average response time", "Consistent quality at any volume"],
   },
   {
     icon: Settings,
@@ -29,8 +27,7 @@ const solutions = [
     problem: "Manual data processing, reporting, and cross-team coordination consume your operations team's capacity.",
     solution: "Digital workers that process data, manage workflows, generate reports, and coordinate across systems without human involvement.",
     integrations: ["Notion", "Airtable", "Google Workspace", "SAP", "NetSuite"],
-    roi: "60% operational cost reduction. 90% fewer processing errors.",
-    caseStudy: "National logistics firm: Automated dispatch, routing, and compliance, saving $1.2M annually.",
+    outcomes: ["Up to 60% operational cost reduction", "Near-zero processing errors", "Real-time cross-system reporting"],
   },
   {
     icon: Search,
@@ -38,8 +35,7 @@ const solutions = [
     problem: "Market research, competitive analysis, and data gathering take weeks and deliver stale results by the time they arrive.",
     solution: "Digital workers that continuously monitor markets, analyze competitors, and deliver actionable insights in real time.",
     integrations: ["Bloomberg", "Crunchbase", "Custom APIs", "Web scraping", "Internal databases"],
-    roi: "10x faster insight generation. Real-time competitive intelligence.",
-    caseStudy: "VC fund: Automated deal sourcing and due diligence across 5,000+ companies.",
+    outcomes: ["Up to 10x faster insight generation", "Real-time competitive intelligence", "Always-current market data"],
   },
 ];
 
@@ -97,12 +93,15 @@ const Solutions = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-body-sm font-semibold text-foreground mb-2">Expected ROI</h4>
-                    <p className="text-body text-accent font-medium">{sol.roi}</p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-secondary/50 border border-border">
-                    <h4 className="text-caption font-semibold text-text-secondary mb-1">Client Result</h4>
-                    <p className="text-body-sm text-foreground">{sol.caseStudy}</p>
+                    <h4 className="text-body-sm font-semibold text-foreground mb-3">Expected Outcomes</h4>
+                    <ul className="space-y-2">
+                      {sol.outcomes.map((outcome, j) => (
+                        <li key={j} className="flex items-start gap-2 text-body-sm text-accent font-medium">
+                          <span className="text-primary mt-0.5">✓</span>
+                          {outcome}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>

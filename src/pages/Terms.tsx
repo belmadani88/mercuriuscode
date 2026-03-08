@@ -100,7 +100,7 @@ const Terms = () => {
                 <li>Our total liability shall not exceed the fees paid by you in the 12 months preceding the claim</li>
                 <li>We are not liable for indirect, incidental, special, consequential, or punitive damages</li>
                 <li>We are not liable for lost profits, data loss, or business interruption arising from the use of our Services</li>
-                <li>AI agents are tools that augment human capabilities — final business decisions remain your responsibility</li>
+                <li>AI agents are tools that augment human capabilities. Final business decisions remain your responsibility</li>
               </ul>
             </div>
 

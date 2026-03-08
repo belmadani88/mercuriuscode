@@ -78,7 +78,7 @@ const HeroSection = () => {
         }}
       />
 
-      {/* ── Text content (parallaxes fastest) ── */}
+      {/* Text content (parallaxes fastest) */}
       <motion.div
         className="container-wide relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28"
         style={{ y: textY }}
