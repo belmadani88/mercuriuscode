@@ -24,7 +24,7 @@ const HeroSection = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* ── Static layered background ── */}
+      {/* Static layered background */}
       <motion.div className="absolute inset-0" style={{ opacity: bgOpacity }}>
         {/* Deep base */}
         <div className="absolute inset-0 bg-background" />
