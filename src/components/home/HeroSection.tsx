@@ -175,9 +175,9 @@ const HeroSection = () => {
           >
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
               {[
-                { value: "50+", label: "Deployments" },
+                { value: "24/7", label: "Always On" },
                 { value: "4-8 wks", label: "Avg. Launch" },
-                { value: "92%", label: "Client Retention" },
+                { value: "200+", label: "Integrations" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}

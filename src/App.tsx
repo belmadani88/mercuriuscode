@@ -7,10 +7,11 @@ import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
 import Industries from "./pages/Industries";
 import HowItWorks from "./pages/HowItWorks";
-import CaseStudies from "./pages/CaseStudies";
+import UseCases from "./pages/UseCases";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Insights from "./pages/Insights";
+import InsightArticle from "./pages/InsightArticle";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
@@ -32,10 +33,11 @@ const App = () => (
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/use-cases" element={<UseCases />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:slug" element={<InsightArticle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />

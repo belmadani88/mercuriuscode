@@ -18,41 +18,41 @@ const CaseStudySection = () => {
         >
           <div>
             <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
-              Results
+              Use Cases
             </span>
             <h2 className="text-heading md:text-display-sm font-bold text-foreground">
-              Real results from real deployments.
+              What digital workers can do for you.
             </h2>
           </div>
-          <Link to="/case-studies" className="hidden md:flex items-center gap-1 text-body-sm font-medium text-primary hover:text-primary/80 transition-colors">
-            View all case studies <ArrowUpRight size={14} />
+          <Link to="/use-cases" className="hidden md:flex items-center gap-1 text-body-sm font-medium text-primary hover:text-primary/80 transition-colors">
+            View all use cases <ArrowUpRight size={14} />
           </Link>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              company: "Series B FinTech",
-              industry: "Financial Services",
-              metric: "340%",
-              label: "Pipeline increase in 90 days",
-              description: "Replaced manual outbound with a digital sales worker. Meeting volume tripled while cost-per-lead dropped by 65%.",
+              area: "Sales Acceleration",
+              industry: "B2B / SaaS",
+              icon: "🎯",
+              label: "Automate outbound prospecting",
+              description: "A digital sales worker qualifies leads, sends personalized outreach, and books meetings on your team's calendar, around the clock.",
             },
             {
-              company: "E-Commerce Brand",
-              industry: "Retail",
-              metric: "67%",
-              label: "Reduction in support costs",
-              description: "A digital support worker resolved 85% of 12,000 monthly tickets automatically, with a 94% customer satisfaction score.",
+              area: "Customer Support",
+              industry: "E-Commerce / SaaS",
+              icon: "💬",
+              label: "Resolve tickets instantly",
+              description: "Digital support workers handle L1 and L2 inquiries across email, chat, and social channels, escalating only the complex issues to your team.",
             },
             {
-              company: "National Logistics Firm",
-              industry: "Supply Chain",
-              metric: "$1.2M",
-              label: "Saved annually",
-              description: "Automated dispatch coordination, route optimization, and compliance documentation across three regional offices.",
+              area: "Operations",
+              industry: "Logistics / Finance",
+              icon: "⚙️",
+              label: "Streamline back-office workflows",
+              description: "Automate dispatch coordination, compliance documentation, data entry, and reporting across departments and offices.",
             },
-          ].map((study, i) => (
+          ].map((useCase, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -61,13 +61,13 @@ const CaseStudySection = () => {
               className="surface-card p-8 group hover:border-glow transition-all duration-300"
             >
               <div className="flex items-center gap-2 mb-6">
-                <span className="text-caption font-medium text-text-secondary">{study.company}</span>
-                <span className="text-caption text-text-tertiary">•</span>
-                <span className="text-caption text-text-tertiary">{study.industry}</span>
+                <span className="text-2xl">{useCase.icon}</span>
+                <span className="text-caption font-medium text-text-secondary">{useCase.area}</span>
+                <span className="text-caption text-text-tertiary">·</span>
+                <span className="text-caption text-text-tertiary">{useCase.industry}</span>
               </div>
-              <div className="text-display-sm font-bold text-gradient mb-2">{study.metric}</div>
-              <div className="text-body-sm font-medium text-foreground mb-3">{study.label}</div>
-              <p className="text-body-sm text-text-secondary">{study.description}</p>
+              <div className="text-body font-semibold text-foreground mb-3">{useCase.label}</div>
+              <p className="text-body-sm text-text-secondary">{useCase.description}</p>
             </motion.div>
           ))}
         </div>
