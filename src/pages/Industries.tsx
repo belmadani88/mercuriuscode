@@ -47,6 +47,7 @@ const industries = [
 const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Industries" description="Digital workers purpose-built for FinTech, E-Commerce, SaaS, Logistics, Healthcare, and Professional Services." path="/industries" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

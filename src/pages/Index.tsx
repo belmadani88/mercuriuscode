@@ -13,6 +13,7 @@ import CTASection from "@/components/home/CTASection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="AI Workforce Architects" description="We design and deploy custom digital workers that operate inside your business 24/7. Automate sales, operations, support, and research." path="/" />
       <Navigation />
       <HeroSection />
       <ProblemSection />

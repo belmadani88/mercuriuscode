@@ -15,6 +15,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Contact" description="Book a free 30-minute strategy call. We will audit your workflows, identify automation opportunities, and show you projected ROI." path="/contact" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

@@ -43,6 +43,7 @@ const solutions = [
 const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Solutions" description="Autonomous digital workers for sales, support, operations, and research. Engineered around your data and workflows." path="/solutions" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

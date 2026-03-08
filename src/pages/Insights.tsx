@@ -53,6 +53,7 @@ const articles = [
 const Insights = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Insights" description="Research, analysis, and practical frameworks on AI automation, digital workers, and the future of business operations." path="/insights" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

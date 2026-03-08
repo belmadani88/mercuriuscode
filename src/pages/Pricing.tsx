@@ -85,6 +85,7 @@ const faqs = [
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Pricing" description="Clear pricing for digital worker deployments. From $2,500/month. Measurable ROI, no long-term lock-in." path="/pricing" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

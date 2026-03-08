@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Terms of Service" description="Terms of Service for Mercurius Code AI workforce services. Fees, intellectual property, confidentiality, and liability." path="/terms" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
