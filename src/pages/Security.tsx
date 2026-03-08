@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Shield, Lock, Server, Eye, FileCheck, Users, RefreshCw, AlertTriangle } from "lucide-react";
 
