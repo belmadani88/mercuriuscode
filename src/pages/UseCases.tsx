@@ -89,6 +89,7 @@ const useCases = [
 const UseCases = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Use Cases" description="See how digital workers automate sales, support, operations, marketing, finance, and HR across industries." path="/use-cases" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

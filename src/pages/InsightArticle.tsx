@@ -117,6 +117,7 @@ const InsightArticle = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title={article.title} description={article.content[0].slice(0, 155)} path={`/insights/${slug}`} />
       <Navigation />
       <section className="pt-32 pb-8 hero-gradient">
         <div className="container-tight">
