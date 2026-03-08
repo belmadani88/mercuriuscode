@@ -29,7 +29,7 @@ const HeroSection = () => {
         {/* Deep base */}
         <div className="absolute inset-0 bg-background" />
 
-        {/* Volumetric teal glow — right/center */}
+        {/* Volumetric teal glow */}
         <div
           className="absolute inset-0"
           style={{
