@@ -14,7 +14,7 @@ const HeroSection = () => {
     offset: ["start start", "end start"],
   });
 
-  // Parallax layers — each moves at a different rate
+  // Parallax layers: each moves at a different rate
   const textY      = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
   const sceneY     = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   const bgOpacity  = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
