@@ -69,7 +69,7 @@ const HeroSection = () => {
         <HeroScene />
       </motion.div>
 
-      {/* ── Gradient overlay: ensures text is readable over scene ── */}
+      {/* Gradient overlay: ensures text is readable over scene */}
       <div
         className="absolute left-0 top-0 bottom-0 w-full lg:w-[58%] z-[2] pointer-events-none"
         style={{
