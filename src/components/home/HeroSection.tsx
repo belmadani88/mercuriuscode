@@ -61,7 +61,7 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* ── 3D Scene (right side, parallaxes slower than text) ── */}
+      {/* 3D Scene (right side, parallaxes slower than text) */}
       <motion.div
         className="absolute inset-0 z-[1]"
         style={{ y: sceneY }}
