@@ -1,10 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Terms of Service" description="Terms of Service for Mercurius Code AI workforce services. Fees, intellectual property, confidentiality, and liability." path="/terms" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -100,7 +102,7 @@ const Terms = () => {
                 <li>Our total liability shall not exceed the fees paid by you in the 12 months preceding the claim</li>
                 <li>We are not liable for indirect, incidental, special, consequential, or punitive damages</li>
                 <li>We are not liable for lost profits, data loss, or business interruption arising from the use of our Services</li>
-                <li>AI agents are tools that augment human capabilities — final business decisions remain your responsibility</li>
+                <li>AI agents are tools that augment human capabilities. Final business decisions remain your responsibility</li>
               </ul>
             </div>
 

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -9,43 +10,44 @@ const industries = [
     name: "FinTech and Financial Services",
     pains: ["Manual compliance reporting", "Slow customer onboarding", "Repetitive back-office operations"],
     useCases: ["Automated KYC/AML screening", "AI-driven fraud detection", "Intelligent document processing"],
-    metric: "70% faster onboarding",
+    metric: "Up to 70% faster onboarding",
   },
   {
     name: "E-Commerce and Retail",
     pains: ["Support costs scaling with growth", "Cart abandonment recovery", "Inventory forecasting errors"],
     useCases: ["24/7 intelligent customer support", "Personalized re-engagement", "Demand prediction and planning"],
-    metric: "45% lower support costs",
+    metric: "Up to 45% lower support costs",
   },
   {
     name: "SaaS and Technology",
     pains: ["Lead qualification bottlenecks", "Churn prediction gaps", "Manual data pipeline management"],
     useCases: ["Automated SDR workflows", "Proactive churn prevention", "Self-managing data operations"],
-    metric: "3x pipeline velocity",
+    metric: "Up to 3x pipeline velocity",
   },
   {
     name: "Logistics and Supply Chain",
     pains: ["Route optimization complexity", "Compliance documentation load", "Dispatch coordination overhead"],
     useCases: ["Intelligent dispatch coordination", "Automated compliance reporting", "Predictive maintenance alerts"],
-    metric: "$1.2M annual savings",
+    metric: "Potential for $1M+ annual savings",
   },
   {
     name: "Healthcare and Life Sciences",
     pains: ["Administrative burden on clinicians", "Scheduling inefficiency", "Research data processing delays"],
     useCases: ["Clinical documentation automation", "Intelligent appointment scheduling", "Literature review acceleration"],
-    metric: "40% admin reduction",
+    metric: "Up to 40% admin reduction",
   },
   {
     name: "Professional Services",
     pains: ["Research-intensive workflows", "Slow proposal generation", "Knowledge management gaps"],
     useCases: ["AI-powered research assistants", "Automated proposal drafting", "Institutional knowledge systems"],
-    metric: "5x faster research",
+    metric: "Up to 5x faster research",
   },
 ];
 
 const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Industries" description="Digital workers purpose-built for FinTech, E-Commerce, SaaS, Logistics, Healthcare, and Professional Services." path="/industries" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

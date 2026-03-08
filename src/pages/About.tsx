@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -14,6 +15,7 @@ const values = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="About" description="Mercurius Code designs and deploys intelligent digital workers. Founded by Oussama Bel Madani with a mission to help businesses operate at full potential." path="/about" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -88,6 +89,7 @@ const useCases = [
 const UseCases = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Use Cases" description="See how digital workers automate sales, support, operations, marketing, finance, and HR across industries." path="/use-cases" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

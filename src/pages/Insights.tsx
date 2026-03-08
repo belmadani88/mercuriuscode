@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -52,6 +53,7 @@ const articles = [
 const Insights = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Insights" description="Research, analysis, and practical frameworks on AI automation, digital workers, and the future of business operations." path="/insights" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

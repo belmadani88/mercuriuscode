@@ -1,10 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Privacy Policy" description="How Mercurius Code collects, uses, and protects your personal information. GDPR and CCPA compliant." path="/privacy" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

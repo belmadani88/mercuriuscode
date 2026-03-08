@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -58,6 +59,7 @@ const steps = [
 const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="How It Works" description="From audit to deployment in 4 to 8 weeks. Our four-phase methodology ensures precision, security, and measurable results." path="/how-it-works" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

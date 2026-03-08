@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Shield, Lock, Server, Eye, FileCheck, Users, RefreshCw, AlertTriangle } from "lucide-react";
 
@@ -39,6 +40,7 @@ const securityPractices = [
 const Security = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="Security" description="Enterprise-grade security practices at Mercurius Code. SOC 2 compliant, AES-256 encryption, GDPR ready." path="/security" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

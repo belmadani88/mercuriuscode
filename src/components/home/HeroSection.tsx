@@ -14,7 +14,7 @@ const HeroSection = () => {
     offset: ["start start", "end start"],
   });
 
-  // Parallax layers — each moves at a different rate
+  // Parallax layers: each moves at a different rate
   const textY      = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
   const sceneY     = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   const bgOpacity  = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
@@ -24,12 +24,12 @@ const HeroSection = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* ── Static layered background ── */}
+      {/* Static layered background */}
       <motion.div className="absolute inset-0" style={{ opacity: bgOpacity }}>
         {/* Deep base */}
         <div className="absolute inset-0 bg-background" />
 
-        {/* Volumetric teal glow — right/center */}
+        {/* Volumetric teal glow */}
         <div
           className="absolute inset-0"
           style={{
@@ -61,7 +61,7 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* ── 3D Scene (right side, parallaxes slower than text) ── */}
+      {/* 3D Scene (right side, parallaxes slower than text) */}
       <motion.div
         className="absolute inset-0 z-[1]"
         style={{ y: sceneY }}
@@ -69,7 +69,7 @@ const HeroSection = () => {
         <HeroScene />
       </motion.div>
 
-      {/* ── Gradient overlay: ensures text is readable over scene ── */}
+      {/* Gradient overlay: ensures text is readable over scene */}
       <div
         className="absolute left-0 top-0 bottom-0 w-full lg:w-[58%] z-[2] pointer-events-none"
         style={{
@@ -78,7 +78,7 @@ const HeroSection = () => {
         }}
       />
 
-      {/* ── Text content (parallaxes fastest) ── */}
+      {/* Text content (parallaxes fastest) */}
       <motion.div
         className="container-wide relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28"
         style={{ y: textY }}

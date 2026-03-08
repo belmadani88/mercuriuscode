@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
@@ -116,6 +117,7 @@ const InsightArticle = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title={article.title} description={article.content[0].slice(0, 155)} path={`/insights/${slug}`} />
       <Navigation />
       <section className="pt-32 pb-8 hero-gradient">
         <div className="container-tight">
