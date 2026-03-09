@@ -16,17 +16,17 @@ const CTASection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">
-            Let's find out what your team could stop doing tomorrow.
+            Find out what your team could stop doing tomorrow.
           </h2>
           <p className="text-body-lg text-text-secondary max-w-xl mx-auto mb-10">
-            In a free 30-minute strategy call, we'll audit your workflows, identify the highest-value automation opportunities, and give you a clear ROI projection.
+            In a free 30-minute strategy call, we will audit your workflows, identify the highest-value automation opportunities, and give you a clear ROI projection.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm w-full sm:w-auto"
             >
-              Schedule Your Free Audit
+              Book a Free Strategy Call
               <ArrowRight size={16} />
             </Link>
             <span className="text-body-sm text-text-tertiary">No commitment. NDA available on request.</span>

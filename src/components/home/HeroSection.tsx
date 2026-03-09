@@ -1,23 +1,25 @@
-import { useRef } from "react";
+import { useRef, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import HeroScene from "./HeroScene";
+import { useIsMobile } from "@/hooks/use-mobile";
+
+const HeroScene = lazy(() => import("./HeroScene"));
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const isMobile = useIsMobile();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
 
-  // Parallax layers: each moves at a different rate
-  const textY      = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
-  const sceneY     = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
-  const bgOpacity  = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
+  const sceneY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+  const bgOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
     <section
@@ -26,10 +28,7 @@ const HeroSection = () => {
     >
       {/* Static layered background */}
       <motion.div className="absolute inset-0" style={{ opacity: bgOpacity }}>
-        {/* Deep base */}
         <div className="absolute inset-0 bg-background" />
-
-        {/* Volumetric teal glow */}
         <div
           className="absolute inset-0"
           style={{
@@ -41,8 +40,6 @@ const HeroSection = () => {
             ].join(","),
           }}
         />
-
-        {/* Top + bottom edge vignette */}
         <div
           className="absolute inset-0"
           style={{
@@ -50,8 +47,6 @@ const HeroSection = () => {
               "linear-gradient(180deg, hsl(237 45% 10% / 0.5) 0%, transparent 25%, transparent 72%, hsl(237 45% 10% / 0.7) 100%)",
           }}
         />
-
-        {/* Subtle film grain */}
         <div
           className="absolute inset-0 opacity-[0.025]"
           style={{
@@ -61,15 +56,19 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* 3D Scene (right side, parallaxes slower than text) */}
-      <motion.div
-        className="absolute inset-0 z-[1]"
-        style={{ y: sceneY }}
-      >
-        <HeroScene />
-      </motion.div>
+      {/* 3D Scene - desktop only */}
+      {!isMobile && (
+        <motion.div
+          className="absolute inset-0 z-[1]"
+          style={{ y: sceneY }}
+        >
+          <Suspense fallback={null}>
+            <HeroScene />
+          </Suspense>
+        </motion.div>
+      )}
 
-      {/* Gradient overlay: ensures text is readable over scene */}
+      {/* Gradient overlay */}
       <div
         className="absolute left-0 top-0 bottom-0 w-full lg:w-[58%] z-[2] pointer-events-none"
         style={{
@@ -78,13 +77,12 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Text content (parallaxes fastest) */}
+      {/* Text content */}
       <motion.div
         className="container-wide relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28"
         style={{ y: textY }}
       >
         <div className="max-w-xl">
-
           {/* Label pill */}
           <motion.div
             initial={{ opacity: 0, x: -16 }}
@@ -94,11 +92,11 @@ const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm px-4 py-1.5 text-caption font-medium text-primary">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Intelligent Automation for Growth
+              AI Workforce Architects
             </span>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline - specific, outcome-driven */}
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,13 +109,11 @@ const HeroSection = () => {
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >
-            Your team
+            Deploy digital workers
             <br />
-            deserves to focus
+            that run your
             <br />
-            <span className="text-gradient">on what</span>
-            <br />
-            <span className="text-gradient">matters most.</span>
+            <span className="text-gradient">operations 24/7.</span>
           </motion.h1>
 
           {/* Subline */}
@@ -128,32 +124,30 @@ const HeroSection = () => {
             className="text-muted-foreground max-w-sm mb-10 leading-relaxed"
             style={{ fontSize: "clamp(1rem, 1vw + 0.8rem, 1.125rem)" }}
           >
-            We design and deploy digital workers that take over your repetitive operations, so your people can focus on growth, strategy, and the work only humans can do.
+            Custom AI workers for sales, support, operations, and research. Deployed in weeks, not months. From $2,500/mo.
           </motion.p>
 
-          {/* CTAs */}
+          {/* CTAs - stack on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.44, ease }}
-            className="flex items-center gap-6 mb-16 lg:mb-20"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-16 lg:mb-20"
           >
-            {/* Primary CTA */}
             <Link
               to="/contact"
-              className="group relative inline-flex items-center gap-2.5 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+              className="group relative inline-flex items-center gap-2.5 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:brightness-110 hover:scale-[1.02] w-full sm:w-auto justify-center sm:justify-start"
               style={{
                 boxShadow: "0 4px 20px -4px hsl(183 100% 27% / 0.45)",
               }}
             >
-              <span>Book a Strategy Call</span>
+              <span>Book a Free Strategy Call</span>
               <ArrowRight
                 size={15}
                 className="transition-transform duration-300 group-hover:translate-x-0.5"
               />
             </Link>
 
-            {/* Secondary link */}
             <Link
               to="/solutions"
               className="group inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors duration-250 hover:text-foreground"
@@ -166,7 +160,7 @@ const HeroSection = () => {
             </Link>
           </motion.div>
 
-          {/* Trust bar */}
+          {/* Trust bar - improved contrast */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -187,19 +181,18 @@ const HeroSection = () => {
                   className="flex flex-col"
                 >
                   <span
-                    className="text-sm font-bold tracking-tight text-foreground/70"
+                    className="text-sm font-bold tracking-tight text-foreground"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {stat.value}
                   </span>
-                  <span className="text-xs text-muted-foreground/50 tracking-wide uppercase">
+                  <span className="text-xs text-muted-foreground tracking-wide uppercase">
                     {stat.label}
                   </span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-
         </div>
       </motion.div>
     </section>
