@@ -15,7 +15,7 @@ const values = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="About" description="Mercurius Code designs and deploys intelligent digital workers. Founded by Oussama Bel Madani with a mission to help businesses operate at full potential." path="/about" />
+      <PageSEO title="About Mercurius Code" description="Mercurius Code designs and deploys intelligent digital workers. Founded by Oussama Bel Madani with a mission to help businesses operate at full potential." path="/about" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -99,12 +99,27 @@ const About = () => {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <section className="py-12 border-t border-border">
+        <div className="container-wide flex flex-wrap justify-center gap-6">
+          <Link to="/how-it-works" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            See our process →
+          </Link>
+          <Link to="/solutions" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            Explore solutions →
+          </Link>
+          <Link to="/insights" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            Read our insights →
+          </Link>
+        </div>
+      </section>
+
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Ready to see what's possible?</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Start with a conversation. We will audit your workflows and show you exactly where digital workers can deliver the highest return.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book Strategy Call <ArrowRight size={16} />
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+            Book a Free Strategy Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>
