@@ -43,7 +43,7 @@ const solutions = [
 const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Solutions" description="Autonomous digital workers for sales, support, operations, and research. Engineered around your data and workflows." path="/solutions" />
+      <PageSEO title="AI Digital Workers for Sales, Support, Ops & Research" description="Autonomous digital workers for sales, support, operations, and research. Engineered around your data and workflows. From $2,500/mo." path="/solutions" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -112,12 +112,27 @@ const Solutions = () => {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <section className="py-12 border-t border-border">
+        <div className="container-wide flex flex-wrap justify-center gap-6">
+          <Link to="/industries" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            See industries we serve →
+          </Link>
+          <Link to="/how-it-works" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            Learn our process →
+          </Link>
+          <Link to="/pricing" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            View pricing →
+          </Link>
+        </div>
+      </section>
+
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Need something different?</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every business operates differently. Tell us about your workflows and we will design the right digital workforce for you.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book Strategy Call <ArrowRight size={16} />
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+            Book a Free Strategy Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>

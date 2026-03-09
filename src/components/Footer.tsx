@@ -9,15 +9,15 @@ const footerLinks = {
   ],
   Company: [
     { label: "About", href: "/about" },
+    { label: "How It Works", href: "/how-it-works" },
     { label: "Use Cases", href: "/use-cases" },
-    { label: "Insights", href: "/insights" },
     { label: "Contact", href: "/contact" },
   ],
   Resources: [
-    { label: "How It Works", href: "/how-it-works" },
     { label: "Pricing", href: "/pricing" },
     { label: "Industries", href: "/industries" },
-    { label: "FAQ", href: "/pricing" },
+    { label: "Insights", href: "/insights" },
+    { label: "Security", href: "/security" },
   ],
 };
 
@@ -33,9 +33,15 @@ const Footer = () => {
               </div>
               <span className="font-semibold text-foreground text-lg tracking-tight">Mercurius Code</span>
             </Link>
-            <p className="text-text-secondary text-body-sm max-w-xs">
+            <p className="text-text-secondary text-body-sm max-w-xs mb-4">
               We design and deploy intelligent digital workers that operate inside your business around the clock.
             </p>
+            <a
+              href="mailto:hello@mercuriuscode.com"
+              className="text-body-sm text-primary hover:text-primary/80 transition-colors"
+            >
+              hello@mercuriuscode.com
+            </a>
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (

@@ -36,7 +36,7 @@ const tiers = [
       "Bi-weekly strategy calls",
       "Custom training and documentation",
     ],
-    cta: "Book Strategy Call",
+    cta: "Book a Free Strategy Call",
     highlighted: true,
   },
   {
@@ -85,7 +85,7 @@ const faqs = [
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Pricing" description="Clear pricing for digital worker deployments. From $2,500/month. Measurable ROI, no long-term lock-in." path="/pricing" />
+      <PageSEO title="Pricing for AI Digital Workers" description="Clear pricing for digital worker deployments. From $2,500/month. Measurable ROI, no long-term lock-in." path="/pricing" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -129,7 +129,7 @@ const Pricing = () => {
                 </ul>
                 <Link
                   to="/contact"
-                  className={`inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-body-sm font-medium transition-all ${
+                  className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-body-sm font-semibold transition-all ${
                     tier.highlighted
                       ? "bg-primary text-primary-foreground hover:bg-primary/90 glow-sm"
                       : "border border-border bg-secondary text-foreground hover:bg-surface-hover"
@@ -141,7 +141,7 @@ const Pricing = () => {
             ))}
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto" id="faq">
             <h2 className="text-heading font-bold text-foreground mb-8 text-center">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (

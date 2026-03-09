@@ -108,12 +108,27 @@ const HowItWorks = () => {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <section className="py-12 border-t border-border">
+        <div className="container-wide flex flex-wrap justify-center gap-6">
+          <Link to="/solutions" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            Explore solutions →
+          </Link>
+          <Link to="/pricing" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            View pricing →
+          </Link>
+          <Link to="/use-cases" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            See use cases →
+          </Link>
+        </div>
+      </section>
+
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free workflow audit.</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We will map your operations, identify the highest-value opportunities, and show you the projected ROI before you commit to anything.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Schedule Your Free Audit <ArrowRight size={16} />
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+            Book a Free Strategy Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>

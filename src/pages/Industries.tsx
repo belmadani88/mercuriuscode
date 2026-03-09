@@ -74,11 +74,11 @@ const Industries = () => {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="surface-card p-8 hover:border-glow transition-all duration-300"
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2">
                 <h3 className="text-heading-sm font-bold text-foreground">{ind.name}</h3>
-                <span className="text-caption font-medium text-accent whitespace-nowrap ml-4">{ind.metric}</span>
+                <span className="text-caption font-medium text-accent whitespace-nowrap">{ind.metric}</span>
               </div>
-              <div className="grid grid-cols-2 gap-6 mb-0">
+              <div className="grid sm:grid-cols-2 gap-6 mb-0">
                 <div>
                   <h4 className="text-caption font-semibold text-text-tertiary uppercase tracking-wider mb-2">Pain Points</h4>
                   <ul className="space-y-1.5">
@@ -107,12 +107,27 @@ const Industries = () => {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <section className="py-12 border-t border-border">
+        <div className="container-wide flex flex-wrap justify-center gap-6">
+          <Link to="/solutions" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            View all solutions →
+          </Link>
+          <Link to="/use-cases" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            Explore use cases →
+          </Link>
+          <Link to="/how-it-works" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            See how it works →
+          </Link>
+        </div>
+      </section>
+
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Don't see your industry?</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every engagement is custom. Tell us about your workflows and we will design the right solution from the ground up.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book Strategy Call <ArrowRight size={16} />
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+            Book a Free Strategy Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>
