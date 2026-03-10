@@ -7,6 +7,7 @@ import { ArrowRight, Zap, HeadphonesIcon, Settings, Search } from "lucide-react"
 
 const solutions = [
   {
+    id: "sales",
     icon: Zap,
     title: "AI Sales Agents",
     problem: "Your sales team spends most of its time on prospecting, data entry, and follow-ups instead of closing deals.",
@@ -15,6 +16,7 @@ const solutions = [
     outcomes: ["Up to 3x pipeline velocity", "Significantly lower cost-per-lead", "Consistent follow-up, 24/7"],
   },
   {
+    id: "support",
     icon: HeadphonesIcon,
     title: "AI Support Agents",
     problem: "Support costs grow linearly with your business. As volume increases, quality and response times decline.",
@@ -23,6 +25,7 @@ const solutions = [
     outcomes: ["Up to 85% auto-resolution rate", "Sub-minute average response time", "Consistent quality at any volume"],
   },
   {
+    id: "operations",
     icon: Settings,
     title: "AI Operations Agents",
     problem: "Manual data processing, reporting, and cross-team coordination consume your operations team's capacity.",
@@ -31,6 +34,7 @@ const solutions = [
     outcomes: ["Up to 60% operational cost reduction", "Near-zero processing errors", "Real-time cross-system reporting"],
   },
   {
+    id: "research",
     icon: Search,
     title: "AI Research Agents",
     problem: "Market research, competitive analysis, and data gathering take weeks and deliver stale results by the time they arrive.",
@@ -63,7 +67,8 @@ const Solutions = () => {
         <div className="container-wide space-y-16">
           {solutions.map((sol, i) => (
             <motion.div
-              key={i}
+              key={sol.id}
+              id={sol.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
