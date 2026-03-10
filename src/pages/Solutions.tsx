@@ -7,6 +7,7 @@ import { ArrowRight, Zap, HeadphonesIcon, Settings, Search } from "lucide-react"
 
 const solutions = [
   {
+    id: "sales",
     icon: Zap,
     title: "AI Sales Agents",
     problem: "Your sales team spends most of its time on prospecting, data entry, and follow-ups instead of closing deals.",
