@@ -25,6 +25,7 @@ const solutions = [
     outcomes: ["Up to 85% auto-resolution rate", "Sub-minute average response time", "Consistent quality at any volume"],
   },
   {
+    id: "operations",
     icon: Settings,
     title: "AI Operations Agents",
     problem: "Manual data processing, reporting, and cross-team coordination consume your operations team's capacity.",
