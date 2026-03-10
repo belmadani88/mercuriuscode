@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const footerLinks = {
   Solutions: [
-    { label: "AI Sales Agents", href: "/solutions" },
-    { label: "AI Support Agents", href: "/solutions" },
-    { label: "AI Operations Agents", href: "/solutions" },
-    { label: "AI Research Agents", href: "/solutions" },
+    { label: "AI Sales Agents", href: "/solutions#sales" },
+    { label: "AI Support Agents", href: "/solutions#support" },
+    { label: "AI Operations Agents", href: "/solutions#operations" },
+    { label: "AI Research Agents", href: "/solutions#research" },
   ],
   Company: [
     { label: "About", href: "/about" },

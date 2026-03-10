@@ -19,11 +19,39 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form data is captured in formData state
-    // Will need a backend handler (PHP/API) when self-hosting
-    setSubmitted(true);
+    setSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/hello@mercuriuscode.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `Strategy Call Request from ${formData.firstName} ${formData.lastName}`,
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        // Fallback: open mailto
+        const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
+        window.location.href = `mailto:hello@mercuriuscode.com?subject=Strategy Call Request&body=${mailtoBody}`;
+      }
+    } catch {
+      // Fallback: open mailto
+      const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
+      window.location.href = `mailto:hello@mercuriuscode.com?subject=Strategy Call Request&body=${mailtoBody}`;
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
