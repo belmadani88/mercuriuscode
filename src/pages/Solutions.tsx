@@ -16,6 +16,7 @@ const solutions = [
     outcomes: ["Up to 3x pipeline velocity", "Significantly lower cost-per-lead", "Consistent follow-up, 24/7"],
   },
   {
+    id: "support",
     icon: HeadphonesIcon,
     title: "AI Support Agents",
     problem: "Support costs grow linearly with your business. As volume increases, quality and response times decline.",
