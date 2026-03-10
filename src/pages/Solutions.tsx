@@ -73,7 +73,7 @@ const Solutions = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
-              className="surface-card p-8 md:p-12"
+              className="surface-card p-8 md:p-12 scroll-mt-24"
             >
               <div className="grid md:grid-cols-2 gap-10">
                 <div>
