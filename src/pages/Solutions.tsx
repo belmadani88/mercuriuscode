@@ -34,6 +34,7 @@ const solutions = [
     outcomes: ["Up to 60% operational cost reduction", "Near-zero processing errors", "Real-time cross-system reporting"],
   },
   {
+    id: "research",
     icon: Search,
     title: "AI Research Agents",
     problem: "Market research, competitive analysis, and data gathering take weeks and deliver stale results by the time they arrive.",
