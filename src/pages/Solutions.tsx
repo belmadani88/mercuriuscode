@@ -67,7 +67,8 @@ const Solutions = () => {
         <div className="container-wide space-y-16">
           {solutions.map((sol, i) => (
             <motion.div
-              key={i}
+              key={sol.id}
+              id={sol.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
