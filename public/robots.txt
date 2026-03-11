@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://mercuriuscode.com/sitemap.xml
+Sitemap: https://heurops.com/sitemap.xml

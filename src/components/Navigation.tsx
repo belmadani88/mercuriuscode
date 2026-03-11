@@ -40,9 +40,9 @@ const Navigation = () => {
         <div className="container-wide flex items-center justify-between h-16 md:h-18">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">M</span>
+              <span className="text-primary-foreground font-bold text-sm">H</span>
             </div>
-            <span className="font-semibold text-foreground text-lg tracking-tight">Mercurius Code</span>
+            <span className="font-semibold text-foreground text-lg tracking-tight">HeurOps</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
