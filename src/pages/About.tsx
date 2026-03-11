@@ -15,17 +15,17 @@ const values = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="About Mercurius Code" description="Mercurius Code designs and deploys intelligent digital workers. Founded by Oussama Bel Madani with a mission to help businesses operate at full potential." path="/about" />
+      <PageSEO title="About HeurOps" description="HeurOps designs and deploys intelligent digital workers. Founded by Oussama Bel Madani with a mission to help businesses operate at full potential." path="/about" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">About Mercurius Code</span>
+            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">About HeurOps</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
               We help businesses operate at their full potential.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Mercurius Code designs and deploys intelligent digital workers that handle the repetitive, high-volume operations inside your business, so your people can focus on strategy, creativity, and growth.
+              HeurOps designs and deploys intelligent digital workers that handle the repetitive, high-volume operations inside your business, so your people can focus on strategy, creativity, and growth.
             </p>
           </motion.div>
         </div>
@@ -69,10 +69,10 @@ const About = () => {
                 <span className="text-caption font-medium text-primary uppercase tracking-wider mb-2 block">Founder</span>
                 <h2 className="text-heading font-bold text-foreground mb-2">Oussama Bel Madani</h2>
                 <p className="text-body text-text-secondary mb-4">
-                  Oussama founded Mercurius Code with a clear conviction: most businesses are not short on talent, they are short on leverage. The repetitive work that consumes teams today can be handled by intelligent systems, freeing people to focus on what actually drives growth.
+                  Oussama founded HeurOps with a clear conviction: most businesses are not short on talent, they are short on leverage. The repetitive work that consumes teams today can be handled by intelligent systems, freeing people to focus on what actually drives growth.
                 </p>
                 <p className="text-body-sm text-text-secondary">
-                  His approach combines deep technical expertise with a relentless focus on business outcomes. Every engagement at Mercurius Code begins with the same question: where can we create the most measurable impact, the fastest?
+                  His approach combines deep technical expertise with a relentless focus on business outcomes. Every engagement at HeurOps begins with the same question: where can we create the most measurable impact, the fastest?
                 </p>
               </div>
             </motion.div>

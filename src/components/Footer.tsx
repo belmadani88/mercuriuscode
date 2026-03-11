@@ -29,18 +29,18 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">M</span>
+                <span className="text-primary-foreground font-bold text-sm">H</span>
               </div>
-              <span className="font-semibold text-foreground text-lg tracking-tight">Mercurius Code</span>
+              <span className="font-semibold text-foreground text-lg tracking-tight">HeurOps</span>
             </Link>
             <p className="text-text-secondary text-body-sm max-w-xs mb-4">
               We design and deploy intelligent digital workers that operate inside your business around the clock.
             </p>
             <a
-              href="mailto:hello@mercuriuscode.com"
+              href="mailto:hello@heurops.com"
               className="text-body-sm text-primary hover:text-primary/80 transition-colors"
             >
-              hello@mercuriuscode.com
+              hello@heurops.com
             </a>
           </div>
 
@@ -74,7 +74,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-caption text-text-tertiary">
-            © 2026 Mercurius Code. All rights reserved.
+            © 2026 HeurOps. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacy" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Privacy Policy</Link>

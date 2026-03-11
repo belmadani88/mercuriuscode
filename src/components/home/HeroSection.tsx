@@ -92,7 +92,7 @@ const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm px-4 py-1.5 text-caption font-medium text-primary">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              AI Workforce Architects
+              Heuristic thinking. Operational excellence.
             </span>
           </motion.div>
 
