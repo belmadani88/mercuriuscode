@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Users, Headphones, Mail, BarChart3, CreditCard, Cpu, Play } from 'lucide-react';
@@ -23,6 +23,9 @@ const WORKFLOWS = [
 
 type Phase = 'idle' | 'source' | 'to-center' | 'process' | 'to-target' | 'target';
 
+const SOURCE_PHASES: Phase[] = ['source', 'to-center', 'process'];
+const TARGET_PHASES: Phase[] = ['to-target', 'target'];
+
 const getNode = (id: string) => NODES.find(n => n.id === id)!;
 
 /* ── Component ── */
@@ -30,18 +33,26 @@ const HeroVisualization = () => {
   const isMobile = useIsMobile();
   const [wfIdx, setWfIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
-  const [runKey, setRunKey] = useState(0); // bump to restart cycle
-  const nextIdxRef = useRef<number | null>(null);
+  const [isManualRun, setIsManualRun] = useState(false);
+  const [manualPulse, setManualPulse] = useState(false);
+  const [runSeed, setRunSeed] = useState({ index: 0, manual: false, nonce: 0 });
 
-  /* Auto-cycle workflows — restarts whenever runKey changes */
+  useEffect(() => {
+    if (!manualPulse) return;
+    const id = setTimeout(() => setManualPulse(false), 900);
+    return () => clearTimeout(id);
+  }, [manualPulse]);
+
+  /* Auto-cycle workflows — restarts whenever runSeed changes */
   useEffect(() => {
     let alive = true;
     const ids: ReturnType<typeof setTimeout>[] = [];
     const t = (fn: () => void, ms: number) => ids.push(setTimeout(() => alive && fn(), ms));
 
-    const run = (i: number) => {
+    const run = (i: number, manual: boolean) => {
       if (!alive) return;
       setWfIdx(i);
+      setIsManualRun(manual);
       setPhase('source');
       t(() => setPhase('to-center'), 700);
       t(() => setPhase('process'), 1700);
@@ -49,25 +60,27 @@ const HeroVisualization = () => {
       t(() => setPhase('target'), 3400);
       t(() => {
         setPhase('idle');
-        const next = nextIdxRef.current ?? (i + 1) % WORKFLOWS.length;
-        nextIdxRef.current = null;
-        t(() => run(next), 1000);
+        if (manual) setIsManualRun(false);
+        t(() => run((i + 1) % WORKFLOWS.length, false), 1000);
       }, 4800);
     };
 
-    // Use nextIdxRef if a manual trigger set it, otherwise start at 0
-    const startIdx = nextIdxRef.current ?? 0;
-    nextIdxRef.current = null;
-    t(() => run(startIdx), runKey === 0 ? 1500 : 200);
-    return () => { alive = false; ids.forEach(clearTimeout); };
-  }, [runKey]);
+    t(() => run(runSeed.index, runSeed.manual), runSeed.nonce === 0 ? 1500 : 120);
+    return () => {
+      alive = false;
+      ids.forEach(clearTimeout);
+    };
+  }, [runSeed]);
 
   const triggerWorkflow = useCallback(() => {
-    // Pick a random workflow and immediately restart the animation cycle
-    nextIdxRef.current = Math.floor(Math.random() * WORKFLOWS.length);
-    setPhase('idle');
-    setRunKey(k => k + 1);
-  }, []);
+    const nextWorkflow = (wfIdx + 1) % WORKFLOWS.length;
+
+    setManualPulse(true);
+    setIsManualRun(true);
+    setWfIdx(nextWorkflow);
+    setPhase('source');
+    setRunSeed(seed => ({ index: nextWorkflow, manual: true, nonce: seed.nonce + 1 }));
+  }, [wfIdx]);
 
   const wf = WORKFLOWS[wfIdx];
   const src = getNode(wf.source);
@@ -76,11 +89,35 @@ const HeroVisualization = () => {
   const particleTarget = useMemo((): { x: number; y: number } | null => {
     switch (phase) {
       case 'source': return { x: src.x, y: src.y };
-      case 'to-center': case 'process': return CENTER;
-      case 'to-target': case 'target': return { x: tgt.x, y: tgt.y };
-      default: return null;
+      case 'to-center':
+      case 'process':
+        return CENTER;
+      case 'to-target':
+      case 'target':
+        return { x: tgt.x, y: tgt.y };
+      default:
+        return null;
     }
   }, [phase, src, tgt]);
+
+  const stepText = useMemo(() => {
+    switch (phase) {
+      case 'source':
+        return `${src.label} event captured`;
+      case 'to-center':
+        return 'Routing task to AI Worker';
+      case 'process':
+        return 'AI Worker is executing the task';
+      case 'to-target':
+        return `Sending action to ${tgt.label}`;
+      case 'target':
+        return wf.status;
+      default:
+        return 'Monitoring systems for the next workflow';
+    }
+  }, [phase, src.label, tgt.label, wf.status]);
+
+  const flowLabel = `${src.label} → AI Worker → ${tgt.label}`;
 
   return (
     <div className="relative w-full max-w-xl mx-auto" style={{ aspectRatio: '1' }}>
@@ -93,16 +130,26 @@ const HeroVisualization = () => {
           </filter>
         </defs>
 
-        {NODES.map((n, i) => (
-          <g key={n.id}>
-            {/* Connection line */}
-            <line
-              x1={n.x} y1={n.y} x2={CENTER.x} y2={CENTER.y}
-              stroke="hsl(183,100%,27%)" strokeWidth="0.25" opacity="0.2"
-              filter="url(#line-glow)"
-            />
-            {/* Path for particle motion */}
-            <path id={`mp-${n.id}`} d={`M${n.x},${n.y} L${CENTER.x},${CENTER.y}`} />
+        {NODES.map((n, i) => {
+          const sourceLegActive = wf.source === n.id && SOURCE_PHASES.includes(phase);
+          const targetLegActive = wf.target === n.id && TARGET_PHASES.includes(phase);
+          const lineActive = sourceLegActive || targetLegActive;
+
+          return (
+            <g key={n.id}>
+              {/* Connection line */}
+              <line
+                x1={n.x}
+                y1={n.y}
+                x2={CENTER.x}
+                y2={CENTER.y}
+                stroke={lineActive ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))'}
+                strokeWidth={lineActive ? '0.45' : '0.25'}
+                strokeOpacity={lineActive ? '0.65' : '0.2'}
+                filter="url(#line-glow)"
+              />
+              {/* Path for particle motion */}
+              <path id={`mp-${n.id}`} d={`M${n.x},${n.y} L${CENTER.x},${CENTER.y}`} />
 
             {/* Forward ambient particle */}
             <circle r="0.6" fill="hsl(183,100%,50%)">
@@ -137,7 +184,8 @@ const HeroVisualization = () => {
               />
             </circle>
           </g>
-        ))}
+          );
+        })}
       </svg>
 
       {/* Outer system nodes */}
@@ -227,14 +275,19 @@ const HeroVisualization = () => {
         <AnimatePresence>
           {phase !== 'idle' && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 4 }}
               className="absolute left-1/2 -translate-x-1/2 top-full mt-2 whitespace-nowrap"
             >
-              <span className={`text-accent/80 font-medium ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}>
-                {wf.task}
-              </span>
+              <div className="rounded-lg border border-border/60 bg-card/85 px-2.5 py-1 backdrop-blur-sm">
+                <p className={`font-medium text-foreground ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}>
+                  {wf.task}
+                </p>
+                <p className={`text-muted-foreground ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}>
+                  {stepText}
+                </p>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -262,16 +315,31 @@ const HeroVisualization = () => {
 
       {/* Run workflow button */}
       <div className="absolute bottom-1 left-1/2 -translate-x-1/2 z-20">
-        <button
-          onClick={triggerWorkflow}
-          className={`flex items-center gap-1.5 font-medium text-muted-foreground hover:text-foreground
-            transition-colors bg-card/50 backdrop-blur-sm border border-border/30 rounded-full
-            px-2.5 py-1 hover:border-primary/25
-            ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}
-        >
-          <Play size={8} className="fill-current" />
-          Run example workflow
-        </button>
+        <div className="flex flex-col items-center gap-1.5">
+          <button
+            onClick={triggerWorkflow}
+            aria-label="Run an example workflow animation"
+            className={`flex items-center gap-1.5 font-medium text-muted-foreground hover:text-foreground
+              transition-colors bg-card/50 backdrop-blur-sm border border-border/30 rounded-full
+              px-2.5 py-1 hover:border-primary/25
+              ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}
+          >
+            <Play size={8} className={`fill-current ${isManualRun || manualPulse ? 'text-primary' : ''}`} />
+            {manualPulse ? 'Workflow triggered ✓' : isManualRun ? 'Running workflow...' : 'Run example workflow'}
+          </button>
+
+          <span
+            aria-live="polite"
+            className={`rounded-full border border-border/50 bg-card/70 px-2 py-0.5 text-muted-foreground
+              ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}
+          >
+            {manualPulse
+              ? `Manual run started: ${flowLabel}`
+              : isManualRun
+                ? `Manual demo: ${flowLabel}`
+                : `Live demo: ${flowLabel}`}
+          </span>
+        </div>
       </div>
     </div>
   );
