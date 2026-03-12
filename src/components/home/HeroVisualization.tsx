@@ -33,12 +33,10 @@ const HeroVisualization = () => {
   const isMobile = useIsMobile();
   const [wfIdx, setWfIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
-  const [runKey, setRunKey] = useState(0); // bump to restart cycle
   const [isManualRun, setIsManualRun] = useState(false);
-  const nextIdxRef = useRef<number | null>(null);
-  const manualStartRef = useRef(false);
+  const [runSeed, setRunSeed] = useState({ index: 0, manual: false, nonce: 0 });
 
-  /* Auto-cycle workflows — restarts whenever runKey changes */
+  /* Auto-cycle workflows — restarts whenever runSeed changes */
   useEffect(() => {
     let alive = true;
     const ids: ReturnType<typeof setTimeout>[] = [];
@@ -56,37 +54,24 @@ const HeroVisualization = () => {
       t(() => {
         setPhase('idle');
         if (manual) setIsManualRun(false);
-
-        const next = nextIdxRef.current ?? (i + 1) % WORKFLOWS.length;
-        const nextManual = manualStartRef.current && nextIdxRef.current !== null;
-        nextIdxRef.current = null;
-        manualStartRef.current = false;
-
-        t(() => run(next, nextManual), 1000);
+        t(() => run((i + 1) % WORKFLOWS.length, false), 1000);
       }, 4800);
     };
 
-    const startIdx = nextIdxRef.current ?? 0;
-    const startManual = manualStartRef.current && runKey > 0;
-    nextIdxRef.current = null;
-    manualStartRef.current = false;
-
-    t(() => run(startIdx, startManual), runKey === 0 ? 1500 : 120);
+    t(() => run(runSeed.index, runSeed.manual), runSeed.nonce === 0 ? 1500 : 120);
     return () => {
       alive = false;
       ids.forEach(clearTimeout);
     };
-  }, [runKey]);
+  }, [runSeed]);
 
   const triggerWorkflow = useCallback(() => {
     const nextWorkflow = (wfIdx + 1) % WORKFLOWS.length;
-    nextIdxRef.current = nextWorkflow;
-    manualStartRef.current = true;
 
     setIsManualRun(true);
     setWfIdx(nextWorkflow);
     setPhase('source');
-    setRunKey(k => k + 1);
+    setRunSeed(seed => ({ index: nextWorkflow, manual: true, nonce: seed.nonce + 1 }));
   }, [wfIdx]);
 
   const wf = WORKFLOWS[wfIdx];
