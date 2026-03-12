@@ -324,8 +324,8 @@ const HeroVisualization = () => {
               px-2.5 py-1 hover:border-primary/25
               ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}
           >
-            <Play size={8} className={`fill-current ${isManualRun ? 'text-primary' : ''}`} />
-            {isManualRun ? 'Running workflow...' : 'Run example workflow'}
+            <Play size={8} className={`fill-current ${isManualRun || manualPulse ? 'text-primary' : ''}`} />
+            {manualPulse ? 'Workflow triggered ✓' : isManualRun ? 'Running workflow...' : 'Run example workflow'}
           </button>
 
           <span
@@ -333,7 +333,11 @@ const HeroVisualization = () => {
             className={`rounded-full border border-border/50 bg-card/70 px-2 py-0.5 text-muted-foreground
               ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}
           >
-            {isManualRun ? `Manual demo: ${flowLabel}` : `Live demo: ${flowLabel}`}
+            {manualPulse
+              ? `Manual run started: ${flowLabel}`
+              : isManualRun
+                ? `Manual demo: ${flowLabel}`
+                : `Live demo: ${flowLabel}`}
           </span>
         </div>
       </div>
