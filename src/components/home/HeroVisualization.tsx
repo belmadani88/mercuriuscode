@@ -34,7 +34,14 @@ const HeroVisualization = () => {
   const [wfIdx, setWfIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
   const [isManualRun, setIsManualRun] = useState(false);
+  const [manualPulse, setManualPulse] = useState(false);
   const [runSeed, setRunSeed] = useState({ index: 0, manual: false, nonce: 0 });
+
+  useEffect(() => {
+    if (!manualPulse) return;
+    const id = setTimeout(() => setManualPulse(false), 900);
+    return () => clearTimeout(id);
+  }, [manualPulse]);
 
   /* Auto-cycle workflows — restarts whenever runSeed changes */
   useEffect(() => {
