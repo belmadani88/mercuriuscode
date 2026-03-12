@@ -137,16 +137,26 @@ const HeroVisualization = () => {
           </filter>
         </defs>
 
-        {NODES.map((n, i) => (
-          <g key={n.id}>
-            {/* Connection line */}
-            <line
-              x1={n.x} y1={n.y} x2={CENTER.x} y2={CENTER.y}
-              stroke="hsl(183,100%,27%)" strokeWidth="0.25" opacity="0.2"
-              filter="url(#line-glow)"
-            />
-            {/* Path for particle motion */}
-            <path id={`mp-${n.id}`} d={`M${n.x},${n.y} L${CENTER.x},${CENTER.y}`} />
+        {NODES.map((n, i) => {
+          const sourceLegActive = wf.source === n.id && SOURCE_PHASES.includes(phase);
+          const targetLegActive = wf.target === n.id && TARGET_PHASES.includes(phase);
+          const lineActive = sourceLegActive || targetLegActive;
+
+          return (
+            <g key={n.id}>
+              {/* Connection line */}
+              <line
+                x1={n.x}
+                y1={n.y}
+                x2={CENTER.x}
+                y2={CENTER.y}
+                stroke={lineActive ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))'}
+                strokeWidth={lineActive ? '0.45' : '0.25'}
+                strokeOpacity={lineActive ? '0.65' : '0.2'}
+                filter="url(#line-glow)"
+              />
+              {/* Path for particle motion */}
+              <path id={`mp-${n.id}`} d={`M${n.x},${n.y} L${CENTER.x},${CENTER.y}`} />
 
             {/* Forward ambient particle */}
             <circle r="0.6" fill="hsl(183,100%,50%)">
