@@ -322,16 +322,27 @@ const HeroVisualization = () => {
 
       {/* Run workflow button */}
       <div className="absolute bottom-1 left-1/2 -translate-x-1/2 z-20">
-        <button
-          onClick={triggerWorkflow}
-          className={`flex items-center gap-1.5 font-medium text-muted-foreground hover:text-foreground
-            transition-colors bg-card/50 backdrop-blur-sm border border-border/30 rounded-full
-            px-2.5 py-1 hover:border-primary/25
-            ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}
-        >
-          <Play size={8} className="fill-current" />
-          Run example workflow
-        </button>
+        <div className="flex flex-col items-center gap-1.5">
+          <button
+            onClick={triggerWorkflow}
+            aria-label="Run an example workflow animation"
+            className={`flex items-center gap-1.5 font-medium text-muted-foreground hover:text-foreground
+              transition-colors bg-card/50 backdrop-blur-sm border border-border/30 rounded-full
+              px-2.5 py-1 hover:border-primary/25
+              ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}
+          >
+            <Play size={8} className={`fill-current ${isManualRun ? 'text-primary' : ''}`} />
+            {isManualRun ? 'Running workflow...' : 'Run example workflow'}
+          </button>
+
+          <span
+            aria-live="polite"
+            className={`rounded-full border border-border/50 bg-card/70 px-2 py-0.5 text-muted-foreground
+              ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}
+          >
+            {isManualRun ? `Manual demo: ${flowLabel}` : `Live demo: ${flowLabel}`}
+          </span>
+        </div>
       </div>
     </div>
   );
