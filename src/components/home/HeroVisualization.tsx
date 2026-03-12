@@ -282,14 +282,19 @@ const HeroVisualization = () => {
         <AnimatePresence>
           {phase !== 'idle' && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 4 }}
               className="absolute left-1/2 -translate-x-1/2 top-full mt-2 whitespace-nowrap"
             >
-              <span className={`text-accent/80 font-medium ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}>
-                {wf.task}
-              </span>
+              <div className="rounded-lg border border-border/60 bg-card/85 px-2.5 py-1 backdrop-blur-sm">
+                <p className={`font-medium text-foreground ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}>
+                  {wf.task}
+                </p>
+                <p className={`text-muted-foreground ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}>
+                  {stepText}
+                </p>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
