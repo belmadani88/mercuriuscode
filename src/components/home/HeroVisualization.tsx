@@ -23,6 +23,9 @@ const WORKFLOWS = [
 
 type Phase = 'idle' | 'source' | 'to-center' | 'process' | 'to-target' | 'target';
 
+const SOURCE_PHASES: Phase[] = ['source', 'to-center', 'process'];
+const TARGET_PHASES: Phase[] = ['to-target', 'target'];
+
 const getNode = (id: string) => NODES.find(n => n.id === id)!;
 
 /* ── Component ── */
@@ -31,7 +34,9 @@ const HeroVisualization = () => {
   const [wfIdx, setWfIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
   const [runKey, setRunKey] = useState(0); // bump to restart cycle
+  const [isManualRun, setIsManualRun] = useState(false);
   const nextIdxRef = useRef<number | null>(null);
+  const manualStartRef = useRef(false);
 
   /* Auto-cycle workflows — restarts whenever runKey changes */
   useEffect(() => {
@@ -39,9 +44,10 @@ const HeroVisualization = () => {
     const ids: ReturnType<typeof setTimeout>[] = [];
     const t = (fn: () => void, ms: number) => ids.push(setTimeout(() => alive && fn(), ms));
 
-    const run = (i: number) => {
+    const run = (i: number, manual: boolean) => {
       if (!alive) return;
       setWfIdx(i);
+      setIsManualRun(manual);
       setPhase('source');
       t(() => setPhase('to-center'), 700);
       t(() => setPhase('process'), 1700);
@@ -49,25 +55,39 @@ const HeroVisualization = () => {
       t(() => setPhase('target'), 3400);
       t(() => {
         setPhase('idle');
+        if (manual) setIsManualRun(false);
+
         const next = nextIdxRef.current ?? (i + 1) % WORKFLOWS.length;
+        const nextManual = manualStartRef.current && nextIdxRef.current !== null;
         nextIdxRef.current = null;
-        t(() => run(next), 1000);
+        manualStartRef.current = false;
+
+        t(() => run(next, nextManual), 1000);
       }, 4800);
     };
 
-    // Use nextIdxRef if a manual trigger set it, otherwise start at 0
     const startIdx = nextIdxRef.current ?? 0;
+    const startManual = manualStartRef.current && runKey > 0;
     nextIdxRef.current = null;
-    t(() => run(startIdx), runKey === 0 ? 1500 : 200);
-    return () => { alive = false; ids.forEach(clearTimeout); };
+    manualStartRef.current = false;
+
+    t(() => run(startIdx, startManual), runKey === 0 ? 1500 : 120);
+    return () => {
+      alive = false;
+      ids.forEach(clearTimeout);
+    };
   }, [runKey]);
 
   const triggerWorkflow = useCallback(() => {
-    // Pick a random workflow and immediately restart the animation cycle
-    nextIdxRef.current = Math.floor(Math.random() * WORKFLOWS.length);
-    setPhase('idle');
+    const nextWorkflow = (wfIdx + 1) % WORKFLOWS.length;
+    nextIdxRef.current = nextWorkflow;
+    manualStartRef.current = true;
+
+    setIsManualRun(true);
+    setWfIdx(nextWorkflow);
+    setPhase('source');
     setRunKey(k => k + 1);
-  }, []);
+  }, [wfIdx]);
 
   const wf = WORKFLOWS[wfIdx];
   const src = getNode(wf.source);
@@ -76,11 +96,35 @@ const HeroVisualization = () => {
   const particleTarget = useMemo((): { x: number; y: number } | null => {
     switch (phase) {
       case 'source': return { x: src.x, y: src.y };
-      case 'to-center': case 'process': return CENTER;
-      case 'to-target': case 'target': return { x: tgt.x, y: tgt.y };
-      default: return null;
+      case 'to-center':
+      case 'process':
+        return CENTER;
+      case 'to-target':
+      case 'target':
+        return { x: tgt.x, y: tgt.y };
+      default:
+        return null;
     }
   }, [phase, src, tgt]);
+
+  const stepText = useMemo(() => {
+    switch (phase) {
+      case 'source':
+        return `${src.label} event captured`;
+      case 'to-center':
+        return 'Routing task to AI Worker';
+      case 'process':
+        return 'AI Worker is executing the task';
+      case 'to-target':
+        return `Sending action to ${tgt.label}`;
+      case 'target':
+        return wf.status;
+      default:
+        return 'Monitoring systems for the next workflow';
+    }
+  }, [phase, src.label, tgt.label, wf.status]);
+
+  const flowLabel = `${src.label} → AI Worker → ${tgt.label}`;
 
   return (
     <div className="relative w-full max-w-xl mx-auto" style={{ aspectRatio: '1' }}>
