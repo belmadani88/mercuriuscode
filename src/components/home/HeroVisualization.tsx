@@ -191,7 +191,8 @@ const HeroVisualization = () => {
               />
             </circle>
           </g>
-        ))}
+          );
+        })}
       </svg>
 
       {/* Outer system nodes */}
