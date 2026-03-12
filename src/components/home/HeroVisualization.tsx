@@ -75,6 +75,7 @@ const HeroVisualization = () => {
   const triggerWorkflow = useCallback(() => {
     const nextWorkflow = (wfIdx + 1) % WORKFLOWS.length;
 
+    setManualPulse(true);
     setIsManualRun(true);
     setWfIdx(nextWorkflow);
     setPhase('source');
