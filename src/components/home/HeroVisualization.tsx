@@ -30,9 +30,10 @@ const HeroVisualization = () => {
   const isMobile = useIsMobile();
   const [wfIdx, setWfIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>('idle');
-  const manualRef = useRef<number | null>(null);
+  const [runKey, setRunKey] = useState(0); // bump to restart cycle
+  const nextIdxRef = useRef<number | null>(null);
 
-  /* Auto-cycle workflows */
+  /* Auto-cycle workflows — restarts whenever runKey changes */
   useEffect(() => {
     let alive = true;
     const ids: ReturnType<typeof setTimeout>[] = [];
@@ -48,18 +49,24 @@ const HeroVisualization = () => {
       t(() => setPhase('target'), 3400);
       t(() => {
         setPhase('idle');
-        const next = manualRef.current ?? (i + 1) % WORKFLOWS.length;
-        manualRef.current = null;
+        const next = nextIdxRef.current ?? (i + 1) % WORKFLOWS.length;
+        nextIdxRef.current = null;
         t(() => run(next), 1000);
       }, 4800);
     };
 
-    t(() => run(0), 1500);
+    // Use nextIdxRef if a manual trigger set it, otherwise start at 0
+    const startIdx = nextIdxRef.current ?? 0;
+    nextIdxRef.current = null;
+    t(() => run(startIdx), runKey === 0 ? 1500 : 200);
     return () => { alive = false; ids.forEach(clearTimeout); };
-  }, []);
+  }, [runKey]);
 
   const triggerWorkflow = useCallback(() => {
-    manualRef.current = Math.floor(Math.random() * WORKFLOWS.length);
+    // Pick a random workflow and immediately restart the animation cycle
+    nextIdxRef.current = Math.floor(Math.random() * WORKFLOWS.length);
+    setPhase('idle');
+    setRunKey(k => k + 1);
   }, []);
 
   const wf = WORKFLOWS[wfIdx];
