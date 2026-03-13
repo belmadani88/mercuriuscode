@@ -95,7 +95,6 @@ const HeroVisualization = () => {
   const [phase, setPhase] = useState<Phase>('idle');
   const [visibleSteps, setVisibleSteps] = useState(0);
   const [isManual, setIsManual] = useState(false);
-  const aliveRef = useRef(true);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   const clearTimers = useCallback(() => {
@@ -124,25 +123,14 @@ const HeroVisualization = () => {
     t(() => { setPhase('step3'); setVisibleSteps(4); }, 3600);
     // Complete
     t(() => { setPhase('complete'); }, 4800);
-    // Auto-advance to next
-    t(() => {
-      if (aliveRef.current) {
-        setIsManual(false);
-        runWorkflow((idx + 1) % WORKFLOWS.length, false);
-      }
-    }, 7000);
   }, [clearTimers]);
 
-  // Start auto-cycle on mount
+  // Keep timers clean on unmount
   useEffect(() => {
-    aliveRef.current = true;
-    const startTimer = setTimeout(() => runWorkflow(0, false), 1500);
     return () => {
-      aliveRef.current = false;
-      clearTimeout(startTimer);
       clearTimers();
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [clearTimers]);
 
   const triggerWorkflow = useCallback((idx?: number) => {
     const nextIdx = idx !== undefined ? idx : (wfIdx + 1) % WORKFLOWS.length;

@@ -14,27 +14,26 @@ const WorkflowControls = ({ onRun, isManual, currentWorkflow, phase }: Props) =>
   const isRunning = phase !== 'idle' && phase !== 'complete';
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-2">
       <button
         onClick={onRun}
         aria-label="Run an example workflow"
-        className={`group flex items-center gap-2 font-semibold transition-all
-          bg-card/60 backdrop-blur-sm border rounded-full
-          hover:border-primary/40 hover:bg-primary/5 active:scale-95
+        className={`group relative inline-flex items-center justify-center gap-2 rounded-xl border-2 font-semibold transition-all duration-300 active:scale-95
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background
+          ${isMobile ? 'w-full px-4 py-3 text-sm' : 'px-6 py-3 text-sm'}
           ${isRunning && isManual
-            ? 'border-primary/40 text-primary'
-            : 'border-border/40 text-muted-foreground hover:text-foreground'
-          }
-          ${isMobile ? 'text-[9px] px-3 py-1.5' : 'text-[11px] px-4 py-2'}`}
+            ? 'border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/30'
+            : 'border-primary/70 bg-primary text-primary-foreground shadow-md shadow-primary/20 hover:brightness-110'
+          }`}
       >
-        <Play
-          size={isMobile ? 10 : 12}
-          className={`fill-current transition-colors ${isRunning && isManual ? 'text-primary' : 'group-hover:text-primary'}`}
-        />
+        <Play size={isMobile ? 14 : 16} className="fill-current" />
         {isRunning && isManual
-          ? `Running: ${currentWorkflow.title}...`
+          ? `Running: ${currentWorkflow.title}`
           : 'Run Example Workflow'}
       </button>
+      <p className={`${isMobile ? 'text-[11px]' : 'text-xs'} text-muted-foreground`}>
+        Click to trigger a real workflow demo
+      </p>
     </div>
   );
 };
