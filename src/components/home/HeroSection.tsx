@@ -104,8 +104,8 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.28, ease }}
-              className="text-muted-foreground max-w-md mb-10 leading-relaxed"
-              style={{ fontSize: "clamp(0.95rem, 0.8vw + 0.7rem, 1.1rem)" }}
+              className="text-muted-foreground max-w-md mb-8 leading-relaxed"
+              style={{ fontSize: "clamp(0.92rem, 0.7vw + 0.65rem, 1.05rem)" }}
             >
               AI agents that automate support, operations, finance and sales
               workflows across your existing tools.
