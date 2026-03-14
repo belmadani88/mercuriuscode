@@ -56,7 +56,7 @@ const HeroSection = () => {
         className="container-wide relative z-10 pt-28 pb-16 lg:pt-36 lg:pb-24"
         style={{ y: contentY }}
       >
-        <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-6 items-center">
+        <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-6 items-start">
           {/* ── Left column: text ── */}
           <div>
             {/* Pill */}
