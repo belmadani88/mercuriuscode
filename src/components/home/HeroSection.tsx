@@ -79,7 +79,7 @@ const HeroSection = () => {
               transition={{ duration: 0.75, delay: 0.12, ease }}
               className="text-foreground mb-6"
               style={{
-                fontSize: "clamp(2.2rem, 4.5vw + 0.5rem, 4.2rem)",
+                fontSize: "clamp(2rem, 4vw + 0.5rem, 3.8rem)",
                 lineHeight: 1.06,
                 letterSpacing: "-0.04em",
                 fontFamily: "'Space Grotesk', sans-serif",
