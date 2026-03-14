@@ -281,7 +281,7 @@ const HeroVisualization = () => {
       </div>
 
       {/* Bottom panel: button FIRST, then activity feed with reserved height */}
-      <div className="flex flex-col gap-2.5 mt-3">
+      <div className="flex flex-col gap-2 mt-2">
         <WorkflowControls
           onRun={() => triggerWorkflow()}
           isManual={isManual}
