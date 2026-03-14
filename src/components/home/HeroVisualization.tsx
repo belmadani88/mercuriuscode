@@ -158,7 +158,7 @@ const HeroVisualization = () => {
       </div>
 
       {/* Main visualization — fixed aspect ratio */}
-      <div className="relative w-full" style={{ aspectRatio: isMobile ? '1' : '1.05' }}>
+      <div className="relative w-full" style={{ aspectRatio: isMobile ? '1' : '1.15' }}>
         {/* SVG lines + ambient particles */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" fill="none">
           <defs>
