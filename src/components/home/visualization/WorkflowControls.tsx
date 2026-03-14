@@ -34,7 +34,7 @@ const WorkflowControls = ({ onRun, isManual, currentWorkflow, phase }: Props) =>
         <Play size={isMobile ? 14 : 16} className="fill-current" />
         {isRunning && isManual
           ? `Running: ${currentWorkflow.title}`
-          : '▶ Run Example Workflow'}
+          : 'Run Example Workflow'}
       </button>
       <p className={`${isMobile ? 'text-[10px]' : 'text-xs'} text-muted-foreground`}>
         Click to see an AI workflow in action

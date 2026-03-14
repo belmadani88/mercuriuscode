@@ -53,10 +53,10 @@ const HeroSection = () => {
 
       {/* Content */}
       <motion.div
-        className="container-wide relative z-10 pt-28 pb-16 lg:pt-36 lg:pb-24"
+        className="container-wide relative z-10 pt-24 pb-10 lg:pt-28 lg:pb-12"
         style={{ y: contentY }}
       >
-        <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-6 items-start">
+        <div className="grid lg:grid-cols-[45%_55%] gap-8 lg:gap-6 items-start">
           {/* ── Left column: text ── */}
           <div>
             {/* Pill */}
@@ -64,7 +64,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease }}
-              className="mb-8"
+              className="mb-5"
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm px-4 py-1.5 text-caption font-medium text-primary">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -79,7 +79,7 @@ const HeroSection = () => {
               transition={{ duration: 0.75, delay: 0.12, ease }}
               className="text-foreground mb-6"
               style={{
-                fontSize: "clamp(2.2rem, 4.5vw + 0.5rem, 4.2rem)",
+                fontSize: "clamp(2rem, 4vw + 0.5rem, 3.8rem)",
                 lineHeight: 1.06,
                 letterSpacing: "-0.04em",
                 fontFamily: "'Space Grotesk', sans-serif",
@@ -104,8 +104,8 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.28, ease }}
-              className="text-muted-foreground max-w-md mb-10 leading-relaxed"
-              style={{ fontSize: "clamp(0.95rem, 0.8vw + 0.7rem, 1.1rem)" }}
+              className="text-muted-foreground max-w-md mb-8 leading-relaxed"
+              style={{ fontSize: "clamp(0.92rem, 0.7vw + 0.65rem, 1.05rem)" }}
             >
               AI agents that automate support, operations, finance and sales
               workflows across your existing tools.
@@ -116,7 +116,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.44, ease }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-12"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8"
             >
               <Link
                 to="/contact"

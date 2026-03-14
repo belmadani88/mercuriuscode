@@ -153,12 +153,12 @@ const HeroVisualization = () => {
   return (
     <div className="relative w-full max-w-xl mx-auto flex flex-col">
       {/* Task counter */}
-      <div className="mb-3">
+      <div className="mb-2">
         <TaskCounter />
       </div>
 
       {/* Main visualization — fixed aspect ratio */}
-      <div className="relative w-full" style={{ aspectRatio: isMobile ? '1' : '1.05' }}>
+      <div className="relative w-full" style={{ aspectRatio: isMobile ? '1' : '1.15' }}>
         {/* SVG lines + ambient particles */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" fill="none">
           <defs>
@@ -281,7 +281,7 @@ const HeroVisualization = () => {
       </div>
 
       {/* Bottom panel: button FIRST, then activity feed with reserved height */}
-      <div className="flex flex-col gap-2.5 mt-3">
+      <div className="flex flex-col gap-2 mt-2">
         <WorkflowControls
           onRun={() => triggerWorkflow()}
           isManual={isManual}
