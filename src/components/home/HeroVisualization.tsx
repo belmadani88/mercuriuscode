@@ -113,23 +113,15 @@ const HeroVisualization = () => {
       timersRef.current.push(setTimeout(fn, ms));
     };
 
-    // Step 0: source lights up, first log entry
     t(() => { setPhase('step0'); setVisibleSteps(1); }, 200);
-    // Step 1: particle to center, AI processing
     t(() => { setPhase('step1'); setVisibleSteps(2); }, 1200);
-    // Step 2: AI done, particle to target
     t(() => { setPhase('step2'); setVisibleSteps(3); }, 2400);
-    // Step 3: target lights up, final log
     t(() => { setPhase('step3'); setVisibleSteps(4); }, 3600);
-    // Complete
     t(() => { setPhase('complete'); }, 4800);
   }, [clearTimers]);
 
-  // Keep timers clean on unmount
   useEffect(() => {
-    return () => {
-      clearTimers();
-    };
+    return () => { clearTimers(); };
   }, [clearTimers]);
 
   const triggerWorkflow = useCallback((idx?: number) => {
@@ -137,7 +129,6 @@ const HeroVisualization = () => {
     runWorkflow(nextIdx, true);
   }, [wfIdx, runWorkflow]);
 
-  // Find workflow by node click
   const handleNodeClick = useCallback((nodeId: string) => {
     const idx = WORKFLOWS.findIndex(w => w.source === nodeId);
     if (idx !== -1) {
@@ -149,7 +140,6 @@ const HeroVisualization = () => {
   const src = getNode(wf.source);
   const tgt = getNode(wf.target);
 
-  // Particle position
   const particlePos = (() => {
     switch (phase) {
       case 'step0': return { x: src.x, y: src.y };
@@ -161,11 +151,13 @@ const HeroVisualization = () => {
   })();
 
   return (
-    <div className="relative w-full max-w-xl mx-auto flex flex-col gap-3">
+    <div className="relative w-full max-w-xl mx-auto flex flex-col">
       {/* Task counter */}
-      <TaskCounter />
+      <div className="mb-3">
+        <TaskCounter />
+      </div>
 
-      {/* Main visualization */}
+      {/* Main visualization — fixed aspect ratio */}
       <div className="relative w-full" style={{ aspectRatio: isMobile ? '1' : '1.05' }}>
         {/* SVG lines + ambient particles */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" fill="none">
@@ -191,7 +183,6 @@ const HeroVisualization = () => {
                   filter="url(#line-glow)"
                 />
                 <path id={`mp-${n.id}`} d={`M${n.x},${n.y} L${CENTER.x},${CENTER.y}`} />
-                {/* Ambient particle */}
                 <circle r="0.5" fill="hsl(183,100%,50%)">
                   <animateMotion dur={`${3.5 + i * 0.4}s`} repeatCount="indefinite" begin={`${i * 0.6}s`}>
                     <mpath href={`#mp-${n.id}`} />
@@ -289,15 +280,18 @@ const HeroVisualization = () => {
         )}
       </div>
 
-      {/* Bottom panel: activity feed + controls */}
-      <div className="flex flex-col gap-2">
-        <ActivityFeed workflow={wf} visibleSteps={visibleSteps} phase={phase} />
+      {/* Bottom panel: button FIRST, then activity feed with reserved height */}
+      <div className="flex flex-col gap-2.5 mt-3">
         <WorkflowControls
           onRun={() => triggerWorkflow()}
           isManual={isManual}
           currentWorkflow={wf}
           phase={phase}
         />
+        {/* Fixed-height container so layout doesn't shift */}
+        <div style={{ minHeight: isMobile ? '100px' : '110px' }}>
+          <ActivityFeed workflow={wf} visibleSteps={visibleSteps} phase={phase} />
+        </div>
       </div>
     </div>
   );
