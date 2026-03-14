@@ -153,7 +153,7 @@ const HeroVisualization = () => {
   return (
     <div className="relative w-full max-w-xl mx-auto flex flex-col">
       {/* Task counter */}
-      <div className="mb-3">
+      <div className="mb-2">
         <TaskCounter />
       </div>
 
