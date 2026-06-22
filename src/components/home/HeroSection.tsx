@@ -29,9 +29,9 @@ const HeroSection = () => {
           className="absolute inset-0"
           style={{
             background: [
-              "radial-gradient(ellipse 55% 55% at 68% 42%, hsl(183 100% 27% / 0.12) 0%, transparent 70%)",
-              "radial-gradient(ellipse 38% 55% at 28% 28%, hsl(180 96% 23% / 0.06) 0%, transparent 60%)",
-              "radial-gradient(ellipse 50% 38% at 72% 82%, hsl(47 97% 54% / 0.03) 0%, transparent 55%)",
+              "radial-gradient(ellipse 55% 55% at 68% 42%, hsl(79 100% 53% / 0.10) 0%, transparent 70%)",
+              "radial-gradient(ellipse 38% 55% at 28% 28%, hsl(271 76% 53% / 0.06) 0%, transparent 60%)",
+              "radial-gradient(ellipse 50% 38% at 72% 82%, hsl(187 100% 50% / 0.05) 0%, transparent 55%)",
             ].join(","),
           }}
         />
@@ -39,7 +39,7 @@ const HeroSection = () => {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, hsl(237 45% 10% / 0.5) 0%, transparent 25%, transparent 72%, hsl(237 45% 10% / 0.7) 100%)",
+              "linear-gradient(180deg, hsl(210 12% 4% / 0.55) 0%, transparent 25%, transparent 72%, hsl(210 12% 3% / 0.75) 100%)",
           }}
         />
         <div
@@ -122,7 +122,7 @@ const HeroSection = () => {
                 to="/contact"
                 className="group relative inline-flex items-center gap-2.5 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:brightness-110 hover:scale-[1.02] w-full sm:w-auto justify-center sm:justify-start"
                 style={{
-                  boxShadow: "0 4px 20px -4px hsl(183 100% 27% / 0.45)",
+                  boxShadow: "0 4px 20px -4px hsl(79 100% 53% / 0.45)",
                 }}
               >
                 <span>Start a Strategy Call</span>
@@ -133,7 +133,7 @@ const HeroSection = () => {
               </Link>
               <Link
                 to="/solutions"
-                className="group inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors duration-250 hover:text-foreground"
+                className="group inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-colors duration-250 hover:text-foreground"
               >
                 See platform demo
                 <ArrowRight
@@ -165,12 +165,12 @@ const HeroSection = () => {
                   {i > 0 && <div className="w-px h-8 bg-border/40 mx-4 sm:mx-5" />}
                   <div className="flex flex-col">
                     <span
-                      className="text-sm font-bold tracking-tight text-foreground"
+                      className="text-sm font-bold tracking-tight text-yellow tabular-nums"
                       style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
                       {stat.value}
                     </span>
-                    <span className="text-[11px] text-muted-foreground tracking-wide uppercase">
+                    <span className="text-[11px] text-cyan/80 tracking-[0.18em] uppercase font-medium">
                       {stat.label}
                     </span>
                   </div>

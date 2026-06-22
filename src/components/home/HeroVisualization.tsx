@@ -183,7 +183,7 @@ const HeroVisualization = () => {
                   filter="url(#line-glow)"
                 />
                 <path id={`mp-${n.id}`} d={`M${n.x},${n.y} L${CENTER.x},${CENTER.y}`} />
-                <circle r="0.5" fill="hsl(183,100%,50%)">
+                <circle r="0.5" fill="hsl(var(--cyan))">
                   <animateMotion dur={`${3.5 + i * 0.4}s`} repeatCount="indefinite" begin={`${i * 0.6}s`}>
                     <mpath href={`#mp-${n.id}`} />
                   </animateMotion>
@@ -215,8 +215,8 @@ const HeroVisualization = () => {
               }`}
             style={{
               boxShadow: phase === 'step1' || phase === 'step2'
-                ? '0 0 30px -4px hsl(183,100%,27%,0.55)'
-                : '0 0 12px -4px hsl(183,100%,27%,0.15)',
+                ? '0 0 30px -4px hsl(79 100% 53% / 0.55)'
+                : '0 0 12px -4px hsl(79 100% 53% / 0.15)',
             }}
             animate={phase === 'step1' ? { scale: [1, 1.08, 1] } : { scale: 1 }}
             transition={{ duration: 0.6, repeat: phase === 'step1' ? 1 : 0 }}
@@ -259,8 +259,8 @@ const HeroVisualization = () => {
             key={`particle-${wfIdx}-${phase}`}
             className="absolute w-2.5 h-2.5 md:w-3 md:h-3 rounded-full pointer-events-none z-20"
             style={{
-              background: 'hsl(var(--accent))',
-              boxShadow: '0 0 12px 3px hsl(47,97%,54%,0.5)',
+              background: 'hsl(var(--magenta))',
+              boxShadow: '0 0 14px 3px hsl(290 100% 50% / 0.55)',
               transform: 'translate(-50%, -50%)',
             }}
             initial={{
