@@ -53,6 +53,12 @@ export default {
         "glow-accent": "hsl(var(--glow-accent))",
         "dark-teal": "hsl(var(--dark-teal))",
         golden: "hsl(var(--golden))",
+        cyan: "hsl(var(--cyan))",
+        purple: "hsl(var(--purple))",
+        magenta: "hsl(var(--magenta))",
+        orange: "hsl(var(--orange))",
+        yellow: "hsl(var(--yellow))",
+        "premium-text": "hsl(var(--premium-text))",
         "text-primary": "hsl(var(--text-primary))",
         "text-secondary": "hsl(var(--text-secondary))",
         "text-tertiary": "hsl(var(--text-tertiary))",
@@ -71,6 +77,10 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        display: ["Orbitron", "Space Grotesk", "system-ui", "sans-serif"],
+        sans: ["Space Grotesk", "system-ui", "sans-serif"],
       },
       fontSize: {
         "display": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.035em" }],
