@@ -28,7 +28,7 @@ const TaskCounter = () => {
         <span className={`font-medium text-muted-foreground ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}>
           Tasks completed today:
         </span>
-        <span className={`font-bold text-foreground tabular-nums ${isMobile ? 'text-[10px]' : 'text-xs'}`}
+        <span className={`font-bold text-yellow tabular-nums ${isMobile ? 'text-[10px]' : 'text-xs'}`}
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
           {count.toLocaleString()}

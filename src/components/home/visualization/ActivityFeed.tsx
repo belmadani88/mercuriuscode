@@ -48,7 +48,7 @@ const ActivityFeed = ({ workflow, visibleSteps, phase }: Props) => {
                 transition={{ duration: 0.3 }}
                 className="flex items-start gap-2"
               >
-                <span className={`font-mono text-muted-foreground shrink-0 ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}>
+                <span className={`font-mono text-cyan/80 shrink-0 ${isMobile ? 'text-[7px]' : 'text-[9px]'}`}>
                   {step.time}
                 </span>
                 <span className={`${isMobile ? 'text-[8px]' : 'text-[10px]'} ${
