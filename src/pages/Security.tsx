@@ -45,7 +45,7 @@ const Security = () => {
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">Security</span>
+            <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Security</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
               Security you can trust.
             </h1>

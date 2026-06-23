@@ -20,7 +20,7 @@ const About = () => {
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">About HeurOps</span>
+            <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">About HeurOps</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
               We help businesses operate at their full potential.
             </h1>
@@ -66,7 +66,7 @@ const About = () => {
                 <span className="text-2xl font-bold text-primary">OB</span>
               </div>
               <div>
-                <span className="text-caption font-medium text-primary uppercase tracking-wider mb-2 block">Founder</span>
+                <span className="text-caption font-medium text-magenta uppercase tracking-wider mb-2 block">Founder</span>
                 <h2 className="text-heading font-bold text-foreground mb-2">Oussama Bel Madani</h2>
                 <p className="text-body text-text-secondary mb-4">
                   Oussama founded HeurOps with a clear conviction: most businesses are not short on talent, they are short on leverage. The repetitive work that consumes teams today can be handled by intelligent systems, freeing people to focus on what actually drives growth.
