@@ -42,7 +42,7 @@ const ExpectedOutcomesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
+          <span className="text-caption font-medium text-magenta uppercase tracking-wider mb-4 block">
             Expected Outcomes
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
@@ -62,10 +62,10 @@ const ExpectedOutcomesSection = () => {
               transition={{ duration: 0.5, delay: 0.1 * (i + 1) }}
               className="surface-card p-8 text-center group hover:border-glow transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <outcome.icon className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 rounded-xl bg-magenta/10 ring-1 ring-magenta/20 flex items-center justify-center mx-auto mb-4">
+                <outcome.icon className="w-5 h-5 text-magenta" />
               </div>
-              <div className="text-display-sm font-bold text-accent mb-1">{outcome.metric}</div>
+              <div className="text-display-sm font-bold text-magenta mb-1">{outcome.metric}</div>
               <div className="text-body-sm font-semibold text-foreground mb-2">{outcome.label}</div>
               <p className="text-caption text-text-secondary">{outcome.detail}</p>
             </motion.div>

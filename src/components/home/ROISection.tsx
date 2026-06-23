@@ -23,7 +23,7 @@ const ROISection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
+          <span className="text-caption font-medium text-yellow uppercase tracking-wider mb-4 block">
             ROI
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
@@ -44,7 +44,7 @@ const ROISection = () => {
           <div className="grid grid-cols-3 border-b border-border">
             <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary">Metric</div>
             <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary text-center">Traditional Hire</div>
-            <div className="p-5 md:p-6 text-body-sm font-medium text-primary text-center">Digital Worker</div>
+            <div className="p-5 md:p-6 text-body-sm font-medium text-yellow text-center">Digital Worker</div>
           </div>
           {comparisons.map((row, i) => (
             <div
@@ -74,7 +74,7 @@ const ROISection = () => {
                   <div className="text-body-sm text-text-secondary">{row.human}</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-caption text-primary uppercase tracking-wider mb-1">Digital Worker</div>
+                  <div className="text-caption text-yellow uppercase tracking-wider mb-1">Digital Worker</div>
                   <div className="text-body-sm text-accent font-medium">{row.ai}</div>
                 </div>
               </div>

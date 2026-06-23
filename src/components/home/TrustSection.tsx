@@ -38,7 +38,7 @@ const TrustSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
+          <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">
             Trust & Security
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
@@ -58,8 +58,8 @@ const TrustSection = () => {
               transition={{ duration: 0.5, delay: 0.1 * (i + 1) }}
               className="surface-card p-6 text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <item.icon className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 rounded-xl bg-cyan/10 ring-1 ring-cyan/20 flex items-center justify-center mx-auto mb-4">
+                <item.icon className="w-5 h-5 text-cyan" />
               </div>
               <h3 className="text-body font-semibold text-foreground mb-2">{item.title}</h3>
               <p className="text-body-sm text-text-secondary">{item.description}</p>

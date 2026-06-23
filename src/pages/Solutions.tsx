@@ -52,7 +52,7 @@ const Solutions = () => {
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">Solutions</span>
+            <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Solutions</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
               Digital workers designed for your specific workflows.
             </h1>
@@ -78,7 +78,7 @@ const Solutions = () => {
               <div className="grid md:grid-cols-2 gap-10">
                 <div>
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                    <sol.icon className="w-5 h-5 text-primary" />
+                    <sol.icon className="w-5 h-5 text-cyan" />
                   </div>
                   <h2 className="text-heading font-bold text-foreground mb-4">{sol.title}</h2>
                   <div className="mb-6">
