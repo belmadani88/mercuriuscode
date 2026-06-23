@@ -42,7 +42,7 @@ const SolutionsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
+          <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">
             Solutions
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
@@ -63,8 +63,8 @@ const SolutionsSection = () => {
               className="surface-card p-8 md:p-10 group hover:border-glow transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <solution.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center ring-1 ring-cyan/20">
+                  <solution.icon className="w-5 h-5 text-cyan" />
                 </div>
                 <span className="text-caption font-medium text-accent">{solution.metrics}</span>
               </div>

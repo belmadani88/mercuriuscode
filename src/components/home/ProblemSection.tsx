@@ -37,7 +37,7 @@ const ProblemSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mb-16"
         >
-          <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
+          <span className="text-caption font-medium text-orange uppercase tracking-wider mb-4 block">
             The Problem
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
@@ -57,8 +57,8 @@ const ProblemSection = () => {
               transition={{ duration: 0.5, delay: 0.1 * (i + 1) }}
               className="surface-card p-8 group hover:border-glow transition-all duration-300"
             >
-              <problem.icon className="w-5 h-5 text-primary mb-6" />
-              <div className="text-display-sm font-bold text-foreground mb-2">{problem.stat}</div>
+              <problem.icon className="w-5 h-5 text-orange mb-6" />
+              <div className="text-display-sm font-bold text-orange mb-2">{problem.stat}</div>
               <div className="text-body-sm font-medium text-foreground mb-3">{problem.label}</div>
               <p className="text-body-sm text-text-secondary">{problem.description}</p>
             </motion.div>

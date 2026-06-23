@@ -17,14 +17,14 @@ const CaseStudySection = () => {
           className="mb-16 flex items-end justify-between"
         >
           <div>
-            <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
+            <span className="text-caption font-medium text-purple uppercase tracking-wider mb-4 block">
               Use Cases
             </span>
             <h2 className="text-heading md:text-display-sm font-bold text-foreground">
               What digital workers can do for you.
             </h2>
           </div>
-          <Link to="/use-cases" className="hidden md:flex items-center gap-1 text-body-sm font-medium text-primary hover:text-primary/80 transition-colors">
+          <Link to="/use-cases" className="hidden md:flex items-center gap-1 text-body-sm font-medium text-purple hover:text-purple/80 transition-colors">
             View all use cases <ArrowUpRight size={14} />
           </Link>
         </motion.div>

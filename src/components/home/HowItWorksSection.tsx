@@ -37,7 +37,7 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-caption font-medium text-primary uppercase tracking-wider mb-4 block">
+          <span className="text-caption font-medium text-purple uppercase tracking-wider mb-4 block">
             Process
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
@@ -58,7 +58,7 @@ const HowItWorksSection = () => {
               className="relative"
             >
               <div className="surface-card p-8 h-full">
-                <span className="text-display-sm font-bold text-primary/20 mb-4 block">{step.number}</span>
+                <span className="text-display-sm font-bold text-purple/30 mb-4 block">{step.number}</span>
                 <h3 className="text-heading-sm font-semibold text-foreground mb-3">{step.title}</h3>
                 <p className="text-body-sm text-text-secondary">{step.description}</p>
               </div>
