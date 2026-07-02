@@ -197,4 +197,35 @@
   .hero-gradient {
     background: radial-gradient(ellipse 80% 60% at 50% -20%, hsl(79 100% 53% / 0.12), transparent);
   }
+
+  /* ────────────────────────────────────────────────────────────
+     ACCENT GOVERNANCE — Semantic role utilities.
+     Components MUST prefer these over raw color names so every
+     slot on every page uses the same accent for the same purpose.
+     ──────────────────────────────────────────────────────────── */
+
+  /* CYAN — Trust, clarity, section eyebrows, links, timestamps */
+  .accent-trust      { color: hsl(var(--cyan)); }
+  .accent-eyebrow    { color: hsl(var(--cyan)); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; font-size: 0.75rem; }
+  .accent-link       { color: hsl(var(--cyan)); }
+  .accent-meta       { color: hsl(var(--cyan) / 0.85); }
+
+  /* YELLOW — Numerics: money, KPIs, %, pricing, stats */
+  .accent-numeric    { color: hsl(var(--yellow)); font-variant-numeric: tabular-nums; }
+  .accent-price      { color: hsl(var(--yellow)); font-variant-numeric: tabular-nums; }
+
+  /* MAGENTA — Outcomes, results, "new", premium hover glints */
+  .accent-result     { color: hsl(var(--magenta)); }
+  .accent-badge-new  { color: hsl(var(--magenta)); }
+
+  /* PURPLE — Process, steps, timeline markers, insights */
+  .accent-process    { color: hsl(var(--purple)); }
+  .accent-step       { color: hsl(var(--purple)); }
+
+  /* ORANGE — Pain points, warnings, industries/categories */
+  .accent-pain       { color: hsl(var(--orange)); }
+  .accent-category   { color: hsl(var(--orange)); }
+
+  /* LIME (primary) — CTAs & success only. Never decorate with it. */
+  .accent-success    { color: hsl(var(--primary)); }
 }
