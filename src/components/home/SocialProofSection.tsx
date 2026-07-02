@@ -30,7 +30,7 @@ const SocialProofSection = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.3, delay: i * 0.04 }}
                 className="text-body-sm font-medium text-text-secondary/70 hover:text-foreground transition-colors"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                
               >
                 {name}
               </motion.span>
