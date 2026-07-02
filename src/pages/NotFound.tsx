@@ -9,7 +9,7 @@ const NotFound = () => {
       <Navigation />
       <div className="flex-1 flex items-center justify-center">
         <div className="text-center px-6">
-          <span className="text-display font-bold text-primary/20 block mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>404</span>
+          <span className="text-display font-bold text-primary/20 block mb-4" >404</span>
           <h1 className="text-heading font-bold text-foreground mb-4">Page not found</h1>
           <p className="text-body text-text-secondary mb-8 max-w-md mx-auto">
             The page you are looking for does not exist or has been moved.

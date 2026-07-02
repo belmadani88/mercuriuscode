@@ -79,8 +79,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ["Orbitron", "Space Grotesk", "system-ui", "sans-serif"],
-        sans: ["Space Grotesk", "system-ui", "sans-serif"],
+        display: ["Archivo", "IBM Plex Sans", "system-ui", "sans-serif"],
+        sans: ["IBM Plex Sans", "system-ui", "sans-serif"],
+        mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
       },
       fontSize: {
         "display": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.035em" }],

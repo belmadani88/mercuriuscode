@@ -82,7 +82,7 @@ const HeroSection = () => {
                 fontSize: "clamp(2rem, 4vw + 0.5rem, 3.8rem)",
                 lineHeight: 1.06,
                 letterSpacing: "-0.04em",
-                fontFamily: "'Space Grotesk', sans-serif",
+                
               }}
             >
               Deploy digital workers
@@ -166,7 +166,7 @@ const HeroSection = () => {
                   <div className="flex flex-col">
                     <span
                       className="text-sm font-bold tracking-tight text-yellow tabular-nums"
-                      style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                      
                     >
                       {stat.value}
                     </span>
