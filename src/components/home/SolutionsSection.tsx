@@ -5,27 +5,27 @@ import { Zap, HeadphonesIcon, Settings, Search } from "lucide-react";
 const solutions = [
   {
     icon: Zap,
-    title: "Sales",
-    description: "Qualifies leads, personalizes outreach, follows up with prospects, and books meetings around the clock. Your pipeline stays full without adding headcount.",
-    metrics: "3x pipeline growth",
+    title: "High-Converting Websites",
+    description: "Custom-built sites engineered around your buyer's decision journey. Every section, every headline, every CTA is designed to move visitors closer to action.",
+    metrics: "2–5x conversion lift",
   },
   {
     icon: HeadphonesIcon,
-    title: "Customer Support",
-    description: "Resolves common inquiries instantly across every channel. Complex issues are escalated with full context, so your team picks up right where it matters.",
-    metrics: "85% auto-resolution",
+    title: "Landing Pages & Funnels",
+    description: "Purpose-built pages for each traffic source, offer, and audience. Turn cold clicks into qualified leads and paid ads into predictable pipeline.",
+    metrics: "Up to 4x ROAS",
   },
   {
     icon: Settings,
-    title: "Operations",
-    description: "Syncs data across systems, generates reports, and keeps workflows on track. No more manual handoffs or spreadsheet errors slowing your team down.",
-    metrics: "60% less admin work",
+    title: "SEO & Growth Systems",
+    description: "Technical foundations, content architecture, and on-page signals engineered to compound rankings and organic revenue quarter after quarter.",
+    metrics: "Organic pipeline that compounds",
   },
   {
     icon: Search,
-    title: "Research",
-    description: "Continuously scans your market, tracks competitors, and surfaces the insights that matter. Decisions get faster when the data comes to you.",
-    metrics: "10x faster insights",
+    title: "CRO & Optimization",
+    description: "Ongoing experimentation, heatmaps, session analysis, and A/B testing to keep lifting your conversion rate long after launch. Growth as a discipline, not a project.",
+    metrics: "Continuous performance gains",
   },
 ];
 
@@ -46,10 +46,10 @@ const SolutionsSection = () => {
             Solutions
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            One platform. Every department covered.
+            One partner. Every layer of your conversion stack.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Each digital worker is built specifically for your workflows. They integrate with the tools you already use and start delivering results within weeks, not quarters.
+            From the first click to the closed deal, we design and build the entire path. Every page, every offer, every experiment is engineered to move a measurable business number.
           </p>
         </motion.div>
 

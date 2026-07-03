@@ -40,9 +40,9 @@ const Navigation = () => {
         <div className="container-wide flex items-center justify-between h-16 md:h-18">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">H</span>
+              <span className="text-primary-foreground font-bold text-sm">W</span>
             </div>
-            <span className="font-semibold text-foreground text-lg tracking-tight">HeurOps</span>
+            <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -72,7 +72,7 @@ const Navigation = () => {
               to="/contact"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-body-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors glow-sm"
             >
-              Book Strategy Call
+              Book Growth Call
             </Link>
           </div>
 
@@ -107,7 +107,7 @@ const Navigation = () => {
                 to="/contact"
                 className="mt-4 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-body font-medium text-primary-foreground"
               >
-                Book Strategy Call
+                Book Growth Call
               </Link>
             </div>
           </motion.div>

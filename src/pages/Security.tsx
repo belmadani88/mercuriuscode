@@ -40,7 +40,7 @@ const securityPractices = [
 const Security = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Security" description="Enterprise-grade security practices at HeurOps. SOC 2 compliant, AES-256 encryption, GDPR ready." path="/security" />
+      <PageSEO title="Security" description="Security and reliability practices at WebThangs. Modern, hardened, encrypted infrastructure for the websites we build and operate." path="/security" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -50,7 +50,7 @@ const Security = () => {
               Security you can trust.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Your data and operations are critical. We've built our entire platform with security at its core, not as an afterthought.
+              Your website is a core business asset. We build and operate every site with security, privacy, and reliability designed in from day one.
             </p>
           </motion.div>
         </div>
@@ -71,10 +71,10 @@ const Security = () => {
               <div>
                 <h2 className="text-heading font-bold text-foreground mb-3">Our Security Commitment</h2>
                 <p className="text-body text-text-secondary mb-4">
-                  At HeurOps, we understand that deploying AI agents into your business requires absolute trust. Your data never leaves your environment unless explicitly configured. Our agents operate within your security perimeter, respecting your existing access controls and compliance requirements.
+                  At WebThangs, we understand that your website often handles customer data, payments, and brand-critical content. We design and build every site with strict security practices, respecting your existing infrastructure, compliance requirements, and access controls.
                 </p>
                 <p className="text-body text-text-secondary">
-                  We maintain the highest industry standards for data protection, regularly undergo independent security audits, and are committed to transparency in every aspect of our security practices.
+                  We maintain high standards for data protection, follow modern web security best practices, and stay transparent about how we handle every layer of your site and its data.
                 </p>
               </div>
             </div>
@@ -111,19 +111,19 @@ const Security = () => {
                 <div className="surface-card p-8">
                   <h3 className="text-body font-semibold text-foreground mb-3">Data Isolation</h3>
                   <p className="text-body-sm text-text-secondary">
-                    Each client's data is logically isolated. AI agents are deployed in dedicated environments with strict tenant separation. No data is shared between clients, and cross-tenant access is architecturally impossible.
+                    Each client's website and data live in dedicated environments with strict separation. No data is shared between clients, and cross-project access is architecturally impossible.
                   </p>
                 </div>
                 <div className="surface-card p-8">
                   <h3 className="text-body font-semibold text-foreground mb-3">Data Minimization</h3>
                   <p className="text-body-sm text-text-secondary">
-                    We collect and process only the minimum data necessary for our agents to operate effectively. We don't retain data beyond its useful life, and we provide clear data deletion mechanisms upon request.
+                    We collect and process only the minimum data necessary for the websites we build to work correctly. We do not retain data beyond its useful life, and we provide clear data deletion mechanisms upon request.
                   </p>
                 </div>
                 <div className="surface-card p-8">
                   <h3 className="text-body font-semibold text-foreground mb-3">Audit Logging</h3>
                   <p className="text-body-sm text-text-secondary">
-                    Every action taken by an AI agent is logged with full audit trails. Access logs, decision records, and data interactions are immutable and available for your review at any time.
+                    Administrative actions on the sites and infrastructure we manage are logged with full audit trails. Access logs and change records are available for your review at any time.
                   </p>
                 </div>
                 <div className="surface-card p-8">
@@ -143,7 +143,7 @@ const Security = () => {
                 </div>
                 <div>
                   <p className="text-body text-text-secondary mb-3">
-                    We welcome responsible disclosure of security vulnerabilities. If you discover a potential security issue, please report it to <span className="text-primary">security@heurops.com</span>. We commit to acknowledging reports within 24 hours and providing regular updates on remediation progress.
+                    We welcome responsible disclosure of security vulnerabilities. If you discover a potential security issue, please report it to <span className="text-primary">contact@webthangs.site</span>. We commit to acknowledging reports within 24 hours and providing regular updates on remediation progress.
                   </p>
                   <p className="text-body-sm text-text-tertiary">
                     We do not pursue legal action against security researchers who act in good faith and follow responsible disclosure practices.
@@ -158,7 +158,7 @@ const Security = () => {
                 We're happy to provide our full security documentation, SOC 2 report, or sign an NDA before any engagement.
               </p>
               <p className="text-body text-text-secondary">
-                Contact us at <span className="text-primary">security@heurops.com</span>
+                Contact us at <span className="text-primary">contact@webthangs.site</span>
               </p>
             </div>
           </motion.div>

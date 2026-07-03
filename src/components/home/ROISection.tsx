@@ -2,12 +2,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const comparisons = [
-  { metric: "Annual Cost", human: "$85,000+", ai: "$12,000 to $24,000" },
-  { metric: "Availability", human: "8 hrs/day, weekdays", ai: "24/7, 365 days a year" },
-  { metric: "Time to Productivity", human: "3 to 6 months", ai: "2 to 4 weeks" },
-  { metric: "Error Rate", human: "Variable", ai: "Under 2%, improving continuously" },
-  { metric: "Scalability", human: "Hire and retrain", ai: "Deploy instantly" },
-  { metric: "Onboarding Cost", human: "$5,000 to $15,000", ai: "Included in setup" },
+  { metric: "Primary Goal", human: "Look good", ai: "Generate revenue" },
+  { metric: "Conversion Rate", human: "1–2% (industry norm)", ai: "3–8% typical outcome" },
+  { metric: "Ad Efficiency", human: "High cost per lead", ai: "Dramatically lower CPL and CAC" },
+  { metric: "Time to Launch", human: "3 to 6 months", ai: "4 to 8 weeks" },
+  { metric: "Post-Launch Support", human: "Handed off, forgotten", ai: "Continuous CRO and optimization" },
+  { metric: "Measurement", human: "Vanity metrics", ai: "Revenue, pipeline, ROI" },
 ];
 
 const ROISection = () => {
@@ -27,10 +27,10 @@ const ROISection = () => {
             ROI
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            The economics are clear.
+            The difference is measurable.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            A side-by-side comparison of what it costs to staff a role traditionally versus deploying a digital worker for the same function.
+            A side-by-side comparison of a generic agency website versus a site engineered by WebThangs around conversion, revenue, and business outcomes.
           </p>
         </motion.div>
 
@@ -43,8 +43,8 @@ const ROISection = () => {
         >
           <div className="grid grid-cols-3 border-b border-border">
             <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary">Metric</div>
-            <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary text-center">Traditional Hire</div>
-            <div className="p-5 md:p-6 text-body-sm font-medium text-yellow text-center">Digital Worker</div>
+            <div className="p-5 md:p-6 text-body-sm font-medium text-text-secondary text-center">Generic Website</div>
+            <div className="p-5 md:p-6 text-body-sm font-medium text-yellow text-center">WebThangs Site</div>
           </div>
           {comparisons.map((row, i) => (
             <div
@@ -70,11 +70,11 @@ const ROISection = () => {
               <div className="text-body-sm font-semibold text-foreground mb-3">{row.metric}</div>
               <div className="flex justify-between items-start gap-4">
                 <div>
-                  <div className="text-caption text-text-tertiary uppercase tracking-wider mb-1">Traditional</div>
+                  <div className="text-caption text-text-tertiary uppercase tracking-wider mb-1">Generic</div>
                   <div className="text-body-sm text-text-secondary">{row.human}</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-caption text-yellow uppercase tracking-wider mb-1">Digital Worker</div>
+                  <div className="text-caption text-yellow uppercase tracking-wider mb-1">WebThangs</div>
                   <div className="text-body-sm text-accent font-medium">{row.ai}</div>
                 </div>
               </div>

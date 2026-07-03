@@ -8,50 +8,50 @@ import { ArrowRight } from "lucide-react";
 const steps = [
   {
     phase: "Phase 1",
-    title: "Discovery and Audit",
+    title: "Discovery & Strategy",
     duration: "Week 1 to 2",
     details: [
-      "Map all existing workflows and processes",
-      "Identify automation opportunities with projected ROI",
-      "Evaluate your current tech stack and integration points",
-      "Define success metrics and KPIs",
-      "Deliver a comprehensive AI Workforce Blueprint",
+      "Deep-dive on your business model, buyers, and offer",
+      "Audit the current site, funnels, and conversion data",
+      "Benchmark competitors and identify strategic gaps",
+      "Define the revenue metrics we design against",
+      "Deliver a complete Conversion Strategy Blueprint",
     ],
   },
   {
     phase: "Phase 2",
-    title: "Architecture and Design",
+    title: "Positioning & Design",
     duration: "Week 2 to 4",
     details: [
-      "Design custom digital worker architecture",
-      "Select optimal AI models for each function",
-      "Plan data flows and security protocols",
-      "Create integration blueprints for your systems",
-      "Define governance and escalation rules",
+      "Sharpen positioning, messaging, and offer clarity",
+      "Design every page around a specific buyer decision",
+      "Copywrite headlines, sections, and CTAs for conversion",
+      "Prototype flows and validate against buyer psychology",
+      "Approve a design system built to scale with your brand",
     ],
   },
   {
     phase: "Phase 3",
-    title: "Build and Deploy",
+    title: "Build & Launch",
     duration: "Week 4 to 8",
     details: [
-      "Develop and train custom digital workers",
-      "Integrate with your existing systems",
-      "Run comprehensive testing and quality assurance",
-      "Execute staged rollout with real-time monitoring",
-      "Provide team training and documentation",
+      "Engineer a fast, accessible, SEO-ready website",
+      "Integrate CRM, analytics, and marketing tools",
+      "Instrument events, funnels, and conversion tracking",
+      "QA across devices, browsers, and Core Web Vitals",
+      "Ship a production launch with zero downtime",
     ],
   },
   {
     phase: "Phase 4",
-    title: "Optimize and Scale",
+    title: "Optimize & Scale",
     duration: "Ongoing",
     details: [
-      "Continuous performance monitoring",
-      "Weekly optimization and accuracy improvements",
-      "Monthly strategy reviews with your team",
-      "Expansion to new workflows and departments",
-      "Quarterly ROI reporting and benchmarking",
+      "Continuous CRO experimentation and A/B testing",
+      "Session analysis, heatmaps, and buyer research",
+      "Monthly growth reviews with your team",
+      "New landing pages, funnels, and campaign builds",
+      "Quarterly performance and revenue reporting",
     ],
   },
 ];
@@ -59,17 +59,17 @@ const steps = [
 const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="How It Works" description="From audit to deployment in 4 to 8 weeks. Our four-phase methodology ensures precision, security, and measurable results." path="/how-it-works" />
+      <PageSEO title="How It Works" description="From strategy to launch in 4 to 8 weeks. Our four-phase methodology delivers websites engineered for measurable revenue growth." path="/how-it-works" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-purple uppercase tracking-wider mb-4 block">Our Process</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              A structured path from audit to results.
+              A structured path from strategy to revenue.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              From first conversation to measurable outcomes in weeks. Our four-phase methodology ensures precision, security, and accountability at every step.
+              From the first conversation to measurable revenue lifts in weeks. Our four-phase methodology brings strategy, design, engineering, and optimization under one accountable roof.
             </p>
           </motion.div>
         </div>
@@ -125,10 +125,10 @@ const HowItWorks = () => {
 
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
-          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free workflow audit.</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We will map your operations, identify the highest-value opportunities, and show you the projected ROI before you commit to anything.</p>
+          <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free growth call.</h2>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We will audit your current site, identify the highest-leverage conversion wins, and show you the revenue projection before you commit to anything.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book a Free Strategy Call <ArrowRight size={16} />
+            Book a Free Growth Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>

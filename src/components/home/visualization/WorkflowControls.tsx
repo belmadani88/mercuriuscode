@@ -34,10 +34,10 @@ const WorkflowControls = ({ onRun, isManual, currentWorkflow, phase }: Props) =>
         <Play size={isMobile ? 14 : 16} className="fill-current" />
         {isRunning && isManual
           ? `Running: ${currentWorkflow.title}`
-          : 'Run Example Workflow'}
+          : 'See a Conversion Flow'}
       </button>
       <p className={`${isMobile ? 'text-[10px]' : 'text-xs'} text-muted-foreground`}>
-        Click to see an AI workflow in action
+        Click to see how a page turns visitors into revenue
       </p>
     </div>
   );

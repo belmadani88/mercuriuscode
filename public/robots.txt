@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://heurops.com/sitemap.xml
+Sitemap: https://webthangs.site/sitemap.xml

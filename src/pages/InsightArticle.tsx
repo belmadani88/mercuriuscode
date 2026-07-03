@@ -157,7 +157,7 @@ const InsightArticle = () => {
               <h3 className="text-heading-sm font-semibold text-foreground mb-3">Ready to explore digital workers for your business?</h3>
               <p className="text-body-sm text-text-secondary mb-6">Let us show you where automation can create the most impact in your operations.</p>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-body-sm font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-                Book a Strategy Call
+                Book a Growth Call
               </Link>
             </div>
           </div>

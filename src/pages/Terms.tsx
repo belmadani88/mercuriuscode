@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Terms of Service" description="Terms of Service for HeurOps AI workforce services. Fees, intellectual property, confidentiality, and liability." path="/terms" />
+      <PageSEO title="Terms of Service" description="Terms of Service for WebThangs web design and growth services. Fees, intellectual property, confidentiality, and liability." path="/terms" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -29,7 +29,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">1. Acceptance of Terms</h2>
               <p className="text-body text-text-secondary mb-4">
-                By accessing or using the services provided by HeurOps ("we," "us," or "our"), including our website, AI agents, consulting services, and related tools (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms").
+                By accessing or using the services provided by WebThangs ("we," "us," or "our"), including our website, web design and development services, growth and consulting services, and related tools (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms").
               </p>
               <p className="text-body text-text-secondary">
                 If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind such entity. If you do not agree to these Terms, do not use our Services.
@@ -39,7 +39,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">2. Description of Services</h2>
               <p className="text-body text-text-secondary">
-                HeurOps provides custom AI agent design, development, deployment, and ongoing optimization services. Our Services include workflow auditing, AI workforce architecture, integration with third-party tools, performance monitoring, and strategic consulting. Specific deliverables, timelines, and scope are defined in individual service agreements or statements of work ("SOW").
+                WebThangs provides custom website design, development, launch, and ongoing conversion optimization services. Our Services include strategy and audit work, positioning and messaging, web design and engineering, integrations, analytics, SEO, and CRO programs. Specific deliverables, timelines, and scope are defined in individual service agreements or statements of work ("SOW").
               </p>
             </div>
 
@@ -72,7 +72,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">5. Intellectual Property</h2>
               <p className="text-body text-text-secondary mb-4">
-                <strong className="text-foreground">HeurOps IP:</strong> All proprietary tools, frameworks, methodologies, models, and software developed by HeurOps remain our exclusive property. You receive a non-exclusive, non-transferable license to use our deliverables for your internal business operations.
+                <strong className="text-foreground">WebThangs IP:</strong> All proprietary tools, frameworks, methodologies, models, and software developed by WebThangs remain our exclusive property. You receive a non-exclusive, non-transferable license to use our deliverables for your internal business operations.
               </p>
               <p className="text-body text-text-secondary">
                 <strong className="text-foreground">Your Data:</strong> You retain full ownership of your data. We use your data solely to provide and improve our Services, as outlined in our Privacy Policy. Custom configurations and workflows developed specifically for you are yours upon full payment.
@@ -102,7 +102,7 @@ const Terms = () => {
                 <li>Our total liability shall not exceed the fees paid by you in the 12 months preceding the claim</li>
                 <li>We are not liable for indirect, incidental, special, consequential, or punitive damages</li>
                 <li>We are not liable for lost profits, data loss, or business interruption arising from the use of our Services</li>
-                <li>AI agents are tools that augment human capabilities. Final business decisions remain your responsibility</li>
+                <li>Websites, growth projections, and recommendations are tools that support your business. Final business decisions remain your responsibility</li>
               </ul>
             </div>
 
@@ -122,7 +122,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">10. Indemnification</h2>
               <p className="text-body text-text-secondary">
-                You agree to indemnify and hold harmless HeurOps, its officers, employees, and agents from any claims, damages, or expenses arising from your use of the Services, violation of these Terms, or infringement of any third-party rights.
+                You agree to indemnify and hold harmless WebThangs, its officers, employees, and agents from any claims, damages, or expenses arising from your use of the Services, violation of these Terms, or infringement of any third-party rights.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ const Terms = () => {
               <h2 className="text-heading-sm font-bold text-foreground mb-3">Questions about these terms?</h2>
               <p className="text-body text-text-secondary">
                 Contact our legal team at{" "}
-                <span className="text-primary">legal@heurops.com</span> or write to HeurOps.
+                <span className="text-primary">contact@webthangs.site</span> or write to WebThangs.
               </p>
             </div>
 

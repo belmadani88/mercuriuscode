@@ -2,8 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const integrations = [
-  "Salesforce", "HubSpot", "Slack", "Notion", "Zendesk",
-  "Intercom", "SAP", "NetSuite", "Google Workspace", "Pipedrive",
+  "Shopify", "Webflow", "WordPress", "Framer", "Stripe",
+  "HubSpot", "Klaviyo", "Google Analytics", "Meta Ads", "Segment",
 ];
 
 const SocialProofSection = () => {
@@ -20,7 +20,7 @@ const SocialProofSection = () => {
           className="text-center"
         >
           <p className="text-caption font-medium text-text-tertiary uppercase tracking-wider mb-6">
-            Integrates with the tools your team already uses
+            Built to work with the platforms and tools you already run on
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             {integrations.map((name, i) => (

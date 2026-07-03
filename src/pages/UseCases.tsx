@@ -7,99 +7,99 @@ import { ArrowRight } from "lucide-react";
 
 const useCases = [
   {
-    area: "Sales Acceleration",
+    area: "Lead Generation Websites",
     industry: "B2B, SaaS, Professional Services",
-    problem: "Your sales team spends most of their time on manual prospecting, writing cold emails, and chasing unqualified leads instead of closing deals.",
-    solution: "A digital sales worker identifies high-intent prospects, sends personalized outreach sequences, handles follow-ups, and books qualified meetings directly on your team's calendar.",
+    problem: "Your website looks fine but generates almost no qualified leads. Sales relies on outbound because inbound never quite works.",
+    solution: "A site engineered around your ideal buyer: sharpened positioning, sharper offers, cleaner CTAs, and forms designed to capture serious intent without friction.",
     capabilities: [
-      "Lead qualification and scoring",
-      "Multi-channel outreach (email, LinkedIn)",
-      "Automated follow-up sequences",
-      "Calendar booking and CRM updates",
+      "Positioning, messaging, and offer strategy",
+      "Homepage and category-page conversion design",
+      "Lead capture forms and demo funnels",
+      "CRM integration and lead routing",
     ],
-    outcome: "Your closers spend 100% of their time with qualified buyers. Outbound never sleeps.",
+    outcome: "Your homepage becomes a consistent source of qualified pipeline instead of a digital brochure.",
   },
   {
-    area: "Customer Support",
+    area: "E-Commerce Storefronts",
     industry: "E-Commerce, SaaS, Marketplaces",
-    problem: "Support volume keeps growing. Hiring more agents is expensive, and response times are slipping. Customer satisfaction is declining.",
-    solution: "Digital support workers handle the majority of incoming tickets across email, chat, and social channels. They resolve common issues instantly and escalate complex ones with full context.",
+    problem: "Traffic is expensive and growing, but conversion rate is flat. Cart abandonment is high and average order value is stuck.",
+    solution: "Product pages, category flows, and checkout experiences engineered to reduce friction, raise trust, and lift both conversion rate and AOV.",
     capabilities: [
-      "L1 and L2 ticket resolution",
-      "Order tracking and status updates",
-      "Returns and refund processing",
-      "Smart escalation with context handoff",
+      "Product page and PDP optimization",
+      "Streamlined checkout and cart flows",
+      "Merchandising and upsell placement",
+      "Trust, reviews, and social-proof design",
     ],
-    outcome: "Instant responses, consistent quality, and a support operation that scales without headcount.",
+    outcome: "More revenue from the same traffic and dramatically better return on ad spend.",
   },
   {
-    area: "Operations and Back Office",
-    industry: "Logistics, Finance, Healthcare",
-    problem: "Manual data entry, compliance documentation, and cross-department coordination consume hours of skilled employee time every day.",
-    solution: "Digital operations workers automate repetitive workflows: data processing, document generation, scheduling, and compliance reporting across your systems.",
+    area: "Paid Traffic Landing Pages",
+    industry: "AI, SaaS, Local, Services",
+    problem: "You are spending real money on ads, but sending clicks to a generic homepage that was never designed to convert them.",
+    solution: "Dedicated landing pages per campaign, audience, and offer. Sharper hero sections, focused CTAs, and full tracking from click to close.",
     capabilities: [
-      "Dispatch and scheduling coordination",
-      "Compliance document generation",
-      "Data entry and validation",
-      "Cross-system reporting and sync",
+      "Campaign-specific landing page design",
+      "Offer, messaging, and CTA optimization",
+      "Conversion tracking and attribution",
+      "A/B testing programs",
     ],
-    outcome: "Fewer errors, faster turnaround, and your team reclaims hours for strategic work.",
+    outcome: "Every dollar of ad spend works harder. Lower CPL, higher ROAS, more predictable pipeline.",
   },
   {
-    area: "Marketing Operations",
+    area: "Brand & Positioning Sites",
     industry: "Agencies, D2C Brands, SaaS",
-    problem: "Campaign execution, content distribution, and performance reporting take too long. Your marketing team is stretched thin across too many channels.",
-    solution: "Digital marketing workers handle campaign scheduling, social media distribution, performance data collection, and report generation automatically.",
+    problem: "Your product is strong but your site does not communicate why. Buyers do not understand your value in the first ten seconds.",
+    solution: "Sharpened positioning, category-defining messaging, and a design language that signals premium, credible, and different from your competitors.",
     capabilities: [
-      "Campaign scheduling and publishing",
-      "Social media content distribution",
-      "Performance data aggregation",
-      "Automated reporting dashboards",
+      "Positioning and narrative strategy",
+      "Premium visual and brand system",
+      "Above-the-fold clarity in seconds",
+      "Competitive differentiation on-page",
     ],
-    outcome: "Your strategists focus on creative and growth while execution runs on autopilot.",
+    outcome: "A site that immediately signals authority and moves buyers from curious to committed.",
   },
   {
-    area: "Finance and Accounting",
+    area: "SEO & Content Systems",
     industry: "Mid-Market Companies, Startups",
-    problem: "Invoice processing, expense categorization, and reconciliation are manual, error-prone, and consume disproportionate team resources.",
-    solution: "Digital finance workers process invoices, categorize expenses, reconcile transactions, and flag anomalies before they become problems.",
+    problem: "Content ships without a strategy, rankings never quite hold, and organic traffic never turns into real pipeline.",
+    solution: "Technical foundations, content architecture, and on-page conversion design so search demand becomes compounding revenue, not vanity traffic.",
     capabilities: [
-      "Invoice processing and matching",
-      "Expense categorization",
-      "Bank reconciliation",
-      "Anomaly detection and alerts",
+      "Technical SEO foundations",
+      "Programmatic and pillar content design",
+      "On-page conversion optimization",
+      "Rank, traffic, and pipeline reporting",
     ],
-    outcome: "Accurate books, faster closes, and finance teams that focus on analysis instead of data entry.",
+    outcome: "A steady, compounding stream of organic pipeline that lowers your reliance on paid channels.",
   },
   {
-    area: "HR and Recruitment",
+    area: "CRO & Optimization Programs",
     industry: "Scaling Companies, Agencies",
-    problem: "Screening candidates, scheduling interviews, and managing onboarding paperwork take recruiters away from evaluating talent.",
-    solution: "Digital HR workers screen applications, schedule interviews, send follow-ups, and manage onboarding checklists so your team can focus on hiring the right people.",
+    problem: "You already have traffic. You just are not converting enough of it, and no one on your team owns the discipline of lifting that number.",
+    solution: "An ongoing optimization program: research, hypotheses, structured A/B tests, and continuous shipping to keep lifting conversion rate over time.",
     capabilities: [
-      "Resume screening and shortlisting",
-      "Interview scheduling",
-      "Candidate communication",
-      "Onboarding workflow automation",
+      "Heatmaps, session analysis, and buyer research",
+      "Prioritized experiment roadmap",
+      "Structured A/B and multivariate testing",
+      "Monthly experiment and revenue reports",
     ],
-    outcome: "Faster time-to-hire and a better candidate experience without adding headcount.",
+    outcome: "Compounding conversion gains that translate directly into revenue you did not have to buy more traffic to earn.",
   },
 ];
 
 const UseCases = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Use Cases" description="See how digital workers automate sales, support, operations, marketing, finance, and HR across industries." path="/use-cases" />
+      <PageSEO title="Use Cases" description="See how conversion-engineered websites, landing pages, SEO, and CRO drive revenue across industries." path="/use-cases" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-magenta uppercase tracking-wider mb-4 block">Use Cases</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Digital workers for every function.
+              Websites and growth systems for every kind of business.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              See how intelligent automation applies to your department, industry, and daily operations.
+              See how conversion-engineered web experiences apply to your industry, your buyers, and your growth model.
             </p>
           </motion.div>
         </div>
@@ -152,9 +152,9 @@ const UseCases = () => {
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Not sure where to start?</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Tell us about your operations. We will identify the highest-impact areas for digital workers in your business.</p>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Tell us about your business. We will identify the highest-leverage web and conversion opportunities and show you the projected impact.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book a Free Strategy Call <ArrowRight size={16} />
+            Book a Free Growth Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>

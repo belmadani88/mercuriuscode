@@ -68,7 +68,7 @@ const HeroSection = () => {
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm px-4 py-1.5 text-caption font-medium text-primary">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                Heuristic thinking. Operational excellence.
+                Conversion strategy. Revenue-first design.
               </span>
             </motion.div>
 
@@ -85,13 +85,13 @@ const HeroSection = () => {
                 
               }}
             >
-              Deploy digital workers
+              Websites engineered
               <br />
-              that run your
+              to turn attention
               <br />
-              operations{" "}
+              into{" "}
               <span className="text-gradient inline-flex items-baseline gap-1.5">
-                24/7
+                revenue
                 <span className="relative flex h-2 w-2 self-center">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
@@ -107,8 +107,8 @@ const HeroSection = () => {
               className="text-muted-foreground max-w-md mb-8 leading-relaxed"
               style={{ fontSize: "clamp(0.92rem, 0.7vw + 0.65rem, 1.05rem)" }}
             >
-              AI agents that automate support, operations, finance and sales
-              workflows across your existing tools.
+              We combine conversion psychology, buyer behavior, and modern web
+              execution to build sites that generate leads, customers, and growth.
             </motion.p>
 
             {/* CTAs */}
@@ -125,7 +125,7 @@ const HeroSection = () => {
                   boxShadow: "0 4px 20px -4px hsl(79 100% 53% / 0.45)",
                 }}
               >
-                <span>Start a Strategy Call</span>
+                <span>Book a Growth Call</span>
                 <ArrowRight
                   size={15}
                   className="transition-transform duration-300 group-hover:translate-x-0.5"
@@ -135,7 +135,7 @@ const HeroSection = () => {
                 to="/solutions"
                 className="group inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-colors duration-250 hover:text-foreground"
               >
-                See platform demo
+                See how we work
                 <ArrowRight
                   size={13}
                   className="opacity-40 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5"
@@ -151,9 +151,9 @@ const HeroSection = () => {
               className="flex items-center"
             >
               {[
-                { value: "24/7", label: "Execution" },
-                { value: "4–8 wks", label: "Deployment" },
-                { value: "200+", label: "Integrations" },
+                { value: "2–3x", label: "Avg. lift" },
+                { value: "4–8 wks", label: "To launch" },
+                { value: "100%", label: "Custom-built" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}

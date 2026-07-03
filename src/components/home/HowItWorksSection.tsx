@@ -4,23 +4,23 @@ import { useRef } from "react";
 const steps = [
   {
     number: "01",
-    title: "Audit Your Workflows",
-    description: "We map your operations, identify the highest-impact automation opportunities, and build a business case with projected ROI.",
+    title: "Audit & Strategy",
+    description: "We study your buyers, your offer, your competitors, and your current site. Then we map the exact conversion strategy that turns your traffic into revenue.",
   },
   {
     number: "02",
-    title: "Design the Solution",
-    description: "We architect digital workers tailored to your processes, tools, and data. No templates. Everything custom.",
+    title: "Design for Conversion",
+    description: "Every layout, headline, image, and CTA is built around buyer psychology. Not templates. Not trends. Just decisions engineered to move revenue.",
   },
   {
     number: "03",
-    title: "Deploy With Zero Disruption",
-    description: "Your digital workers go live alongside your team. No downtime, no retraining. They start producing value from day one.",
+    title: "Build & Launch",
+    description: "Fast, modern, technically flawless. Your new site ships in weeks, not months, with performance, SEO, and analytics wired in from day one.",
   },
   {
     number: "04",
-    title: "Optimize Continuously",
-    description: "We monitor performance weekly, refine accuracy, and expand coverage as your business evolves. Results compound over time.",
+    title: "Optimize & Scale",
+    description: "We measure every conversion, test every hypothesis, and keep lifting performance. Your site gets better every month, not worse.",
   },
 ];
 
@@ -41,10 +41,10 @@ const HowItWorksSection = () => {
             Process
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            From first call to measurable results in weeks.
+            From strategy to measurable revenue in weeks.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            A structured, four-phase process designed for speed, precision, and minimal disruption to your team.
+            A structured, four-phase engagement designed for speed, precision, and measurable growth from launch onward.
           </p>
         </motion.div>
 

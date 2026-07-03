@@ -8,25 +8,21 @@ interface PageSEOProps {
 }
 
 const PageSEO = ({ title, description, path, jsonLd }: PageSEOProps) => {
-  const fullTitle = `${title} | HeurOps`;
-  const url = path ? `https://heurops.com${path}` : undefined;
-  const ogImage = "https://heurops.com/og-image.png";
+  const fullTitle = `${title} | WebThangs`;
+  const url = path ? `https://webthangs.site${path}` : undefined;
+  const ogImage = "https://webthangs.site/og-image.png";
 
   const defaultJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "HeurOps",
-    url: "https://heurops.com",
-    logo: "https://heurops.com/favicon.ico",
-    description: "We design and deploy custom AI digital workers that operate inside your business 24/7.",
+    name: "WebThangs",
+    url: "https://webthangs.site",
+    logo: "https://webthangs.site/favicon.ico",
+    description: "WebThangs builds high-converting websites engineered to turn attention into revenue.",
     foundingDate: "2025",
-    founder: {
-      "@type": "Person",
-      name: "Oussama Bel Madani",
-    },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@heurops.com",
+      email: "contact@webthangs.site",
       contactType: "sales",
     },
     sameAs: [],
