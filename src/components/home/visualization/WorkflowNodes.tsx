@@ -28,7 +28,7 @@ const WorkflowNodes = ({ activeSource, activeTarget, phase, workflow, onNodeClic
           >
             <motion.button
               onClick={() => onNodeClick(n.id)}
-              aria-label={`${n.label} — click to run a workflow`}
+              aria-label={`${n.label} — click to preview this conversion flow`}
               className={`flex flex-col items-center gap-0.5 rounded-xl border backdrop-blur-sm transition-all duration-300 cursor-pointer
                 ${isMobile ? 'px-2 py-1.5' : 'px-3.5 py-2'}
                 ${isActive
@@ -78,7 +78,7 @@ const WorkflowNodes = ({ activeSource, activeTarget, phase, workflow, onNodeClic
                 >
                   <span className={`bg-card border border-border/50 rounded px-1.5 py-0.5 text-muted-foreground
                     ${isMobile ? 'text-[6px]' : 'text-[8px]'}`}>
-                    Click to run workflow
+                    Click to preview flow
                   </span>
                 </motion.div>
               )}

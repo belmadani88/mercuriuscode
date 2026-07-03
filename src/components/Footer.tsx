@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const footerLinks = {
   Solutions: [
-    { label: "AI Sales Agents", href: "/solutions#sales" },
-    { label: "AI Support Agents", href: "/solutions#support" },
-    { label: "AI Operations Agents", href: "/solutions#operations" },
-    { label: "AI Research Agents", href: "/solutions#research" },
+    { label: "High-Converting Websites", href: "/solutions#sales" },
+    { label: "Landing Pages & Funnels", href: "/solutions#support" },
+    { label: "SEO & Growth Systems", href: "/solutions#operations" },
+    { label: "CRO & Optimization", href: "/solutions#research" },
   ],
   Company: [
     { label: "About", href: "/about" },
@@ -29,12 +29,12 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">H</span>
+              <span className="text-primary-foreground font-bold text-sm">W</span>
               </div>
               <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
             </Link>
             <p className="text-text-secondary text-body-sm max-w-xs mb-4">
-              We design and deploy intelligent digital workers that operate inside your business around the clock.
+            We build high-converting websites engineered to turn attention into revenue.
             </p>
             <a
               href="mailto:contact@webthangs.site"

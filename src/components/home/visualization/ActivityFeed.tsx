@@ -24,11 +24,11 @@ const ActivityFeed = ({ workflow, visibleSteps, phase }: Props) => {
             <span className={`relative inline-flex rounded-full h-1.5 w-1.5 ${isEmpty ? 'bg-muted-foreground' : 'bg-green-400'}`} />
           </span>
           <span className={`font-semibold text-foreground ${isMobile ? 'text-[9px]' : 'text-[11px]'}`}>
-            Activity Log
+            Conversion Log
           </span>
         </div>
         <span className={`text-muted-foreground ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}>
-          {isEmpty ? 'Waiting for task...' : workflow.title}
+          {isEmpty ? 'Waiting for visitor...' : workflow.title}
         </span>
       </div>
 
@@ -36,7 +36,7 @@ const ActivityFeed = ({ workflow, visibleSteps, phase }: Props) => {
       <div className={`${isMobile ? 'px-2 py-1.5' : 'px-3 py-2'} space-y-1`}>
         {isEmpty ? (
           <div className={`flex items-center justify-center py-4 text-muted-foreground/50 ${isMobile ? 'text-[9px]' : 'text-[11px]'}`}>
-            Click "Run Example Workflow" to see activity
+            Click "See a Conversion Flow" to preview
           </div>
         ) : (
           <AnimatePresence mode="popLayout">

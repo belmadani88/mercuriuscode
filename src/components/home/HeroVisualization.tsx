@@ -10,11 +10,11 @@ import WorkflowControls from './visualization/WorkflowControls';
 export const CENTER = { x: 50, y: 44 };
 
 export const NODES = [
-  { id: 'crm',       label: 'CRM',       emoji: '👤', x: 50, y: 6 },
-  { id: 'support',   label: 'Support',   emoji: '🎧', x: 86, y: 28 },
+  { id: 'crm',       label: 'Traffic',   emoji: '👥', x: 50, y: 6 },
+  { id: 'support',   label: 'Landing',   emoji: '🎯', x: 86, y: 28 },
   { id: 'email',     label: 'Email',     emoji: '✉️', x: 76, y: 72 },
   { id: 'analytics', label: 'Analytics', emoji: '📊', x: 24, y: 72 },
-  { id: 'payments',  label: 'Payments',  emoji: '💳', x: 14, y: 28 },
+  { id: 'payments',  label: 'Checkout',  emoji: '💳', x: 14, y: 28 },
 ] as const;
 
 export type NodeId = typeof NODES[number]['id'];
@@ -38,48 +38,48 @@ export const WORKFLOWS: Workflow[] = [
     id: 'lead',
     source: 'crm',
     target: 'email',
-    title: 'Qualify Inbound Lead',
+    title: 'Convert Landing Visitor',
     steps: [
-      { time: '09:14:00', text: 'New lead added to CRM', status: 'done' },
-      { time: '09:14:02', text: 'AI Worker analyzing lead...', status: 'processing' },
-      { time: '09:14:04', text: 'Lead qualified — scheduling demo', status: 'done' },
-      { time: '09:14:06', text: 'Email sent to lead ✅', status: 'done' },
+      { time: '09:14:00', text: 'Visitor lands on hero section', status: 'done' },
+      { time: '09:14:02', text: 'Personalizing offer to intent...', status: 'processing' },
+      { time: '09:14:04', text: 'CTA optimized, form pre-filled', status: 'done' },
+      { time: '09:14:06', text: 'Lead captured and routed ✅', status: 'done' },
     ],
   },
   {
     id: 'ticket',
     source: 'support',
     target: 'analytics',
-    title: 'Resolve Support Ticket',
+    title: 'Answer Buyer Objection',
     steps: [
-      { time: '09:15:10', text: 'Support ticket received (urgent)', status: 'done' },
-      { time: '09:15:12', text: 'AI Worker retrieving FAQ...', status: 'processing' },
-      { time: '09:15:15', text: 'Answer generated — ticket resolved', status: 'done' },
-      { time: '09:15:17', text: 'Ticket logged to Analytics ✅', status: 'done' },
+      { time: '09:15:10', text: 'High-intent visitor hesitates', status: 'done' },
+      { time: '09:15:12', text: 'Surfacing trust proof...', status: 'processing' },
+      { time: '09:15:15', text: 'Objection resolved on-page', status: 'done' },
+      { time: '09:15:17', text: 'Conversion event fired ✅', status: 'done' },
     ],
   },
   {
     id: 'invoice',
     source: 'payments',
     target: 'crm',
-    title: 'Process Invoice',
+    title: 'Reduce Checkout Friction',
     steps: [
-      { time: '09:16:00', text: 'Invoice generated from order', status: 'done' },
-      { time: '09:16:02', text: 'AI Worker processing payment...', status: 'processing' },
-      { time: '09:16:05', text: 'Payment confirmed — updating CRM', status: 'done' },
-      { time: '09:16:07', text: 'Record synced to CRM ✅', status: 'done' },
+      { time: '09:16:00', text: 'Cart abandonment detected', status: 'done' },
+      { time: '09:16:02', text: 'Trimming checkout steps...', status: 'processing' },
+      { time: '09:16:05', text: 'Payment completed, order placed', status: 'done' },
+      { time: '09:16:07', text: 'Revenue attributed to page ✅', status: 'done' },
     ],
   },
   {
     id: 'report',
     source: 'analytics',
     target: 'email',
-    title: 'Share Analytics Report',
+    title: 'Share Growth Report',
     steps: [
-      { time: '09:17:00', text: 'Weekly report generated', status: 'done' },
-      { time: '09:17:02', text: 'AI Worker summarizing insights...', status: 'processing' },
-      { time: '09:17:05', text: 'Newsletter drafted with key metrics', status: 'done' },
-      { time: '09:17:07', text: 'Report emailed to stakeholders ✅', status: 'done' },
+      { time: '09:17:00', text: 'Weekly conversion data compiled', status: 'done' },
+      { time: '09:17:02', text: 'Extracting revenue insights...', status: 'processing' },
+      { time: '09:17:05', text: 'Key wins and A/B tests summarized', status: 'done' },
+      { time: '09:17:07', text: 'Report delivered to stakeholders ✅', status: 'done' },
     ],
   },
 ];
@@ -224,7 +224,7 @@ const HeroVisualization = () => {
             <div className="absolute -inset-2 rounded-2xl border border-primary/10 animate-pulse pointer-events-none" />
             <span className={`${isMobile ? 'text-base' : 'text-xl'}`}>🤖</span>
             <span className={`font-semibold text-foreground whitespace-nowrap ${isMobile ? 'text-[9px]' : 'text-xs'}`}>
-              AI Worker
+              Conversion Engine
             </span>
           </motion.div>
 

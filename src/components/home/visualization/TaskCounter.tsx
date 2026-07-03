@@ -26,7 +26,7 @@ const TaskCounter = () => {
           <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-400" />
         </span>
         <span className={`font-medium text-muted-foreground ${isMobile ? 'text-[8px]' : 'text-[10px]'}`}>
-          Tasks completed today:
+          Conversions generated today:
         </span>
         <span className={`font-bold text-yellow tabular-nums ${isMobile ? 'text-[10px]' : 'text-xs'}`}
           
