@@ -8,44 +8,44 @@ import { Link } from "react-router-dom";
 const articles = [
   {
     slug: "why-your-next-hire-should-be-a-digital-worker",
-    category: "AI Strategy",
-    title: "Why Your Next Hire Should Be a Digital Worker",
-    excerpt: "The economics of deploying a digital workforce have shifted fundamentally. Here is the analysis that makes the case.",
+    category: "Conversion Strategy",
+    title: "Why Your Next Growth Hire Should Be Your Website",
+    excerpt: "Before hiring another salesperson or scaling ad spend, fix the asset every visitor already touches. Here is the case for making your website your best-performing rep.",
     readTime: "8 min read",
   },
   {
     slug: "the-true-cost-of-manual-operations",
     category: "ROI Analysis",
-    title: "The True Cost of Manual Operations in 2026",
-    excerpt: "We audited 50 mid-market companies. The cost of operational inefficiency is higher than most leadership teams realize.",
+    title: "The True Cost of a Low-Converting Website",
+    excerpt: "We analyzed the funnels of 50 growth-stage businesses. The revenue leaking through weak websites is bigger than most leadership teams realize.",
     readTime: "12 min read",
   },
   {
     slug: "how-we-architect-multi-agent-systems",
-    category: "Technical",
-    title: "How We Architect Multi-Agent Systems",
-    excerpt: "A look inside our methodology for designing digital workers that operate together as a coordinated workforce.",
+    category: "Design Systems",
+    title: "How We Architect Websites That Actually Convert",
+    excerpt: "A look inside the methodology we use to design sites where every section, offer, and CTA is engineered against a specific buyer decision.",
     readTime: "15 min read",
   },
   {
     slug: "beyond-chatbots-what-real-automation-looks-like",
-    category: "Workflow Automation",
-    title: "Beyond Chatbots: What Real Automation Looks Like",
-    excerpt: "The market is crowded with chatbot wrappers. Here is how to tell the difference between a tool and a genuine digital worker.",
+    category: "Growth",
+    title: "Beyond Pretty Pages: What a Real Conversion Site Looks Like",
+    excerpt: "The market is crowded with template shops and portfolio agencies. Here is how to tell the difference between a decorated brochure and a revenue-engineered website.",
     readTime: "6 min read",
   },
   {
     slug: "digital-workers-vs-traditional-hiring",
     category: "Business Strategy",
-    title: "Digital Workers vs Traditional Hiring: A CFO's Framework",
-    excerpt: "A financial model for evaluating when to hire people versus deploying digital workers for the same function.",
+    title: "Website Investment vs Ad Spend: A CFO's Framework",
+    excerpt: "A financial model for deciding when to invest in a better website versus pouring more money into paid channels that a weak site cannot convert.",
     readTime: "10 min read",
   },
   {
     slug: "enterprise-ai-security",
     category: "Security",
-    title: "Enterprise AI Security: What Decision-Makers Need to Know",
-    excerpt: "Data privacy, compliance, and governance considerations for deploying digital workers in regulated industries.",
+    title: "Web Security for Growing Businesses: What Leaders Need to Know",
+    excerpt: "Data privacy, uptime, and compliance considerations for the websites that hold your brand, your leads, and your revenue.",
     readTime: "9 min read",
   },
 ];
@@ -53,17 +53,17 @@ const articles = [
 const Insights = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Insights" description="Research, analysis, and practical frameworks on AI automation, digital workers, and the future of business operations." path="/insights" />
+      <PageSEO title="Insights" description="Research and frameworks on conversion strategy, website performance, and modern growth." path="/insights" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-purple uppercase tracking-wider mb-4 block">Insights</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Perspectives on the future of work.
+              Perspectives on conversion, growth, and modern web strategy.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Research, analysis, and practical frameworks from the team building digital workforces for growth-stage companies.
+              Research, analysis, and practical frameworks from the team building high-converting websites for growth-stage companies.
             </p>
           </motion.div>
         </div>
