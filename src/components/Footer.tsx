@@ -31,16 +31,16 @@ const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">H</span>
               </div>
-              <span className="font-semibold text-foreground text-lg tracking-tight">HeurOps</span>
+              <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
             </Link>
             <p className="text-text-secondary text-body-sm max-w-xs mb-4">
               We design and deploy intelligent digital workers that operate inside your business around the clock.
             </p>
             <a
-              href="mailto:hello@heurops.com"
+              href="mailto:contact@webthangs.site"
               className="text-body-sm text-primary hover:text-primary/80 transition-colors"
             >
-              hello@heurops.com
+              contact@webthangs.site
             </a>
           </div>
 
@@ -74,7 +74,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-caption text-text-tertiary">
-            © 2026 HeurOps. All rights reserved.
+            © 2026 WebThangs. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacy" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Privacy Policy</Link>

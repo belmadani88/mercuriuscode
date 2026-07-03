@@ -42,7 +42,7 @@ const Navigation = () => {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">H</span>
             </div>
-            <span className="font-semibold text-foreground text-lg tracking-tight">HeurOps</span>
+            <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">

@@ -26,7 +26,7 @@ const Contact = () => {
     setSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/hello@heurops.com", {
+      const response = await fetch("https://formsubmit.co/ajax/contact@webthangs.site", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -42,11 +42,11 @@ const Contact = () => {
         setSubmitted(true);
       } else {
         const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
-        window.location.href = `mailto:hello@heurops.com?subject=Strategy Call Request&body=${mailtoBody}`;
+        window.location.href = `mailto:contact@webthangs.site?subject=Strategy Call Request&body=${mailtoBody}`;
       }
     } catch {
       const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
-      window.location.href = `mailto:hello@heurops.com?subject=Strategy Call Request&body=${mailtoBody}`;
+      window.location.href = `mailto:contact@webthangs.site?subject=Strategy Call Request&body=${mailtoBody}`;
     } finally {
       setSubmitting(false);
     }
@@ -179,9 +179,9 @@ const Contact = () => {
               </div>
 
               <div className="space-y-4 pt-4">
-                <a href="mailto:hello@heurops.com" className="flex items-center gap-3 text-body-sm text-text-secondary hover:text-foreground transition-colors">
+                <a href="mailto:contact@webthangs.site" className="flex items-center gap-3 text-body-sm text-text-secondary hover:text-foreground transition-colors">
                   <Mail className="w-4 h-4 text-text-tertiary" />
-                  hello@heurops.com
+                  contact@webthangs.site
                 </a>
                 <div className="flex items-center gap-3 text-body-sm text-text-secondary">
                   <MapPin className="w-4 h-4 text-text-tertiary" />
