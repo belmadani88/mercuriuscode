@@ -30,7 +30,7 @@ const Contact = () => {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `Strategy Call Request from ${formData.firstName} ${formData.lastName}`,
+          _subject: `Growth Call Request from ${formData.firstName} ${formData.lastName}`,
           name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
           company: formData.company,
@@ -42,11 +42,11 @@ const Contact = () => {
         setSubmitted(true);
       } else {
         const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
-        window.location.href = `mailto:contact@webthangs.site?subject=Strategy Call Request&body=${mailtoBody}`;
+        window.location.href = `mailto:contact@webthangs.site?subject=Growth Call Request&body=${mailtoBody}`;
       }
     } catch {
       const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
-      window.location.href = `mailto:contact@webthangs.site?subject=Strategy Call Request&body=${mailtoBody}`;
+      window.location.href = `mailto:contact@webthangs.site?subject=Growth Call Request&body=${mailtoBody}`;
     } finally {
       setSubmitting(false);
     }
