@@ -47,7 +47,7 @@ const solutions = [
 const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="AI Digital Workers for Sales, Support, Ops & Research" description="Autonomous digital workers for sales, support, operations, and research. Engineered around your data and workflows. From $2,500/mo." path="/solutions" />
+      <PageSEO title="Websites, Funnels, SEO & CRO for Growth" description="Custom websites, landing pages, SEO systems, and continuous CRO — engineered around your buyers and your business objectives." path="/solutions" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">

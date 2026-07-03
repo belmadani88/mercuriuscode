@@ -85,17 +85,17 @@ const faqs = [
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Pricing for AI Digital Workers" description="Clear pricing for digital worker deployments. From $2,500/month. Measurable ROI, no long-term lock-in." path="/pricing" />
+      <PageSEO title="Pricing" description="Clear pricing for premium websites, funnels, and growth programs. Measurable ROI, no long-term lock-in." path="/pricing" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
             <span className="text-caption font-medium text-yellow uppercase tracking-wider mb-4 block">Pricing</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Invest in outcomes, not headcount.
+              Invest in revenue, not aesthetics.
             </h1>
             <p className="text-body-lg text-text-secondary">
-              Clear pricing. Measurable ROI. No long-term lock-in.
+              Clear pricing. Measurable ROI. Websites that pay for themselves.
             </p>
           </motion.div>
         </div>
