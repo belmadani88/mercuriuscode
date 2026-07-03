@@ -9,38 +9,38 @@ const solutions = [
   {
     id: "sales",
     icon: Zap,
-    title: "AI Sales Agents",
-    problem: "Your sales team spends most of its time on prospecting, data entry, and follow-ups instead of closing deals.",
-    solution: "Digital workers that qualify leads, personalize outreach, nurture prospects, and book meetings around the clock, without adding headcount.",
-    integrations: ["Salesforce", "HubSpot", "LinkedIn", "Outreach", "Pipedrive"],
-    outcomes: ["Up to 3x pipeline velocity", "Significantly lower cost-per-lead", "Consistent follow-up, 24/7"],
+    title: "High-Converting Websites",
+    problem: "Your current site looks acceptable but does not generate revenue. Visitors land, scroll, and leave. Every non-converting session is money you already paid to acquire.",
+    solution: "A custom-built site engineered around your buyers, your offer, and your business model. Every section is designed to move visitors toward a measurable action.",
+    integrations: ["Webflow", "Framer", "WordPress", "Custom React", "Headless CMS"],
+    outcomes: ["2 to 5x conversion rate lift", "Lower cost per lead and per acquisition", "A site your team is proud to send traffic to"],
   },
   {
     id: "support",
     icon: HeadphonesIcon,
-    title: "AI Support Agents",
-    problem: "Support costs grow linearly with your business. As volume increases, quality and response times decline.",
-    solution: "Digital workers that resolve tickets, handle multi-channel inquiries, and escalate complex issues with full context, instantly.",
-    integrations: ["Zendesk", "Intercom", "Freshdesk", "Slack", "Email"],
-    outcomes: ["Up to 85% auto-resolution rate", "Sub-minute average response time", "Consistent quality at any volume"],
+    title: "Landing Pages & Funnels",
+    problem: "You are spending on ads, SEO, and outbound, but sending that traffic to generic pages that were never designed to convert it.",
+    solution: "Dedicated landing pages and funnels engineered per audience, offer, and channel. Sharper messaging, tighter offers, and instrumentation to prove what works.",
+    integrations: ["Google Ads", "Meta Ads", "HubSpot", "Klaviyo", "GA4"],
+    outcomes: ["Up to 4x return on ad spend", "Predictable pipeline from paid channels", "Full-funnel visibility from click to close"],
   },
   {
     id: "operations",
     icon: Settings,
-    title: "AI Operations Agents",
-    problem: "Manual data processing, reporting, and cross-team coordination consume your operations team's capacity.",
-    solution: "Digital workers that process data, manage workflows, generate reports, and coordinate across systems without human involvement.",
-    integrations: ["Notion", "Airtable", "Google Workspace", "SAP", "NetSuite"],
-    outcomes: ["Up to 60% operational cost reduction", "Near-zero processing errors", "Real-time cross-system reporting"],
+    title: "SEO & Growth Systems",
+    problem: "Your organic traffic is flat. Rankings never quite hold. Content ships without a strategy and never compounds into pipeline.",
+    solution: "Technical foundations, content architecture, and on-page signals engineered so search demand becomes predictable, compounding revenue.",
+    integrations: ["GA4", "GSC", "Ahrefs", "Semrush", "Segment"],
+    outcomes: ["Organic pipeline that compounds", "Higher share of high-intent keywords", "Content that converts, not just ranks"],
   },
   {
     id: "research",
     icon: Search,
-    title: "AI Research Agents",
-    problem: "Market research, competitive analysis, and data gathering take weeks and deliver stale results by the time they arrive.",
-    solution: "Digital workers that continuously monitor markets, analyze competitors, and deliver actionable insights in real time.",
-    integrations: ["Bloomberg", "Crunchbase", "Custom APIs", "Web scraping", "Internal databases"],
-    outcomes: ["Up to 10x faster insight generation", "Real-time competitive intelligence", "Always-current market data"],
+    title: "CRO & Ongoing Optimization",
+    problem: "You launched a nice site and moved on. Meanwhile every point of conversion left on the table is compounded revenue you will never earn back.",
+    solution: "Continuous experimentation, session analysis, heatmaps, and structured A/B testing to keep lifting conversion rate long after launch.",
+    integrations: ["GA4", "Hotjar", "Microsoft Clarity", "VWO", "Segment"],
+    outcomes: ["Compounding conversion gains", "Data-backed design decisions", "A site that gets better every month, not worse"],
   },
 ];
 
@@ -54,10 +54,10 @@ const Solutions = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Solutions</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Digital workers designed for your specific workflows.
+              Websites and growth systems engineered around your business.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Not chatbots. Not templates. Autonomous digital workers engineered around your data, your processes, and your business objectives.
+              Not templates. Not aesthetics-first. Custom-built sites and funnels engineered around your buyers, your offer, and the numbers you actually care about.
             </p>
           </motion.div>
         </div>
@@ -135,9 +135,9 @@ const Solutions = () => {
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Need something different?</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every business operates differently. Tell us about your workflows and we will design the right digital workforce for you.</p>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every business grows differently. Tell us about your buyers and your offer, and we will design the right growth engine for you.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book a Free Strategy Call <ArrowRight size={16} />
+            Book a Free Growth Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>
