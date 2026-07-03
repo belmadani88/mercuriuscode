@@ -5,23 +5,23 @@ import { Shield, Lock, RefreshCw, Blocks } from "lucide-react";
 const trustItems = [
   {
     icon: Shield,
-    title: "Enterprise-Grade Security",
-    description: "AES-256 encryption, SOC 2 compliance, and strict access controls. Your data never leaves your environment.",
+    title: "Built on Business Strategy",
+    description: "Every project starts with your model, your buyers, and your numbers. Design decisions are made against revenue goals, not aesthetic preferences.",
   },
   {
     icon: Lock,
-    title: "Privacy by Design",
-    description: "Fully compliant with GDPR, CCPA, and industry-specific regulations. NDA available before any engagement.",
+    title: "Conversion Psychology at the Core",
+    description: "Layouts, copy, offers, and micro-interactions are engineered around how buyers actually decide. Trust, clarity, and momentum on every page.",
   },
   {
     icon: Blocks,
-    title: "Seamless Integration",
-    description: "Connects with Salesforce, HubSpot, Slack, Notion, SAP, and 200+ other tools your team already relies on.",
+    title: "Modern Web Execution",
+    description: "Fast, accessible, secure, SEO-ready, and beautifully engineered. We ship on the best tools for your business, from Webflow to fully custom builds.",
   },
   {
     icon: RefreshCw,
-    title: "Continuous Optimization",
-    description: "Weekly performance reviews, ongoing accuracy improvements, and proactive scaling as your needs grow.",
+    title: "Ongoing Growth Partnership",
+    description: "Launch is the beginning, not the end. We test, refine, and evolve your site every month to keep converting more of the traffic you earn.",
   },
 ];
 
@@ -39,13 +39,13 @@ const TrustSection = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">
-            Trust & Security
+            Why WebThangs
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            Security and reliability, by default.
+            A partner, not a vendor.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            We handle sensitive business data every day. Our infrastructure is built to the same standards as the financial institutions we serve.
+            Serious businesses hire us because we treat their website as a revenue asset, not a marketing checkbox. Everything we do is measured against growth.
           </p>
         </motion.div>
 

@@ -21,7 +21,7 @@ const CaseStudySection = () => {
               Use Cases
             </span>
             <h2 className="text-heading md:text-display-sm font-bold text-foreground">
-              What digital workers can do for you.
+              What a conversion-engineered site can do for you.
             </h2>
           </div>
           <Link to="/use-cases" className="hidden md:flex items-center gap-1 text-body-sm font-medium text-purple hover:text-purple/80 transition-colors">
@@ -32,25 +32,25 @@ const CaseStudySection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              area: "Sales Acceleration",
-              industry: "B2B / SaaS",
+              area: "Lead Generation",
+              industry: "B2B & Services",
               icon: "🎯",
-              label: "Automate outbound prospecting",
-              description: "A digital sales worker qualifies leads, sends personalized outreach, and books meetings on your team's calendar, around the clock.",
+              label: "Turn traffic into qualified leads",
+              description: "Pages engineered around your ideal buyer. Sharper messaging, tighter offers, and forms designed to capture serious intent without friction.",
             },
             {
-              area: "Customer Support",
-              industry: "E-Commerce / SaaS",
+              area: "E-Commerce Growth",
+              industry: "DTC & Retail",
               icon: "💬",
-              label: "Resolve tickets instantly",
-              description: "Digital support workers handle L1 and L2 inquiries across email, chat, and social channels, escalating only the complex issues to your team.",
+              label: "Lift average order value and CVR",
+              description: "Storefronts, product pages, and checkout flows tuned to reduce friction, raise trust, and get more visitors to complete the purchase.",
             },
             {
-              area: "Operations",
-              industry: "Logistics / Finance",
+              area: "SaaS & Startups",
+              industry: "AI, Tech, Software",
               icon: "⚙️",
-              label: "Streamline back-office workflows",
-              description: "Automate dispatch coordination, compliance documentation, data entry, and reporting across departments and offices.",
+              label: "Position, differentiate, convert",
+              description: "Sharpen your positioning, communicate your product in seconds, and turn homepage visitors into signups, demos, and paid customers.",
             },
           ].map((useCase, i) => (
             <motion.div

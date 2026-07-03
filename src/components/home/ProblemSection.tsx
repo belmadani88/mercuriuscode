@@ -6,21 +6,21 @@ import { TrendingDown, Clock, AlertTriangle } from "lucide-react";
 const problems = [
   {
     icon: TrendingDown,
-    stat: "$4.7M",
-    label: "Average annual cost of manual operations",
-    description: "Data entry, follow-ups, reporting, approvals. Across departments, these small inefficiencies compound into millions in lost output.",
+    stat: "97%",
+    label: "Of visitors leave without converting",
+    description: "Most sites are built to look nice, not to sell. Traffic arrives, scrolls, and disappears. Every non-converting visitor is money you already paid to acquire.",
   },
   {
     icon: Clock,
-    stat: "68%",
-    label: "Of employee time spent on repeatable work",
-    description: "Research consistently shows that most knowledge workers spend the majority of their day on tasks that follow a pattern, not on strategic thinking.",
+    stat: "2.35%",
+    label: "Average website conversion rate",
+    description: "The industry benchmark most businesses accept without questioning. A site engineered for conversion typically performs two to five times better on the same traffic.",
   },
   {
     icon: AlertTriangle,
-    stat: "23 hrs",
-    label: "Per person, per week on low-value tasks",
-    description: "Nearly three full working days, every week, consumed by work that a well-designed digital worker can handle with higher accuracy.",
+    stat: "$1 in / $0.15 out",
+    label: "The true cost of ad spend on a weak site",
+    description: "Every dollar spent driving traffic to a low-converting page is a dollar wasted. Fix the site, and the same ad budget delivers dramatically more revenue.",
   },
 ];
 
@@ -41,10 +41,10 @@ const ProblemSection = () => {
             The Problem
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            Your team is spending time on the wrong things.
+            Your website is leaving revenue on the table.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Every business has work that follows a pattern. Repetitive, predictable, and necessary. We automate it so your people can do what they were actually hired to do.
+            You worked hard to earn the traffic. Ads, SEO, content, referrals. Then the site fails to convert. Most websites are decorated brochures pretending to be sales engines. We fix that.
           </p>
         </motion.div>
 

@@ -5,27 +5,27 @@ import { TrendingUp, Clock, DollarSign, Target } from "lucide-react";
 const outcomes = [
   {
     icon: DollarSign,
-    metric: "60-80%",
-    label: "Expected cost reduction",
-    detail: "Compared to staffing the same function traditionally, based on typical deployment economics.",
+    metric: "2–5x",
+    label: "Conversion rate lift",
+    detail: "Typical uplift versus the previous site, based on the same traffic sources and offers.",
   },
   {
     icon: Clock,
     metric: "4-8 weeks",
-    label: "From audit to production",
-    detail: "Most digital workers are live and producing results within two months of engagement.",
+    label: "From strategy to launch",
+    detail: "Most projects go live within two months, complete with analytics and CRO instrumentation.",
   },
   {
     icon: Target,
-    metric: "Under 2%",
-    label: "Target error rate",
-    detail: "After the optimization period, digital workers consistently outperform manual accuracy benchmarks.",
+    metric: "Under 2s",
+    label: "Target page load",
+    detail: "Performance is a conversion lever. Faster pages convert better, rank higher, and cost less to advertise on.",
   },
   {
     icon: TrendingUp,
     metric: "3x",
-    label: "Projected pipeline growth",
-    detail: "Sales teams supported by digital workers can expect significantly higher outbound volume and quality.",
+    label: "Return on ad spend",
+    detail: "Same ad budget, better landing experience. Every dollar you spend on traffic works dramatically harder.",
   },
 ];
 
@@ -46,10 +46,10 @@ const ExpectedOutcomesSection = () => {
             Expected Outcomes
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            Projected results from day one.
+            Measurable outcomes from day one.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            These projections are based on the capabilities of our digital worker architecture and typical deployment performance.
+            These are the targets we design against on every engagement, benchmarked against typical results across our client work.
           </p>
         </motion.div>
 

@@ -28,7 +28,7 @@ const StickyCTA = () => {
             to="/contact"
             className="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground glow-sm w-full"
           >
-            Book a Free Strategy Call
+            Book a Free Growth Call
             <ArrowRight size={15} />
           </Link>
         </motion.div>
