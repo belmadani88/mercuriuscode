@@ -29,7 +29,7 @@ const Privacy = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">1. Introduction</h2>
               <p className="text-body text-text-secondary mb-4">
-                WebThangs ("we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your data when you visit our website, use our services, or interact with our AI agents.
+              WebThangs ("we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your data when you visit our website or engage our web design and growth services.
               </p>
               <p className="text-body text-text-secondary">
                 By accessing our services, you agree to the collection and use of information in accordance with this policy. If you do not agree with our practices, please do not use our services.
@@ -65,7 +65,7 @@ const Privacy = () => {
               <h2 className="text-heading-sm font-bold text-foreground mb-4">3. How We Use Your Information</h2>
               <p className="text-body text-text-secondary mb-4">We use the information we collect to:</p>
               <ul className="list-disc list-inside space-y-2 text-body text-text-secondary">
-                <li>Provide, maintain, and improve our AI agent services</li>
+                <li>Provide, maintain, and improve our web design and growth services</li>
                 <li>Process transactions and send related communications</li>
                 <li>Respond to inquiries, support requests, and feedback</li>
                 <li>Send marketing communications (with your consent)</li>

@@ -18,12 +18,8 @@ const PageSEO = ({ title, description, path, jsonLd }: PageSEOProps) => {
     name: "WebThangs",
     url: "https://webthangs.site",
     logo: "https://webthangs.site/favicon.ico",
-    description: "We design and deploy custom AI digital workers that operate inside your business 24/7.",
+    description: "WebThangs builds high-converting websites engineered to turn attention into revenue.",
     foundingDate: "2025",
-    founder: {
-      "@type": "Person",
-      name: "Oussama Bel Madani",
-    },
     contactPoint: {
       "@type": "ContactPoint",
       email: "contact@webthangs.site",

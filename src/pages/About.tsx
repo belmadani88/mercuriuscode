@@ -6,26 +6,26 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const values = [
-  { title: "Precision Over Volume", description: "We take on fewer clients and deliver deeper impact. Every deployment is custom-engineered to produce measurable results." },
-  { title: "Outcomes Over Activity", description: "We don't bill for time. We deliver outcomes. Our success is directly tied to the ROI you see." },
-  { title: "Transparency Over Hype", description: "No black boxes. We explain every model choice, every design decision, and every tradeoff in plain language." },
-  { title: "Partnership Over Transactions", description: "We work alongside your team, not above it. Your growth is our business model." },
+  { title: "Revenue Over Aesthetics", description: "Design that is not tied to a business outcome is decoration. Every choice we make is measured against your growth." },
+  { title: "Strategy Before Pixels", description: "We do not open a design tool until we understand your buyers, your offer, and the exact decision the site needs to earn." },
+  { title: "Fewer Clients, Deeper Work", description: "We take on a small number of engagements at a time so every project gets senior attention from strategy to launch." },
+  { title: "Partnership Over Projects", description: "Launch is a milestone, not the finish line. We stay involved to keep lifting conversion rate long after the site goes live." },
 ];
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="About WebThangs" description="WebThangs designs and deploys intelligent digital workers. Founded by Oussama Bel Madani with a mission to help businesses operate at full potential." path="/about" />
+      <PageSEO title="About WebThangs" description="WebThangs is a premium web agency that builds high-converting websites engineered to turn attention into revenue." path="/about" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">About WebThangs</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              We help businesses operate at their full potential.
+              We build websites that earn back the traffic you paid for.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              WebThangs designs and deploys intelligent digital workers that handle the repetitive, high-volume operations inside your business, so your people can focus on strategy, creativity, and growth.
+              WebThangs is a premium web agency for businesses that treat their website as revenue infrastructure. We combine conversion strategy, buyer psychology, and modern web execution to turn attention into pipeline, customers, and growth.
             </p>
           </motion.div>
         </div>
@@ -37,19 +37,19 @@ const About = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-heading font-bold text-foreground mb-4">Our Vision</h2>
               <p className="text-body-lg text-text-secondary mb-4">
-                Within the next decade, every competitive business will operate with an AI-powered workforce. The companies that move early will build advantages that compound over time.
+                The businesses that grow fastest over the next decade will be the ones that treat their website as a revenue engine, not a marketing brochure. We build for those businesses.
               </p>
               <p className="text-body text-text-secondary">
-                We are not building another chatbot or SaaS tool. We are designing the operational infrastructure that makes businesses genuinely autonomous, where digital workers handle sales, support, operations, and research with the precision of your best employees and the consistency of machines.
+                We are not a design studio and we are not a template shop. We are a conversion-focused web agency that treats every project as a business problem first, and a design problem second. The site is the deliverable. Growth is the outcome.
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
               <h2 className="text-heading font-bold text-foreground mb-4">Our Approach</h2>
               <p className="text-body-lg text-text-secondary mb-4">
-                We do not use templates. We do not deploy generic solutions. Every engagement starts from first principles.
+                We do not use templates. We do not chase trends. Every engagement starts with the buyer, the offer, and the business model.
               </p>
               <p className="text-body text-text-secondary">
-                Each digital worker is designed around your specific workflows, data, and business logic. We audit first. We architect second. We deploy third. Then we optimize continuously. This is operational infrastructure, not off-the-shelf software.
+                We audit first. We position second. We design third. We ship fast, measure everything, and keep lifting conversion rate long after launch. This is website work as growth work, not as a creative deliverable.
               </p>
             </motion.div>
           </div>
@@ -63,16 +63,16 @@ const About = () => {
               className="surface-card p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start"
             >
               <div className="w-20 h-20 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl font-bold text-primary">OB</span>
+                <span className="text-2xl font-bold text-primary">WT</span>
               </div>
               <div>
                 <span className="text-caption font-medium text-magenta uppercase tracking-wider mb-2 block">Founder</span>
                 <h2 className="text-heading font-bold text-foreground mb-2">Oussama Bel Madani</h2>
                 <p className="text-body text-text-secondary mb-4">
-                  Oussama founded WebThangs with a clear conviction: most businesses are not short on talent, they are short on leverage. The repetitive work that consumes teams today can be handled by intelligent systems, freeing people to focus on what actually drives growth.
+                  Oussama founded WebThangs on a clear conviction: most businesses are not short on traffic or ideas. They are short on websites that actually convert what they already have. Great execution on the fundamentals still beats gimmicks every time.
                 </p>
                 <p className="text-body-sm text-text-secondary">
-                  His approach combines deep technical expertise with a relentless focus on business outcomes. Every engagement at WebThangs begins with the same question: where can we create the most measurable impact, the fastest?
+                  His approach combines conversion strategy, brand thinking, and technical execution. Every engagement at WebThangs starts with the same question: where can we create the most measurable revenue impact, the fastest?
                 </p>
               </div>
             </motion.div>
@@ -117,9 +117,9 @@ const About = () => {
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Ready to see what's possible?</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Start with a conversation. We will audit your workflows and show you exactly where digital workers can deliver the highest return.</p>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Start with a conversation. We will audit your current site and show you exactly where a conversion-engineered rebuild would deliver the highest return.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book a Free Strategy Call <ArrowRight size={16} />
+            Book a Free Growth Call <ArrowRight size={16} />
           </Link>
         </div>
       </section>
