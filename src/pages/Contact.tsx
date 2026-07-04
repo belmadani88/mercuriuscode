@@ -54,17 +54,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Contact" description="Book a free 30-minute strategy call. We will audit your workflows, identify automation opportunities, and show you projected ROI." path="/contact" />
+      <PageSEO title="Contact" description="Book a free 30-minute growth call. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
             <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Get Started</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Book your free strategy call.
+              Book your free growth call.
             </h1>
             <p className="text-body-lg text-text-secondary">
-              30 minutes. No sales pitch. We will audit your workflows, identify the best automation opportunities, and show you the projected ROI.
+              30 minutes. No sales pitch. We will audit your website, identify your highest-leverage conversion opportunities, and show you the revenue you are leaving on the table.
             </p>
           </motion.div>
         </div>
@@ -80,7 +80,7 @@ const Contact = () => {
                     <CheckCircle2 className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-heading-sm font-bold text-foreground mb-3">Thank you. We will be in touch shortly.</h3>
-                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your strategy call.</p>
+                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your growth call.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -139,7 +139,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="text-body-sm font-medium text-foreground mb-2 block">What would you like to automate?</label>
+                    <label htmlFor="message" className="text-body-sm font-medium text-foreground mb-2 block">What is holding your website back?</label>
                     <textarea
                       id="message"
                       name="message"
@@ -148,7 +148,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-body-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                      placeholder="Describe the workflows, bottlenecks, or tasks you would like to automate..."
+                      placeholder="Tell us about your site, your traffic, and the conversion problem you want to solve..."
                       maxLength={2000}
                     />
                   </div>
@@ -165,9 +165,9 @@ const Contact = () => {
                 <h3 className="text-heading-sm font-bold text-foreground mb-4">What to expect</h3>
                 <ul className="space-y-4">
                   {[
-                    "A focused 30-minute strategy discussion",
-                    "Workflow audit and automation opportunity mapping",
-                    "Custom ROI projection based on your operations",
+                    "A focused 30-minute growth conversation",
+                    "A live audit of your site and highest-leverage conversion leaks",
+                    "A custom revenue projection based on your traffic and funnel",
                     "Clear next steps with no pressure and no obligation",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-body text-text-secondary">
