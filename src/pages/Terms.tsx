@@ -75,7 +75,7 @@ const Terms = () => {
                 <strong className="text-foreground">WebThangs IP:</strong> All proprietary tools, frameworks, methodologies, models, and software developed by WebThangs remain our exclusive property. You receive a non-exclusive, non-transferable license to use our deliverables for your internal business operations.
               </p>
               <p className="text-body text-text-secondary">
-                <strong className="text-foreground">Your Data:</strong> You retain full ownership of your data. We use your data solely to provide and improve our Services, as outlined in our Privacy Policy. Custom configurations and workflows developed specifically for you are yours upon full payment.
+                <strong className="text-foreground">Your Data:</strong> You retain full ownership of your data. We use your data solely to provide and improve our Services, as outlined in our Privacy Policy. Custom designs, page templates, and conversion systems developed specifically for you are yours upon full payment.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">7. Service Level & Availability</h2>
               <p className="text-body text-text-secondary">
-                We strive to maintain 99.9% uptime for our deployed AI agents. Planned maintenance windows will be communicated in advance. We are not liable for interruptions caused by third-party services, force majeure events, or circumstances beyond our reasonable control.
+                We strive to maintain 99.9% uptime for the websites and conversion systems we host and operate on your behalf. Planned maintenance windows will be communicated in advance. We are not liable for interruptions caused by third-party services, force majeure events, or circumstances beyond our reasonable control.
               </p>
             </div>
 
