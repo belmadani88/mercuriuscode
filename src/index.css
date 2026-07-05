@@ -48,17 +48,24 @@
     --sidebar-border: 211 14% 19%;
     --sidebar-ring: 79 100% 53%;
 
-    /* Custom tokens (re-mapped to Webthangs palette) */
+    /* ────────────────────────────────────────────────────────
+       MONOCHROMATIC BRAND SYSTEM
+       All legacy accent tokens are re-aliased to the primary
+       (Fluorescent Lime) or a neutral so the entire product
+       collapses onto ONE coherent palette. Do NOT reintroduce
+       secondary hues. Create hierarchy through opacity, scale,
+       weight, spacing and motion instead.
+       ──────────────────────────────────────────────────────── */
     --glow: 79 100% 53%;                 /* lime glow */
-    --glow-accent: 187 100% 50%;         /* cyan */
-    --dark-teal: 187 100% 50%;           /* legacy alias → cyan */
-    --golden: 54 100% 50%;               /* legacy alias → yellow */
-    --cyan: 187 100% 50%;                /* #00E5FF */
-    --purple: 271 76% 53%;               /* #8A2BE2 */
-    --magenta: 290 100% 50%;             /* #E100FF */
-    --orange: 16 100% 60%;               /* #FF6B35 */
-    --yellow: 54 100% 50%;               /* #FFE600 */
-    --premium-text: 36 14% 75%;          /* #C9C3B8 */
+    --glow-accent: 79 100% 53%;          /* → primary */
+    --dark-teal: 79 100% 53%;            /* → primary */
+    --golden: 79 100% 53%;               /* → primary */
+    --cyan: 213 11% 69%;                 /* → neutral text-secondary */
+    --purple: 79 100% 53%;               /* → primary */
+    --magenta: 79 100% 53%;              /* → primary */
+    --orange: 213 11% 69%;               /* → neutral text-secondary */
+    --yellow: 79 100% 53%;               /* → primary */
+    --premium-text: 213 11% 69%;         /* → neutral text-secondary */
     --surface: 213 13% 10%;
     --surface-hover: 211 16% 17%;
     --text-primary: 214 29% 97%;
@@ -210,26 +217,26 @@
      ──────────────────────────────────────────────────────────── */
 
   /* CYAN — Trust, clarity, section eyebrows, links, timestamps */
-  .accent-trust      { color: hsl(var(--cyan)); }
-  .accent-eyebrow    { color: hsl(var(--cyan)); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; font-size: 0.75rem; }
-  .accent-link       { color: hsl(var(--cyan)); }
-  .accent-meta       { color: hsl(var(--cyan) / 0.85); }
+  .accent-trust      { color: hsl(var(--muted-foreground)); }
+  .accent-eyebrow    { color: hsl(var(--primary)); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; font-size: 0.75rem; }
+  .accent-link       { color: hsl(var(--foreground)); text-decoration: underline; text-decoration-color: hsl(var(--primary) / 0.4); text-underline-offset: 4px; }
+  .accent-meta       { color: hsl(var(--muted-foreground)); }
 
   /* YELLOW — Numerics: money, KPIs, %, pricing, stats */
-  .accent-numeric    { color: hsl(var(--yellow)); font-variant-numeric: tabular-nums; }
-  .accent-price      { color: hsl(var(--yellow)); font-variant-numeric: tabular-nums; }
+  .accent-numeric    { color: hsl(var(--primary)); font-variant-numeric: tabular-nums; font-weight: 700; }
+  .accent-price      { color: hsl(var(--foreground)); font-variant-numeric: tabular-nums; font-weight: 700; }
 
   /* MAGENTA — Outcomes, results, "new", premium hover glints */
-  .accent-result     { color: hsl(var(--magenta)); }
-  .accent-badge-new  { color: hsl(var(--magenta)); }
+  .accent-result     { color: hsl(var(--primary)); }
+  .accent-badge-new  { color: hsl(var(--primary)); }
 
   /* PURPLE — Process, steps, timeline markers, insights */
-  .accent-process    { color: hsl(var(--purple)); }
-  .accent-step       { color: hsl(var(--purple)); }
+  .accent-process    { color: hsl(var(--muted-foreground)); }
+  .accent-step       { color: hsl(var(--primary)); }
 
   /* ORANGE — Pain points, warnings, industries/categories */
-  .accent-pain       { color: hsl(var(--orange)); }
-  .accent-category   { color: hsl(var(--orange)); }
+  .accent-pain       { color: hsl(var(--muted-foreground)); }
+  .accent-category   { color: hsl(var(--muted-foreground)); }
 
   /* LIME (primary) — CTAs & success only. Never decorate with it. */
   .accent-success    { color: hsl(var(--primary)); }
