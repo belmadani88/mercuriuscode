@@ -15,7 +15,7 @@ import CTASection from "@/components/home/CTASection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO
         title="High-converting websites engineered for revenue"
         description="WebThangs is a premium web agency. We build websites engineered around conversion psychology, buyer behavior, and measurable business outcomes."

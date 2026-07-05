@@ -84,7 +84,7 @@ const faqs = [
 
 const Pricing = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="Pricing" description="Clear pricing for premium websites, funnels, and growth programs. Measurable ROI, no long-term lock-in." path="/pricing" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

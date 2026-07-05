@@ -14,7 +14,7 @@ const values = [
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="About WebThangs" description="WebThangs is a premium web agency that builds high-converting websites engineered to turn attention into revenue." path="/about" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

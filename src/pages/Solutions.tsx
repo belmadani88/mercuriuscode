@@ -46,7 +46,7 @@ const solutions = [
 
 const Solutions = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="Websites, Funnels, SEO & CRO for Growth" description="Custom websites, landing pages, SEO systems, and continuous CRO — engineered around your buyers and your business objectives." path="/solutions" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="Contact" description="Book a free 30-minute growth call. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
