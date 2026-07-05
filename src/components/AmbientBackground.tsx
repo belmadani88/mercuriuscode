@@ -21,70 +21,70 @@ const PALETTES: Record<string, Blob[]> = {
   // Home — lime hero + cyan/purple depth
   "/": [
     { color: "var(--primary)", x: "72%", y: "18%", size: "70vmax", opacity: 0.234, blur: 140 },
-    { color: "var(--cyan)",    x: "12%", y: "55%", size: "55vmax", opacity: 0.156, blur: 160 },
-    { color: "var(--purple)",  x: "82%", y: "82%", size: "60vmax", opacity: 0.13, blur: 180 },
-    { color: "var(--magenta)", x: "35%", y: "92%", size: "40vmax", opacity: 0.091, blur: 200 },
+    { color: "var(--foreground)",    x: "12%", y: "55%", size: "55vmax", opacity: 0.156, blur: 160 },
+    { color: "var(--primary)",  x: "82%", y: "82%", size: "60vmax", opacity: 0.13, blur: 180 },
+    { color: "var(--primary)", x: "35%", y: "92%", size: "40vmax", opacity: 0.091, blur: 200 },
   ],
   "/solutions": [
-    { color: "var(--cyan)",    x: "18%", y: "22%", size: "65vmax", opacity: 0.182, blur: 150 },
+    { color: "var(--foreground)",    x: "18%", y: "22%", size: "65vmax", opacity: 0.182, blur: 150 },
     { color: "var(--primary)", x: "85%", y: "35%", size: "50vmax", opacity: 0.156, blur: 160 },
-    { color: "var(--purple)",  x: "50%", y: "85%", size: "55vmax", opacity: 0.117, blur: 180 },
+    { color: "var(--primary)",  x: "50%", y: "85%", size: "55vmax", opacity: 0.117, blur: 180 },
   ],
   "/industries": [
-    { color: "var(--orange)",  x: "78%", y: "20%", size: "55vmax", opacity: 0.143, blur: 170 },
-    { color: "var(--yellow)",  x: "15%", y: "60%", size: "48vmax", opacity: 0.117, blur: 170 },
-    { color: "var(--cyan)",    x: "55%", y: "90%", size: "55vmax", opacity: 0.13, blur: 180 },
+    { color: "var(--foreground)",  x: "78%", y: "20%", size: "55vmax", opacity: 0.143, blur: 170 },
+    { color: "var(--primary)",  x: "15%", y: "60%", size: "48vmax", opacity: 0.117, blur: 170 },
+    { color: "var(--foreground)",    x: "55%", y: "90%", size: "55vmax", opacity: 0.13, blur: 180 },
   ],
   "/how-it-works": [
-    { color: "var(--purple)",  x: "20%", y: "25%", size: "60vmax", opacity: 0.182, blur: 160 },
-    { color: "var(--cyan)",    x: "80%", y: "55%", size: "55vmax", opacity: 0.143, blur: 170 },
+    { color: "var(--primary)",  x: "20%", y: "25%", size: "60vmax", opacity: 0.182, blur: 160 },
+    { color: "var(--foreground)",    x: "80%", y: "55%", size: "55vmax", opacity: 0.143, blur: 170 },
     { color: "var(--primary)", x: "50%", y: "88%", size: "45vmax", opacity: 0.13, blur: 170 },
   ],
   "/use-cases": [
-    { color: "var(--magenta)", x: "75%", y: "22%", size: "55vmax", opacity: 0.143, blur: 170 },
-    { color: "var(--purple)",  x: "18%", y: "48%", size: "55vmax", opacity: 0.13, blur: 180 },
+    { color: "var(--primary)", x: "75%", y: "22%", size: "55vmax", opacity: 0.143, blur: 170 },
+    { color: "var(--primary)",  x: "18%", y: "48%", size: "55vmax", opacity: 0.13, blur: 180 },
     { color: "var(--primary)", x: "60%", y: "85%", size: "45vmax", opacity: 0.13, blur: 170 },
   ],
   "/pricing": [
-    { color: "var(--yellow)",  x: "70%", y: "18%", size: "55vmax", opacity: 0.143, blur: 170 },
+    { color: "var(--primary)",  x: "70%", y: "18%", size: "55vmax", opacity: 0.143, blur: 170 },
     { color: "var(--primary)", x: "20%", y: "50%", size: "55vmax", opacity: 0.156, blur: 160 },
-    { color: "var(--cyan)",    x: "58%", y: "88%", size: "50vmax", opacity: 0.13, blur: 180 },
+    { color: "var(--foreground)",    x: "58%", y: "88%", size: "50vmax", opacity: 0.13, blur: 180 },
   ],
   "/about": [
-    { color: "var(--cyan)",    x: "72%", y: "20%", size: "60vmax", opacity: 0.156, blur: 170 },
-    { color: "var(--purple)",  x: "18%", y: "55%", size: "55vmax", opacity: 0.13, blur: 180 },
+    { color: "var(--foreground)",    x: "72%", y: "20%", size: "60vmax", opacity: 0.156, blur: 170 },
+    { color: "var(--primary)",  x: "18%", y: "55%", size: "55vmax", opacity: 0.13, blur: 180 },
     { color: "var(--primary)", x: "60%", y: "90%", size: "45vmax", opacity: 0.117, blur: 170 },
   ],
   "/insights": [
-    { color: "var(--purple)",  x: "78%", y: "22%", size: "58vmax", opacity: 0.156, blur: 170 },
-    { color: "var(--cyan)",    x: "16%", y: "58%", size: "52vmax", opacity: 0.13, blur: 180 },
-    { color: "var(--magenta)", x: "55%", y: "90%", size: "45vmax", opacity: 0.104, blur: 190 },
+    { color: "var(--primary)",  x: "78%", y: "22%", size: "58vmax", opacity: 0.156, blur: 170 },
+    { color: "var(--foreground)",    x: "16%", y: "58%", size: "52vmax", opacity: 0.13, blur: 180 },
+    { color: "var(--primary)", x: "55%", y: "90%", size: "45vmax", opacity: 0.104, blur: 190 },
   ],
   "/contact": [
     { color: "var(--primary)", x: "20%", y: "22%", size: "55vmax", opacity: 0.182, blur: 160 },
-    { color: "var(--cyan)",    x: "80%", y: "58%", size: "55vmax", opacity: 0.156, blur: 170 },
-    { color: "var(--yellow)",  x: "50%", y: "92%", size: "40vmax", opacity: 0.104, blur: 190 },
+    { color: "var(--foreground)",    x: "80%", y: "58%", size: "55vmax", opacity: 0.156, blur: 170 },
+    { color: "var(--primary)",  x: "50%", y: "92%", size: "40vmax", opacity: 0.104, blur: 190 },
   ],
   "/security": [
-    { color: "var(--cyan)",    x: "78%", y: "22%", size: "60vmax", opacity: 0.156, blur: 170 },
+    { color: "var(--foreground)",    x: "78%", y: "22%", size: "60vmax", opacity: 0.156, blur: 170 },
     { color: "var(--primary)", x: "20%", y: "60%", size: "50vmax", opacity: 0.13, blur: 180 },
-    { color: "var(--purple)",  x: "55%", y: "92%", size: "45vmax", opacity: 0.104, blur: 190 },
+    { color: "var(--primary)",  x: "55%", y: "92%", size: "45vmax", opacity: 0.104, blur: 190 },
   ],
   // Legal/misc — quieter
   "/privacy": [
-    { color: "var(--cyan)",    x: "82%", y: "18%", size: "50vmax", opacity: 0.104, blur: 190 },
-    { color: "var(--purple)",  x: "18%", y: "72%", size: "45vmax", opacity: 0.091, blur: 200 },
+    { color: "var(--foreground)",    x: "82%", y: "18%", size: "50vmax", opacity: 0.104, blur: 190 },
+    { color: "var(--primary)",  x: "18%", y: "72%", size: "45vmax", opacity: 0.091, blur: 200 },
   ],
   "/terms": [
-    { color: "var(--purple)",  x: "78%", y: "22%", size: "48vmax", opacity: 0.104, blur: 190 },
-    { color: "var(--cyan)",    x: "20%", y: "70%", size: "45vmax", opacity: 0.091, blur: 200 },
+    { color: "var(--primary)",  x: "78%", y: "22%", size: "48vmax", opacity: 0.104, blur: 190 },
+    { color: "var(--foreground)",    x: "20%", y: "70%", size: "45vmax", opacity: 0.091, blur: 200 },
   ],
 };
 
 const DEFAULT_PALETTE: Blob[] = [
   { color: "var(--primary)", x: "75%", y: "20%", size: "60vmax", opacity: 0.156, blur: 170 },
-  { color: "var(--cyan)",    x: "18%", y: "60%", size: "55vmax", opacity: 0.13, blur: 180 },
-  { color: "var(--purple)",  x: "55%", y: "90%", size: "50vmax", opacity: 0.104, blur: 190 },
+  { color: "var(--foreground)",    x: "18%", y: "60%", size: "55vmax", opacity: 0.13, blur: 180 },
+  { color: "var(--primary)",  x: "55%", y: "90%", size: "50vmax", opacity: 0.104, blur: 190 },
 ];
 
 const AmbientBackground = () => {
