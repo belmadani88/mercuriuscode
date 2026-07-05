@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="Terms of Service" description="Terms of Service for WebThangs web design and growth services. Fees, intellectual property, confidentiality, and liability." path="/terms" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

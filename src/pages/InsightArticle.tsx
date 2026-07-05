@@ -100,7 +100,7 @@ const InsightArticle = () => {
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <Navigation />
         <section className="pt-32 pb-16">
           <div className="container-tight text-center">
@@ -116,7 +116,7 @@ const InsightArticle = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title={article.title} description={article.content[0].slice(0, 155)} path={`/insights/${slug}`} />
       <Navigation />
       <section className="pt-32 pb-8 hero-gradient">

@@ -58,7 +58,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="How It Works" description="From strategy to launch in 4 to 8 weeks. Our four-phase methodology delivers websites engineered for measurable revenue growth." path="/how-it-works" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

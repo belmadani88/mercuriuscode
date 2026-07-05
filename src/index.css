@@ -75,12 +75,17 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
+    background-color: transparent;
     font-family: 'IBM Plex Sans', system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.7;
     letter-spacing: 0.005em;
     font-optical-sizing: auto;
+  }
+
+  html {
+    background-color: hsl(var(--background));
   }
 
   h1, h2, h3, h4, h5, h6 {

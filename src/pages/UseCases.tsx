@@ -88,7 +88,7 @@ const useCases = [
 
 const UseCases = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="Use Cases" description="See how conversion-engineered websites, landing pages, SEO, and CRO drive revenue across industries." path="/use-cases" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

@@ -39,7 +39,7 @@ const securityPractices = [
 
 const Security = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="Security" description="Security and reliability practices at WebThangs. Modern, hardened, encrypted infrastructure for the websites we build and operate." path="/security" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

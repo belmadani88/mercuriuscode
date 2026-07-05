@@ -52,7 +52,7 @@ const articles = [
 
 const Insights = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <PageSEO title="Insights" description="Research and frameworks on conversion strategy, website performance, and modern growth." path="/insights" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">

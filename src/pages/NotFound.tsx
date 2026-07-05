@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
       <div className="flex-1 flex items-center justify-center">
         <div className="text-center px-6">
