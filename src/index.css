@@ -75,7 +75,8 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
+    background-color: hsl(var(--background));
     font-family: 'IBM Plex Sans', system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.7;
