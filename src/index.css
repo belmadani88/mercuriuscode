@@ -87,6 +87,10 @@
   html {
     background-color: hsl(var(--background));
   }
+  /* Ambient layer sits at z:-10; keep body transparent so it shows through */
+  body {
+    background-color: transparent !important;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Archivo', 'IBM Plex Sans', system-ui, sans-serif;
