@@ -104,6 +104,8 @@ const AmbientBackground = () => {
       className="pointer-events-none fixed inset-0 overflow-hidden"
       style={{ zIndex: -10 }}
     >
+      {/* Solid brand canvas — body is transparent so this is the base layer */}
+      <div className="absolute inset-0 bg-background" />
       {/* Base vignette to seat the glows into the dark canvas */}
       <div
         className="absolute inset-0"
