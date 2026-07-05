@@ -30,8 +30,8 @@ const HeroSection = () => {
           style={{
             background: [
               "radial-gradient(ellipse 55% 55% at 68% 42%, hsl(79 100% 53% / 0.10) 0%, transparent 70%)",
-              "radial-gradient(ellipse 38% 55% at 28% 28%, hsl(271 76% 53% / 0.06) 0%, transparent 60%)",
-              "radial-gradient(ellipse 50% 38% at 72% 82%, hsl(187 100% 50% / 0.05) 0%, transparent 55%)",
+              "radial-gradient(ellipse 38% 55% at 28% 28%, hsl(79 100% 53% / 0.05) 0%, transparent 60%)",
+              "radial-gradient(ellipse 50% 38% at 72% 82%, hsl(0 0% 100% / 0.03) 0%, transparent 55%)",
             ].join(","),
           }}
         />

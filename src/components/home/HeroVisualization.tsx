@@ -259,8 +259,8 @@ const HeroVisualization = () => {
             key={`particle-${wfIdx}-${phase}`}
             className="absolute w-2.5 h-2.5 md:w-3 md:h-3 rounded-full pointer-events-none z-20"
             style={{
-              background: 'hsl(var(--magenta))',
-              boxShadow: '0 0 14px 3px hsl(290 100% 50% / 0.55)',
+              background: 'hsl(var(--primary))',
+              boxShadow: '0 0 14px 3px hsl(var(--primary) / 0.55)',
               transform: 'translate(-50%, -50%)',
             }}
             initial={{

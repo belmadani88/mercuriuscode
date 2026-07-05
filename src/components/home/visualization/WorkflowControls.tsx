@@ -27,8 +27,8 @@ const WorkflowControls = ({ onRun, isManual, currentWorkflow, phase }: Props) =>
           }`}
         style={{
           boxShadow: isRunning && isManual
-            ? '0 4px 24px -4px hsl(47 97% 54% / 0.5)'
-            : '0 4px 16px -4px hsl(47 97% 54% / 0.35)',
+            ? '0 4px 24px -4px hsl(var(--primary) / 0.5)'
+            : '0 4px 16px -4px hsl(var(--primary) / 0.35)',
         }}
       >
         <Play size={isMobile ? 14 : 16} className="fill-current" />

@@ -35,7 +35,7 @@ const WorkflowNodes = ({ activeSource, activeTarget, phase, workflow, onNodeClic
                   ? 'border-primary/50 bg-primary/10'
                   : 'border-border/30 bg-card/60 hover:border-primary/25 hover:bg-card/80'
                 }`}
-              style={isActive ? { boxShadow: '0 0 18px -2px hsl(183,100%,27%,0.45)' } : undefined}
+              style={isActive ? { boxShadow: '0 0 18px -2px hsl(var(--primary) / 0.35)' } : undefined}
               animate={{ scale: isActive ? 1.12 : 1 }}
               transition={{ duration: 0.3 }}
               whileHover={{ scale: isActive ? 1.12 : 1.05 }}
