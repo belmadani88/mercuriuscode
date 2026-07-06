@@ -80,7 +80,7 @@ const Solutions = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                     <sol.icon className="w-5 h-5 text-cyan" />
                   </div>
-                  <h2 className="text-heading font-bold text-foreground mb-4">{sol.title}</h2>
+                  <h2 className="text-heading-sm font-semibold text-foreground mb-4">{sol.title}</h2>
                   <div className="mb-6">
                     <h4 className="text-body-sm font-semibold text-destructive/80 mb-2">The Problem</h4>
                     <p className="text-body text-text-secondary">{sol.problem}</p>

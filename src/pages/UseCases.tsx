@@ -117,7 +117,7 @@ const UseCases = () => {
               className="surface-card p-8 md:p-12"
             >
               <div className="flex items-center gap-3 mb-6">
-                <h2 className="text-heading font-bold text-foreground">{uc.area}</h2>
+                <h2 className="text-heading-sm font-semibold text-foreground">{uc.area}</h2>
                 <span className="text-caption text-text-tertiary">{uc.industry}</span>
               </div>
 

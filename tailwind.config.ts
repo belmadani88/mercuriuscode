@@ -84,14 +84,18 @@ export default {
         mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
       },
       fontSize: {
-        "display": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.035em" }],
-        "display-sm": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.03em" }],
-        "heading": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.025em" }],
-        "heading-sm": ["1.5rem", { lineHeight: "1.3", letterSpacing: "-0.02em" }],
-        "body-lg": ["1.125rem", { lineHeight: "1.7" }],
-        "body": ["1rem", { lineHeight: "1.7" }],
-        "body-sm": ["0.875rem", { lineHeight: "1.6" }],
-        "caption": ["0.75rem", { lineHeight: "1.5" }],
+        // Unified typography scale (fluid, responsive, one source of truth).
+        // Use these tokens ONLY. Do not add arbitrary text-[Npx] utilities.
+        "display":    ["clamp(2.25rem, 4.2vw + 1rem, 3.75rem)", { lineHeight: "1.08", letterSpacing: "-0.03em" }],
+        "display-sm": ["clamp(1.875rem, 2.8vw + 0.75rem, 2.75rem)", { lineHeight: "1.12", letterSpacing: "-0.025em" }],
+        "heading":    ["clamp(1.5rem, 1.6vw + 0.85rem, 2rem)",   { lineHeight: "1.2",  letterSpacing: "-0.02em" }],
+        "heading-sm": ["clamp(1.125rem, 0.6vw + 0.9rem, 1.25rem)", { lineHeight: "1.3", letterSpacing: "-0.015em" }],
+        "card-title": ["clamp(1rem, 0.35vw + 0.9rem, 1.125rem)", { lineHeight: "1.35", letterSpacing: "-0.01em" }],
+        "body-lg":    ["clamp(1rem, 0.35vw + 0.9rem, 1.125rem)", { lineHeight: "1.65" }],
+        "body":       ["1rem",     { lineHeight: "1.65" }],
+        "body-sm":    ["0.875rem", { lineHeight: "1.55" }],
+        "caption":    ["0.75rem",  { lineHeight: "1.4", letterSpacing: "0.02em" }],
+        "label":      ["0.6875rem",{ lineHeight: "1.4", letterSpacing: "0.14em" }],
       },
       keyframes: {
         "accordion-down": {
