@@ -1,30 +1,16 @@
-import { Suspense, lazy, useRef } from "react";
+import { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 const HeroVisualization = lazy(() => import("./HeroVisualization"));
 
-const ease = [0.22, 1, 0.36, 1] as const;
-
 const HeroSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-
-  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
-
   return (
     <section
-      ref={sectionRef}
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Layered background */}
-      <motion.div className="absolute inset-0" style={{ opacity: bgOpacity }}>
+      <div className="absolute inset-0">
         <div className="absolute inset-0 bg-background" />
         <div
           className="absolute inset-0"
@@ -50,13 +36,10 @@ const HeroSection = () => {
             backgroundSize: "128px 128px",
           }}
         />
-      </motion.div>
+      </div>
 
       {/* Content */}
-      <motion.div
-        className="container-wide relative z-10 pt-24 pb-10 lg:pt-28 lg:pb-12"
-        style={{ y: contentY }}
-      >
+      <div className="container-wide relative z-10 pt-24 pb-10 lg:pt-28 lg:pb-12">
         <div className="grid lg:grid-cols-[45%_55%] gap-8 lg:gap-6 items-start">
           {/* ── Left column: text ── */}
           <div>
