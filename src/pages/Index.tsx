@@ -1,17 +1,20 @@
+import { lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
-import StickyCTA from "@/components/StickyCTA";
 import HeroSection from "@/components/home/HeroSection";
-import SocialProofSection from "@/components/home/SocialProofSection";
-import ProblemSection from "@/components/home/ProblemSection";
-import SolutionsSection from "@/components/home/SolutionsSection";
-import HowItWorksSection from "@/components/home/HowItWorksSection";
-import ROISection from "@/components/home/ROISection";
-import ExpectedOutcomesSection from "@/components/home/ExpectedOutcomesSection";
-import CaseStudySection from "@/components/home/CaseStudySection";
-import TrustSection from "@/components/home/TrustSection";
-import CTASection from "@/components/home/CTASection";
+
+/* Below-the-fold sections load after the hero is interactive */
+const SocialProofSection = lazy(() => import("@/components/home/SocialProofSection"));
+const ProblemSection = lazy(() => import("@/components/home/ProblemSection"));
+const SolutionsSection = lazy(() => import("@/components/home/SolutionsSection"));
+const HowItWorksSection = lazy(() => import("@/components/home/HowItWorksSection"));
+const ROISection = lazy(() => import("@/components/home/ROISection"));
+const ExpectedOutcomesSection = lazy(() => import("@/components/home/ExpectedOutcomesSection"));
+const CaseStudySection = lazy(() => import("@/components/home/CaseStudySection"));
+const TrustSection = lazy(() => import("@/components/home/TrustSection"));
+const CTASection = lazy(() => import("@/components/home/CTASection"));
+const Footer = lazy(() => import("@/components/Footer"));
+const StickyCTA = lazy(() => import("@/components/StickyCTA"));
 
 const Index = () => {
   return (
@@ -23,17 +26,19 @@ const Index = () => {
       />
       <Navigation />
       <HeroSection />
-      <SocialProofSection />
-      <ProblemSection />
-      <SolutionsSection />
-      <HowItWorksSection />
-      <ROISection />
-      <ExpectedOutcomesSection />
-      <CaseStudySection />
-      <TrustSection />
-      <CTASection />
-      <Footer />
-      <StickyCTA />
+      <Suspense fallback={null}>
+        <SocialProofSection />
+        <ProblemSection />
+        <SolutionsSection />
+        <HowItWorksSection />
+        <ROISection />
+        <ExpectedOutcomesSection />
+        <CaseStudySection />
+        <TrustSection />
+        <CTASection />
+        <Footer />
+        <StickyCTA />
+      </Suspense>
     </div>
   );
 };
