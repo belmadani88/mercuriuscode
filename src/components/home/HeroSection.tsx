@@ -112,24 +112,13 @@ const HeroSection = () => {
             </div>
 
             {/* Stats with vertical separators */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="flex items-center"
-            >
+            <div className="flex items-center">
               {[
                 { value: "2–3x", label: "Avg. lift" },
                 { value: "4–8 wks", label: "To launch" },
                 { value: "100%", label: "Custom-built" },
               ].map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  className="flex items-center"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.45, delay: 0.85 + i * 0.12 }}
-                >
+                <div key={stat.label} className="flex items-center">
                   {i > 0 && <div className="w-px h-8 bg-border/40 mx-4 sm:mx-5" />}
                   <div className="flex flex-col">
                     <span
@@ -142,18 +131,13 @@ const HeroSection = () => {
                       {stat.label}
                     </span>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* ── Right column: visualization ── */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.3, ease }}
-            className="w-full"
-          >
+          <div className="w-full animate-fade-in-hero">
             <Suspense
               fallback={
                 <div
@@ -165,9 +149,9 @@ const HeroSection = () => {
             >
               <HeroVisualization />
             </Suspense>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
