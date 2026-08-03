@@ -247,3 +247,12 @@
   /* LIME (primary) — CTAs & success only. Never decorate with it. */
   .accent-success    { color: hsl(var(--primary)); }
 }
+
+/* Hero visualization entrance (CSS instead of JS to keep the critical path light) */
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in-hero {
+  animation: heroFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
