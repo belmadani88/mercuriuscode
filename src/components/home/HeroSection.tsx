@@ -141,8 +141,7 @@ const HeroSection = () => {
             <Suspense
               fallback={
                 <div
-                  className="w-full max-w-xl mx-auto"
-                  style={{ aspectRatio: "0.78" }}
+                  className="w-full max-w-xl mx-auto aspect-[1/1.66] md:aspect-[1/1.39] lg:aspect-[1/1.36]"
                   aria-hidden="true"
                 />
               }
