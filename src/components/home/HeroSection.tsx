@@ -1,8 +1,9 @@
-import { useRef } from "react";
+import { Suspense, lazy, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import HeroVisualization from "./HeroVisualization";
+
+const HeroVisualization = lazy(() => import("./HeroVisualization"));
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -170,7 +171,17 @@ const HeroSection = () => {
             transition={{ duration: 0.9, delay: 0.3, ease }}
             className="w-full"
           >
-            <HeroVisualization />
+            <Suspense
+              fallback={
+                <div
+                  className="w-full max-w-xl mx-auto"
+                  style={{ aspectRatio: "0.78" }}
+                  aria-hidden="true"
+                />
+              }
+            >
+              <HeroVisualization />
+            </Suspense>
           </motion.div>
         </div>
       </motion.div>
