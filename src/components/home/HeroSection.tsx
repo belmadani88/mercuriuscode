@@ -60,23 +60,15 @@ const HeroSection = () => {
           {/* ── Left column: text ── */}
           <div>
             {/* Pill */}
-            <motion.div
-              initial={{ opacity: 0, x: -16 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease }}
-              className="mb-5"
-            >
+            <div className="mb-5">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm px-4 py-1.5 text-caption font-medium text-primary">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 Conversion strategy. Revenue-first design.
               </span>
-            </motion.div>
+            </div>
 
             {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, delay: 0.12, ease }}
+            <h1
               className="text-foreground mb-6"
               style={{
                 fontSize: "clamp(2rem, 4vw + 0.5rem, 3.8rem)",
@@ -97,27 +89,19 @@ const HeroSection = () => {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
                 </span>
               </span>
-            </motion.h1>
+            </h1>
 
             {/* Subheadline */}
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.28, ease }}
+            <p
               className="text-muted-foreground max-w-md mb-8 leading-relaxed"
               style={{ fontSize: "clamp(0.92rem, 0.7vw + 0.65rem, 1.05rem)" }}
             >
               We combine conversion psychology, buyer behavior, and modern web
               execution to build sites that generate leads, customers, and growth.
-            </motion.p>
+            </p>
 
             {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.44, ease }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8"
-            >
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8">
               <Link
                 to="/contact"
                 className="group relative inline-flex items-center gap-2.5 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:brightness-110 hover:scale-[1.02] w-full sm:w-auto justify-center sm:justify-start"
@@ -141,7 +125,7 @@ const HeroSection = () => {
                   className="opacity-40 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5"
                 />
               </Link>
-            </motion.div>
+            </div>
 
             {/* Stats with vertical separators */}
             <motion.div
