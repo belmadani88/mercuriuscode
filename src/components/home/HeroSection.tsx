@@ -137,11 +137,11 @@ const HeroSection = () => {
           </div>
 
           {/* ── Right column: visualization ── */}
-          <div className="w-full animate-fade-in-hero">
+          <div className="w-full animate-fade-in-hero min-h-[548px] md:min-h-[628px] lg:min-h-[656px]">
             <Suspense
               fallback={
                 <div
-                  className="w-full max-w-xl mx-auto aspect-[1/1.66] md:aspect-[1/1.39] lg:aspect-[1/1.36]"
+                  className="w-full max-w-xl mx-auto h-full"
                   aria-hidden="true"
                 />
               }
