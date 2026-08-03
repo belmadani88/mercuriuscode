@@ -1,4 +1,21 @@
-/* Fonts loaded via index.html preload for performance */
+/* Self-hosted variable fonts — zero third-party requests, no render-blocking CSS */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Archivo-var.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url('/fonts/IBMPlexSans-var.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 @tailwind base;
 @tailwind components;
@@ -229,4 +246,13 @@
 
   /* LIME (primary) — CTAs & success only. Never decorate with it. */
   .accent-success    { color: hsl(var(--primary)); }
+}
+
+/* Hero visualization entrance (CSS instead of JS to keep the critical path light) */
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in-hero {
+  animation: heroFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
 }

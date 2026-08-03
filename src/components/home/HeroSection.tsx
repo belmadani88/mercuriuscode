@@ -1,29 +1,15 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+
 import HeroVisualization from "./HeroVisualization";
 
-const ease = [0.22, 1, 0.36, 1] as const;
-
 const HeroSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-
-  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
-
   return (
     <section
-      ref={sectionRef}
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Layered background */}
-      <motion.div className="absolute inset-0" style={{ opacity: bgOpacity }}>
+      <div className="absolute inset-0">
         <div className="absolute inset-0 bg-background" />
         <div
           className="absolute inset-0"
@@ -49,34 +35,23 @@ const HeroSection = () => {
             backgroundSize: "128px 128px",
           }}
         />
-      </motion.div>
+      </div>
 
       {/* Content */}
-      <motion.div
-        className="container-wide relative z-10 pt-24 pb-10 lg:pt-28 lg:pb-12"
-        style={{ y: contentY }}
-      >
+      <div className="container-wide relative z-10 pt-24 pb-10 lg:pt-28 lg:pb-12">
         <div className="grid lg:grid-cols-[45%_55%] gap-8 lg:gap-6 items-start">
           {/* ── Left column: text ── */}
           <div>
             {/* Pill */}
-            <motion.div
-              initial={{ opacity: 0, x: -16 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease }}
-              className="mb-5"
-            >
+            <div className="mb-5">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm px-4 py-1.5 text-caption font-medium text-primary">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 Conversion strategy. Revenue-first design.
               </span>
-            </motion.div>
+            </div>
 
             {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, delay: 0.12, ease }}
+            <h1
               className="text-foreground mb-6"
               style={{
                 fontSize: "clamp(2rem, 4vw + 0.5rem, 3.8rem)",
@@ -97,27 +72,19 @@ const HeroSection = () => {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
                 </span>
               </span>
-            </motion.h1>
+            </h1>
 
             {/* Subheadline */}
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.28, ease }}
+            <p
               className="text-muted-foreground max-w-md mb-8 leading-relaxed"
               style={{ fontSize: "clamp(0.92rem, 0.7vw + 0.65rem, 1.05rem)" }}
             >
               We combine conversion psychology, buyer behavior, and modern web
               execution to build sites that generate leads, customers, and growth.
-            </motion.p>
+            </p>
 
             {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.44, ease }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8"
-            >
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8">
               <Link
                 to="/contact"
                 className="group relative inline-flex items-center gap-2.5 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:brightness-110 hover:scale-[1.02] w-full sm:w-auto justify-center sm:justify-start"
@@ -141,27 +108,16 @@ const HeroSection = () => {
                   className="opacity-40 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5"
                 />
               </Link>
-            </motion.div>
+            </div>
 
             {/* Stats with vertical separators */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="flex items-center"
-            >
+            <div className="flex items-center">
               {[
                 { value: "2–3x", label: "Avg. lift" },
                 { value: "4–8 wks", label: "To launch" },
                 { value: "100%", label: "Custom-built" },
               ].map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  className="flex items-center"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.45, delay: 0.85 + i * 0.12 }}
-                >
+                <div key={stat.label} className="flex items-center">
                   {i > 0 && <div className="w-px h-8 bg-border/40 mx-4 sm:mx-5" />}
                   <div className="flex flex-col">
                     <span
@@ -174,22 +130,17 @@ const HeroSection = () => {
                       {stat.label}
                     </span>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* ── Right column: visualization ── */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.3, ease }}
-            className="w-full"
-          >
+          <div className="w-full animate-fade-in-hero">
             <HeroVisualization />
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
