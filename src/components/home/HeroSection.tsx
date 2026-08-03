@@ -1,8 +1,7 @@
-import { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-const HeroVisualization = lazy(() => import("./HeroVisualization"));
+import HeroVisualization from "./HeroVisualization";
 
 const HeroSection = () => {
   return (
@@ -137,17 +136,8 @@ const HeroSection = () => {
           </div>
 
           {/* ── Right column: visualization ── */}
-          <div className="w-full animate-fade-in-hero min-h-[548px] md:min-h-[628px] lg:min-h-[656px]">
-            <Suspense
-              fallback={
-                <div
-                  className="w-full max-w-xl mx-auto h-full"
-                  aria-hidden="true"
-                />
-              }
-            >
-              <HeroVisualization />
-            </Suspense>
+          <div className="w-full animate-fade-in-hero">
+            <HeroVisualization />
           </div>
         </div>
       </div>
