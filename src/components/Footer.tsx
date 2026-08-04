@@ -14,7 +14,7 @@ const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   Resources: [
-    { label: "Pricing", href: "/pricing" },
+    { label: "Packages", href: "/packages" },
     { label: "Industries", href: "/industries" },
     { label: "Insights", href: "/insights" },
     { label: "Security", href: "/security" },

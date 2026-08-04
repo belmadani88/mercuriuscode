@@ -92,7 +92,7 @@ const HeroSection = () => {
                   boxShadow: "0 4px 20px -4px hsl(79 100% 53% / 0.45)",
                 }}
               >
-                <span>Book a Growth Call</span>
+                <span>Book a Strategy Meeting</span>
                 <ArrowRight
                   size={15}
                   className="transition-transform duration-300 group-hover:translate-x-0.5"

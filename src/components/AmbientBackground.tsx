@@ -45,7 +45,7 @@ const PALETTES: Record<string, Blob[]> = {
     { color: "var(--primary)",  x: "18%", y: "48%", size: "55vmax", opacity: 0.13, blur: 180 },
     { color: "var(--primary)", x: "60%", y: "85%", size: "45vmax", opacity: 0.13, blur: 170 },
   ],
-  "/pricing": [
+  "/packages": [
     { color: "var(--primary)",  x: "70%", y: "18%", size: "55vmax", opacity: 0.143, blur: 170 },
     { color: "var(--primary)", x: "20%", y: "50%", size: "55vmax", opacity: 0.156, blur: 160 },
     { color: "var(--foreground)",    x: "58%", y: "88%", size: "50vmax", opacity: 0.13, blur: 180 },
@@ -114,21 +114,22 @@ const AmbientBackground = () => {
             "radial-gradient(ellipse at 50% 0%, hsl(var(--background) / 0) 0%, hsl(var(--background) / 0.35) 60%, hsl(var(--background) / 0.9) 100%)",
         }}
       />
-      {blobs.map((b, i) => (
-        <div
-          key={i}
-          className="absolute rounded-full will-change-transform"
-          style={{
-            left: b.x,
-            top: b.y,
-            width: b.size,
-            height: b.size,
-            transform: "translate(-50%, -50%)",
-            background: `radial-gradient(circle at center, hsl(${b.color} / ${b.opacity}) 0%, hsl(${b.color} / 0) 65%)`,
-            filter: `blur(${b.blur}px)`,
-          }}
-        />
-      ))}
+      {/* Glow field: one composited layer of soft radial gradients.
+          No CSS filter blur — the gradient falloff supplies the softness,
+          which keeps scrolling smooth on low-power and mobile devices. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: blobs
+            .map(
+              (b) =>
+                `radial-gradient(circle ${b.size} at ${b.x} ${b.y}, hsl(${b.color} / ${b.opacity}) 0%, hsl(${b.color} / ${(
+                  b.opacity * 0.45
+                ).toFixed(3)}) 32%, hsl(${b.color} / 0) 70%)`
+            )
+            .join(","),
+        }}
+      />
       {/* Faint grain to prevent banding */}
       <div
         className="absolute inset-0 opacity-[0.025] mix-blend-overlay"

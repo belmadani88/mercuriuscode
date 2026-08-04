@@ -114,8 +114,8 @@ const HowItWorks = () => {
           <Link to="/solutions" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
             Explore solutions →
           </Link>
-          <Link to="/pricing" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
-            View pricing →
+          <Link to="/packages" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            View packages →
           </Link>
           <Link to="/use-cases" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
             See use cases →
@@ -128,7 +128,7 @@ const HowItWorks = () => {
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free growth call.</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We will audit your current site, identify the highest-leverage conversion wins, and show you the revenue projection before you commit to anything.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book a Free Growth Call <ArrowRight size={16} />
+            Book a Strategy Meeting <ArrowRight size={16} />
           </Link>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
@@ -9,7 +9,7 @@ const Solutions = lazy(() => import("./pages/Solutions"));
 const Industries = lazy(() => import("./pages/Industries"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const UseCases = lazy(() => import("./pages/UseCases"));
-const Pricing = lazy(() => import("./pages/Pricing"));
+const Packages = lazy(() => import("./pages/Packages"));
 const About = lazy(() => import("./pages/About"));
 const Insights = lazy(() => import("./pages/Insights"));
 const InsightArticle = lazy(() => import("./pages/InsightArticle"));
@@ -40,7 +40,8 @@ const App = () => (
         <Route path="/industries" element={<Industries />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/use-cases" element={<UseCases />} />
-        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/pricing" element={<Navigate to="/packages" replace />} />
         <Route path="/about" element={<About />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/insights/:slug" element={<InsightArticle />} />
