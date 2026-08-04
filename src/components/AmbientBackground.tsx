@@ -114,21 +114,22 @@ const AmbientBackground = () => {
             "radial-gradient(ellipse at 50% 0%, hsl(var(--background) / 0) 0%, hsl(var(--background) / 0.35) 60%, hsl(var(--background) / 0.9) 100%)",
         }}
       />
-      {blobs.map((b, i) => (
-        <div
-          key={i}
-          className="absolute rounded-full will-change-transform"
-          style={{
-            left: b.x,
-            top: b.y,
-            width: b.size,
-            height: b.size,
-            transform: "translate(-50%, -50%)",
-            background: `radial-gradient(circle at center, hsl(${b.color} / ${b.opacity}) 0%, hsl(${b.color} / 0) 65%)`,
-            filter: `blur(${b.blur}px)`,
-          }}
-        />
-      ))}
+      {/* Glow field: one composited layer of soft radial gradients.
+          No CSS filter blur — the gradient falloff supplies the softness,
+          which keeps scrolling smooth on low-power and mobile devices. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: blobs
+            .map(
+              (b) =>
+                `radial-gradient(circle ${b.size} at ${b.x} ${b.y}, hsl(${b.color} / ${b.opacity}) 0%, hsl(${b.color} / ${(
+                  b.opacity * 0.45
+                ).toFixed(3)}) 32%, hsl(${b.color} / 0) 70%)`
+            )
+            .join(","),
+        }}
+      />
       {/* Faint grain to prevent banding */}
       <div
         className="absolute inset-0 opacity-[0.025] mix-blend-overlay"
