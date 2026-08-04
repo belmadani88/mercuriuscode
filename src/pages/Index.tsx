@@ -14,7 +14,6 @@ const CaseStudySection = lazy(() => import("@/components/home/CaseStudySection")
 const TrustSection = lazy(() => import("@/components/home/TrustSection"));
 const CTASection = lazy(() => import("@/components/home/CTASection"));
 const Footer = lazy(() => import("@/components/Footer"));
-const StickyCTA = lazy(() => import("@/components/StickyCTA"));
 
 const Index = () => {
   return (
