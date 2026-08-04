@@ -9,8 +9,6 @@ const tiers = [
   {
     name: "Launch",
     description: "For businesses ready to replace a weak site with a conversion-engineered one.",
-    price: "From $6,000",
-    period: "/month",
     features: [
       "Custom-designed marketing website",
       "Conversion strategy and positioning",
@@ -19,14 +17,12 @@ const tiers = [
       "Email support",
       "Monthly performance review",
     ],
-    cta: "Get Started",
+    cta: "Book a Strategy Meeting",
     highlighted: false,
   },
   {
     name: "Growth",
     description: "For teams serious about compounding revenue from their website and paid channels.",
-    price: "From $12,000",
-    period: "/month",
     features: [
       "Everything in Launch",
       "Ongoing CRO and A/B testing program",
@@ -36,14 +32,12 @@ const tiers = [
       "Bi-weekly growth strategy calls",
       "Custom analytics dashboards",
     ],
-    cta: "Book a Free Growth Call",
+    cta: "Book a Strategy Meeting",
     highlighted: true,
   },
   {
     name: "Enterprise",
     description: "For organizations that treat their web presence as core revenue infrastructure.",
-    price: "Custom",
-    period: "",
     features: [
       "Multi-site or global rollouts",
       "Complex integrations and custom builds",
@@ -54,7 +48,7 @@ const tiers = [
       "Custom hosting and infrastructure",
       "Executive quarterly reviews",
     ],
-    cta: "Contact Sales",
+    cta: "Book a Strategy Meeting",
     highlighted: false,
   },
 ];
@@ -82,20 +76,20 @@ const faqs = [
   },
 ];
 
-const Pricing = () => {
+const Packages = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="Pricing" description="Clear pricing for premium websites, funnels, and growth programs. Measurable ROI, no long-term lock-in." path="/pricing" />
+      <PageSEO title="Packages" description="Engagement packages for premium websites, funnels, and growth programs. Measurable ROI, no long-term lock-in." path="/packages" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
-            <span className="text-caption font-medium text-yellow uppercase tracking-wider mb-4 block">Pricing</span>
+            <span className="text-caption font-medium text-yellow uppercase tracking-wider mb-4 block">Packages</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
               Invest in revenue, not aesthetics.
             </h1>
             <p className="text-body-lg text-text-secondary">
-              Clear pricing. Measurable ROI. Websites that pay for themselves.
+              Clear scope. Measurable ROI. Websites that pay for themselves. Every package is scoped to your goals in a strategy meeting.
             </p>
           </motion.div>
         </div>
@@ -115,10 +109,6 @@ const Pricing = () => {
               >
                 <h3 className="text-heading-sm font-bold text-foreground mb-2">{tier.name}</h3>
                 <p className="text-body-sm text-text-secondary mb-6">{tier.description}</p>
-                <div className="mb-8">
-                  <span className="text-heading font-bold text-foreground">{tier.price}</span>
-                  <span className="text-body-sm text-text-tertiary">{tier.period}</span>
-                </div>
                 <ul className="space-y-3 mb-8 flex-1">
                   {tier.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2 text-body-sm text-text-secondary">
@@ -166,4 +156,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default Packages;
