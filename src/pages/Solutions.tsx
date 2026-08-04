@@ -126,8 +126,8 @@ const Solutions = () => {
           <Link to="/how-it-works" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
             Learn our process →
           </Link>
-          <Link to="/pricing" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
-            View pricing →
+          <Link to="/packages" className="text-body-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            View packages →
           </Link>
         </div>
       </section>
@@ -137,7 +137,7 @@ const Solutions = () => {
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Need something different?</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every business grows differently. Tell us about your buyers and your offer, and we will design the right growth engine for you.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book a Free Growth Call <ArrowRight size={16} />
+            Book a Strategy Meeting <ArrowRight size={16} />
           </Link>
         </div>
       </section>
