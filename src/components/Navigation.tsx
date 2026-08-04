@@ -28,6 +28,15 @@ const Navigation = () => {
     setMobileOpen(false);
   }, [location]);
 
+  // Lock page scroll while the mobile menu is open so the panel is the only
+  // scroll context and the full menu stays in view.
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   return (
     <>
       <nav
