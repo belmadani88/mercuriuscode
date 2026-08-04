@@ -3,10 +3,23 @@ import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ArrowRight, Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { z } from "zod";
+import { ArrowRight, Mail, MapPin, Clock, CheckCircle2, AlertCircle } from "lucide-react";
+
+const contactSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required").max(60, "First name is too long"),
+  lastName: z.string().trim().min(1, "Last name is required").max(60, "Last name is too long"),
+  email: z.string().trim().min(1, "Work email is required").email("Enter a valid email address").max(255, "Email is too long"),
+  company: z.string().trim().min(1, "Company is required").max(120, "Company name is too long"),
+  message: z.string().trim().min(10, "Please add at least 10 characters").max(2000, "Message is too long"),
+});
+
+const CONTACT_EMAIL = "contact@webthangs.site";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -16,52 +29,81 @@ const Contact = () => {
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => (prev[name] ? { ...prev, [name]: "" } : prev));
   };
 
   const [submitting, setSubmitting] = useState(false);
 
+  const buildMailto = () => {
+    const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\n${formData.message}`;
+    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Strategy Meeting Request")}&body=${encodeURIComponent(body)}`;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
+
+    const parsed = contactSchema.safeParse(formData);
+    if (!parsed.success) {
+      const fieldErrors: Record<string, string> = {};
+      parsed.error.issues.forEach((issue) => {
+        const key = String(issue.path[0]);
+        if (!fieldErrors[key]) fieldErrors[key] = issue.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
     setSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/contact@webthangs.site", {
+      const response = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `Growth Call Request from ${formData.firstName} ${formData.lastName}`,
-          name: `${formData.firstName} ${formData.lastName}`,
-          email: formData.email,
-          company: formData.company,
-          message: formData.message,
+          _subject: `Strategy Meeting Request from ${parsed.data.firstName} ${parsed.data.lastName}`,
+          _template: "table",
+          name: `${parsed.data.firstName} ${parsed.data.lastName}`,
+          email: parsed.data.email,
+          company: parsed.data.company,
+          message: parsed.data.message,
         }),
       });
 
-      if (response.ok) {
+      const result = await response.json().catch(() => null);
+
+      if (response.ok && (!result || result.success !== "false")) {
         setSubmitted(true);
       } else {
-        const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
-        window.location.href = `mailto:contact@webthangs.site?subject=Growth Call Request&body=${mailtoBody}`;
+        setSubmitError("We could not send your request automatically. Use the email link below and we will reply within 24 hours.");
       }
     } catch {
-      const mailtoBody = `Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0ACompany: ${formData.company}%0A%0A${formData.message}`;
-      window.location.href = `mailto:contact@webthangs.site?subject=Growth Call Request&body=${mailtoBody}`;
+      setSubmitError("We could not send your request automatically. Use the email link below and we will reply within 24 hours.");
     } finally {
       setSubmitting(false);
     }
   };
 
+  const fieldClass = (name: string) =>
+    `w-full px-4 py-3 rounded-lg bg-secondary border text-foreground text-body-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+      errors[name] ? "border-destructive" : "border-border"
+    }`;
+
+  const FieldError = ({ name }: { name: string }) =>
+    errors[name] ? <p className="text-caption text-destructive mt-1.5">{errors[name]}</p> : null;
+
   return (
     <div className="min-h-screen">
-      <PageSEO title="Contact" description="Book a free 30-minute growth call. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
+      <PageSEO title="Contact" description="Book a free 30-minute strategy meeting. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
             <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Get Started</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Book your free growth call.
+              Book your free strategy meeting.
             </h1>
             <p className="text-body-lg text-text-secondary">
               30 minutes. No sales pitch. We will audit your website, identify your highest-leverage conversion opportunities, and show you the revenue you are leaving on the table.
@@ -80,10 +122,10 @@ const Contact = () => {
                     <CheckCircle2 className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-heading-sm font-bold text-foreground mb-3">Thank you. We will be in touch shortly.</h3>
-                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your growth call.</p>
+                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your strategy meeting.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} noValidate className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="text-body-sm font-medium text-foreground mb-2 block">First Name</label>
@@ -91,12 +133,14 @@ const Contact = () => {
                         id="firstName"
                         name="firstName"
                         type="text"
-                        required
+                        maxLength={60}
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-body-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        aria-invalid={!!errors.firstName}
+                        className={fieldClass("firstName")}
                         placeholder="Jane"
                       />
+                      <FieldError name="firstName" />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="text-body-sm font-medium text-foreground mb-2 block">Last Name</label>
@@ -104,12 +148,14 @@ const Contact = () => {
                         id="lastName"
                         name="lastName"
                         type="text"
-                        required
+                        maxLength={60}
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-body-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        aria-invalid={!!errors.lastName}
+                        className={fieldClass("lastName")}
                         placeholder="Smith"
                       />
+                      <FieldError name="lastName" />
                     </div>
                   </div>
                   <div>
@@ -118,12 +164,14 @@ const Contact = () => {
                       id="email"
                       name="email"
                       type="email"
-                      required
+                      maxLength={255}
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-body-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      aria-invalid={!!errors.email}
+                      className={fieldClass("email")}
                       placeholder="jane@company.com"
                     />
+                    <FieldError name="email" />
                   </div>
                   <div>
                     <label htmlFor="company" className="text-body-sm font-medium text-foreground mb-2 block">Company</label>
@@ -131,29 +179,43 @@ const Contact = () => {
                       id="company"
                       name="company"
                       type="text"
-                      required
+                      maxLength={120}
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-body-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      aria-invalid={!!errors.company}
+                      className={fieldClass("company")}
                       placeholder="Acme Inc."
                     />
+                    <FieldError name="company" />
                   </div>
                   <div>
                     <label htmlFor="message" className="text-body-sm font-medium text-foreground mb-2 block">What is holding your website back?</label>
                     <textarea
                       id="message"
                       name="message"
-                      required
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-body-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                      aria-invalid={!!errors.message}
+                      className={`${fieldClass("message")} resize-none`}
                       placeholder="Tell us about your site, your traffic, and the conversion problem you want to solve..."
                       maxLength={2000}
                     />
+                    <FieldError name="message" />
                   </div>
+                  {submitError && (
+                    <div className="flex items-start gap-3 rounded-lg border border-destructive/40 bg-destructive/10 p-4">
+                      <AlertCircle className="w-4 h-4 text-destructive mt-0.5 flex-shrink-0" />
+                      <div className="text-body-sm text-text-secondary">
+                        {submitError}{" "}
+                        <a href={buildMailto()} className="text-primary underline">
+                          Send by email instead
+                        </a>
+                      </div>
+                    </div>
+                  )}
                   <button type="submit" disabled={submitting} className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm disabled:opacity-60 disabled:cursor-not-allowed">
-                    {submitting ? "Sending…" : "Book a Free Growth Call"} {!submitting && <ArrowRight size={16} />}
+                    {submitting ? "Sending…" : "Book a Strategy Meeting"} {!submitting && <ArrowRight size={16} />}
                   </button>
                   <p className="text-caption text-text-tertiary text-center">We respond within 24 hours. NDA available on request.</p>
                 </form>
@@ -165,7 +227,7 @@ const Contact = () => {
                 <h3 className="text-heading-sm font-bold text-foreground mb-4">What to expect</h3>
                 <ul className="space-y-4">
                   {[
-                    "A focused 30-minute growth conversation",
+                    "A focused 30-minute strategy conversation",
                     "A live audit of your site and highest-leverage conversion leaks",
                     "A custom revenue projection based on your traffic and funnel",
                     "Clear next steps with no pressure and no obligation",
