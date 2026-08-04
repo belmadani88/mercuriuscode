@@ -36,7 +36,6 @@ const Index = () => {
         <TrustSection />
         <CTASection />
         <Footer />
-        <StickyCTA />
       </Suspense>
     </div>
   );
