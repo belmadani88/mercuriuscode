@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Industries", href: "/industries" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Use Cases", href: "/use-cases" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Packages", href: "/packages" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
 ];
@@ -72,13 +72,15 @@ const Navigation = () => {
               to="/contact"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-body-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors glow-sm"
             >
-              Book Growth Call
+              Book a Strategy Meeting
             </Link>
           </div>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden text-foreground p-2"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -91,23 +93,23 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-0 z-40 bg-background pt-20 px-6 lg:hidden"
+            className="fixed inset-0 z-40 bg-background pt-16 pb-4 px-6 lg:hidden flex flex-col overflow-y-auto"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col justify-center flex-1 gap-0.5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-xl font-medium text-foreground py-2 border-b border-border"
+                  className="text-base font-medium text-foreground py-2.5 border-b border-border"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="mt-4 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-body font-medium text-primary-foreground"
+                className="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-body-sm font-semibold text-primary-foreground"
               >
-                Book Growth Call
+                Book a Strategy Meeting
               </Link>
             </div>
           </motion.div>
