@@ -45,7 +45,7 @@ const PALETTES: Record<string, Blob[]> = {
     { color: "var(--primary)",  x: "18%", y: "48%", size: "55vmax", opacity: 0.13, blur: 180 },
     { color: "var(--primary)", x: "60%", y: "85%", size: "45vmax", opacity: 0.13, blur: 170 },
   ],
-  "/pricing": [
+  "/packages": [
     { color: "var(--primary)",  x: "70%", y: "18%", size: "55vmax", opacity: 0.143, blur: 170 },
     { color: "var(--primary)", x: "20%", y: "50%", size: "55vmax", opacity: 0.156, blur: 160 },
     { color: "var(--foreground)",    x: "58%", y: "88%", size: "50vmax", opacity: 0.13, blur: 180 },
