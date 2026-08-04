@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CTABand from "@/components/CTABand";
 import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
@@ -96,6 +97,10 @@ const Insights = () => {
           </div>
         </div>
       </section>
+      <CTABand
+        heading="Want these ideas applied to your website?"
+        body="Book a 30-minute strategy meeting and we will map the highest-leverage conversion fixes for your funnel."
+      />
       <Footer />
     </div>
   );
