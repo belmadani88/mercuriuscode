@@ -55,7 +55,7 @@ const Navigation = () => {
             <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-5 xl:gap-8">
+          <div className="hidden xl:flex items-center gap-5 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -71,7 +71,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-4">
             <Link
               to="/contact"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-caption font-semibold text-primary-foreground hover:bg-primary/90 transition-colors glow-sm text-center leading-tight"
@@ -82,7 +82,7 @@ const Navigation = () => {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-foreground p-2"
+            className="xl:hidden text-foreground p-2"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -97,7 +97,7 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-0 z-40 bg-background pt-16 pb-4 px-6 lg:hidden flex flex-col overflow-y-auto"
+            className="fixed inset-0 z-40 bg-background pt-16 pb-4 px-6 xl:hidden flex flex-col overflow-y-auto"
           >
             <div className="flex flex-col justify-center flex-1 gap-0.5">
               {navLinks.map((link) => (
