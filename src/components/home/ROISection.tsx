@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Check, X } from "lucide-react";
 
 const comparisons = [
   { metric: "Primary Goal", human: "Look good", ai: "Generate revenue" },
@@ -21,7 +22,7 @@ const ROISection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-10 md:mb-16"
         >
           <span className="text-caption font-medium text-yellow uppercase tracking-wider mb-4 block">
             ROI
@@ -29,7 +30,7 @@ const ROISection = () => {
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
             The difference is measurable.
           </h2>
-          <p className="text-body-lg text-text-secondary">
+          <p className="text-body-lg text-text-secondary max-w-xl mx-auto">
             A side-by-side comparison of a generic agency website versus a site engineered by WebThangs around conversion, revenue, and business outcomes.
           </p>
         </motion.div>
@@ -63,19 +64,29 @@ const ROISection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="space-y-4 md:hidden"
+          className="space-y-3 md:hidden"
         >
           {comparisons.map((row, i) => (
-            <div key={i} className="surface-card p-5">
-              <div className="text-body-sm font-semibold text-foreground mb-3">{row.metric}</div>
-              <div className="flex justify-between items-start gap-4">
-                <div>
-                  <div className="text-caption text-text-tertiary uppercase tracking-wider mb-1">Generic</div>
-                  <div className="text-body-sm text-text-secondary">{row.human}</div>
+            <div key={i} className="surface-card overflow-hidden">
+              <div className="px-4 py-2.5 border-b border-border bg-secondary/40">
+                <span className="text-caption font-semibold uppercase tracking-wider text-text-secondary">
+                  {row.metric}
+                </span>
+              </div>
+              <div className="divide-y divide-border">
+                <div className="flex items-start gap-3 px-4 py-3">
+                  <X className="w-3.5 h-3.5 text-text-tertiary mt-0.5 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <div className="text-caption text-text-tertiary mb-0.5">Generic website</div>
+                    <div className="text-body-sm text-text-secondary">{row.human}</div>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <div className="text-caption text-yellow uppercase tracking-wider mb-1">WebThangs</div>
-                  <div className="text-body-sm text-accent font-medium">{row.ai}</div>
+                <div className="flex items-start gap-3 px-4 py-3 bg-primary/[0.04]">
+                  <Check className="w-3.5 h-3.5 text-primary mt-0.5 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <div className="text-caption text-primary mb-0.5">WebThangs site</div>
+                    <div className="text-body-sm text-foreground font-medium">{row.ai}</div>
+                  </div>
                 </div>
               </div>
             </div>
