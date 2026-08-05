@@ -4,7 +4,7 @@ import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { z } from "zod";
-import { ArrowRight, Mail, MapPin, Clock, CheckCircle2, AlertCircle } from "lucide-react";
+import { ArrowRight, Mail, Clock, CheckCircle2, AlertCircle } from "lucide-react";
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(60, "First name is too long"),
@@ -38,7 +38,7 @@ const Contact = () => {
 
   const buildMailto = () => {
     const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\n${formData.message}`;
-    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Strategy Meeting Request")}&body=${encodeURIComponent(body)}`;
+    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Free Website Conversion Audit Request")}&body=${encodeURIComponent(body)}`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -63,7 +63,7 @@ const Contact = () => {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `Strategy Meeting Request from ${parsed.data.firstName} ${parsed.data.lastName}`,
+          _subject: `Free Website Conversion Audit Request from ${parsed.data.firstName} ${parsed.data.lastName}`,
           _template: "table",
           name: `${parsed.data.firstName} ${parsed.data.lastName}`,
           email: parsed.data.email,
@@ -96,14 +96,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
-      <PageSEO title="Contact" description="Book a free 30-minute strategy meeting. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
+      <PageSEO title="Contact" description="Get a free website conversion audit. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
             <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Get Started</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Book your free strategy meeting.
+              Get your free website conversion audit.
             </h1>
             <p className="text-body-lg text-text-secondary">
               30 minutes. No sales pitch. We will audit your website, identify your highest-leverage conversion opportunities, and show you the revenue you are leaving on the table.
@@ -122,7 +122,7 @@ const Contact = () => {
                     <CheckCircle2 className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-heading-sm font-bold text-foreground mb-3">Thank you. We will be in touch shortly.</h3>
-                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your strategy meeting.</p>
+                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your free conversion audit.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="space-y-6">
@@ -215,7 +215,7 @@ const Contact = () => {
                     </div>
                   )}
                   <button type="submit" disabled={submitting} className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm disabled:opacity-60 disabled:cursor-not-allowed">
-                    {submitting ? "Sending…" : "Book a Strategy Meeting"} {!submitting && <ArrowRight size={16} />}
+                    {submitting ? "Sending…" : "Get Your Free Website Conversion Audit"} {!submitting && <ArrowRight size={16} />}
                   </button>
                   <p className="text-caption text-text-tertiary text-center">We respond within 24 hours. NDA available on request.</p>
                 </form>
@@ -245,10 +245,6 @@ const Contact = () => {
                   <Mail className="w-4 h-4 text-text-tertiary" />
                   contact@webthangs.site
                 </a>
-                <div className="flex items-center gap-3 text-body-sm text-text-secondary">
-                  <MapPin className="w-4 h-4 text-text-tertiary" />
-                  San Francisco, CA
-                </div>
                 <div className="flex items-center gap-3 text-body-sm text-text-secondary">
                   <Clock className="w-4 h-4 text-text-tertiary" />
                   Response within 24 hours

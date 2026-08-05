@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Packages", href: "/packages" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navigation = () => {
@@ -54,7 +55,7 @@ const Navigation = () => {
             <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-5 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -70,24 +71,18 @@ const Navigation = () => {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-4">
             <Link
               to="/contact"
-              className="text-body-sm font-medium text-text-secondary hover:text-foreground transition-colors"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-caption font-semibold text-primary-foreground hover:bg-primary/90 transition-colors glow-sm text-center leading-tight"
             >
-              Contact
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-body-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors glow-sm"
-            >
-              Book a Strategy Meeting
+              Get Your Free Website Conversion Audit
             </Link>
           </div>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-foreground p-2"
+            className="xl:hidden text-foreground p-2"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -102,23 +97,23 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-0 z-40 bg-background pt-16 pb-4 px-6 lg:hidden flex flex-col overflow-y-auto"
+            className="fixed inset-0 z-40 bg-background pt-16 pb-4 px-6 xl:hidden flex flex-col overflow-y-auto"
           >
             <div className="flex flex-col justify-center flex-1 gap-0.5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-base font-medium text-foreground py-2.5 border-b border-border"
+                  className="text-body-sm font-medium text-foreground py-2 border-b border-border"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-body-sm font-semibold text-primary-foreground"
+                className="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-caption font-semibold text-primary-foreground text-center leading-tight"
               >
-                Book a Strategy Meeting
+                Get Your Free Website Conversion Audit
               </Link>
             </div>
           </motion.div>

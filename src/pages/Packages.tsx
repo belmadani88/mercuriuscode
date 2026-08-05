@@ -17,7 +17,7 @@ const tiers = [
       "Email support",
       "Monthly performance review",
     ],
-    cta: "Book a Strategy Meeting",
+    cta: "Get Your Free Website Conversion Audit",
     highlighted: false,
   },
   {
@@ -32,7 +32,7 @@ const tiers = [
       "Bi-weekly growth strategy calls",
       "Custom analytics dashboards",
     ],
-    cta: "Book a Strategy Meeting",
+    cta: "Get Your Free Website Conversion Audit",
     highlighted: true,
   },
   {
@@ -48,7 +48,7 @@ const tiers = [
       "Custom hosting and infrastructure",
       "Executive quarterly reviews",
     ],
-    cta: "Book a Strategy Meeting",
+    cta: "Get Your Free Website Conversion Audit",
     highlighted: false,
   },
 ];
@@ -89,7 +89,7 @@ const Packages = () => {
               Invest in revenue, not aesthetics.
             </h1>
             <p className="text-body-lg text-text-secondary">
-              Clear scope. Measurable ROI. Websites that pay for themselves. Every package is scoped to your goals in a strategy meeting.
+              Clear scope. Measurable ROI. Websites that pay for themselves. Every package is scoped to your goals in your free conversion audit.
             </p>
           </motion.div>
         </div>

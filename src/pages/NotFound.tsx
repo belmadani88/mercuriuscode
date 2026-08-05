@@ -19,7 +19,7 @@ const NotFound = () => {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-body-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm"
             >
-              Book a Strategy Meeting <ArrowRight size={14} />
+              Get Your Free Website Conversion Audit <ArrowRight size={14} />
             </Link>
             <Link
               to="/"
