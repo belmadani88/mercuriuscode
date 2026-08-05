@@ -129,7 +129,7 @@ const Terms = () => {
             <div>
               <h2 className="text-heading-sm font-bold text-foreground mb-4">11. Governing Law</h2>
               <p className="text-body text-text-secondary">
-                These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes shall be resolved through binding arbitration in San Francisco, CA, under the rules of the American Arbitration Association.
+                These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes shall be resolved through binding arbitration under the rules of the American Arbitration Association.
               </p>
             </div>
 

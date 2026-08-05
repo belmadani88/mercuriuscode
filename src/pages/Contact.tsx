@@ -4,7 +4,7 @@ import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { z } from "zod";
-import { ArrowRight, Mail, MapPin, Clock, CheckCircle2, AlertCircle } from "lucide-react";
+import { ArrowRight, Mail, Clock, CheckCircle2, AlertCircle } from "lucide-react";
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(60, "First name is too long"),
@@ -245,10 +245,6 @@ const Contact = () => {
                   <Mail className="w-4 h-4 text-text-tertiary" />
                   contact@webthangs.site
                 </a>
-                <div className="flex items-center gap-3 text-body-sm text-text-secondary">
-                  <MapPin className="w-4 h-4 text-text-tertiary" />
-                  San Francisco, CA
-                </div>
                 <div className="flex items-center gap-3 text-body-sm text-text-secondary">
                   <Clock className="w-4 h-4 text-text-tertiary" />
                   Response within 24 hours
