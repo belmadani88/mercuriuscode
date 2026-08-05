@@ -17,7 +17,7 @@ const tiers = [
       "Email support",
       "Monthly performance review",
     ],
-    cta: "Book a Strategy Meeting",
+    cta: "Get Your Free Website Conversion Audit",
     highlighted: false,
   },
   {
@@ -32,7 +32,7 @@ const tiers = [
       "Bi-weekly growth strategy calls",
       "Custom analytics dashboards",
     ],
-    cta: "Book a Strategy Meeting",
+    cta: "Get Your Free Website Conversion Audit",
     highlighted: true,
   },
   {
@@ -48,7 +48,7 @@ const tiers = [
       "Custom hosting and infrastructure",
       "Executive quarterly reviews",
     ],
-    cta: "Book a Strategy Meeting",
+    cta: "Get Your Free Website Conversion Audit",
     highlighted: false,
   },
 ];

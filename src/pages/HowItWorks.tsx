@@ -128,7 +128,7 @@ const HowItWorks = () => {
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free growth call.</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We will audit your current site, identify the highest-leverage conversion wins, and show you the revenue projection before you commit to anything.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
-            Book a Strategy Meeting <ArrowRight size={16} />
+            Get Your Free Website Conversion Audit <ArrowRight size={16} />
           </Link>
         </div>
       </section>

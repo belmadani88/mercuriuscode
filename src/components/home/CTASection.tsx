@@ -26,7 +26,7 @@ const CTASection = () => {
               to="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm w-full sm:w-auto"
             >
-              Book a Strategy Meeting
+              Get Your Free Website Conversion Audit
               <ArrowRight size={16} />
             </Link>
             <span className="text-body-sm text-text-tertiary">No commitment. NDA available on request.</span>
