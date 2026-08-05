@@ -126,7 +126,9 @@
     line-height: 1.2;
     overflow-wrap: break-word;
     word-break: normal;
-    hyphens: auto;
+    hyphens: none;
+    /* Keep multi-line titles visually even instead of splitting mid-phrase */
+    text-wrap: balance;
   }
 
   /* Base sizes only apply if a size utility isn't set — tokens win. */
