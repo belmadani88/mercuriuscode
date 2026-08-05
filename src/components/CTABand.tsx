@@ -8,7 +8,7 @@ type Props = {
 
 const CTABand = ({
   heading = "Ready to see what your website could be earning?",
-  body = "Book a 30-minute strategy meeting. We review your site, find the conversion leaks, and show you the revenue you are leaving on the table.",
+  body = "Request your free website conversion audit. We review your site, find the conversion leaks, and show you the revenue you are leaving on the table.",
 }: Props) => (
   <section className="section-padding border-t border-border">
     <div className="container-tight text-center">

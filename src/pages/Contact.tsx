@@ -38,7 +38,7 @@ const Contact = () => {
 
   const buildMailto = () => {
     const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\n${formData.message}`;
-    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Strategy Meeting Request")}&body=${encodeURIComponent(body)}`;
+    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Free Website Conversion Audit Request")}&body=${encodeURIComponent(body)}`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -63,7 +63,7 @@ const Contact = () => {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `Strategy Meeting Request from ${parsed.data.firstName} ${parsed.data.lastName}`,
+          _subject: `Free Website Conversion Audit Request from ${parsed.data.firstName} ${parsed.data.lastName}`,
           _template: "table",
           name: `${parsed.data.firstName} ${parsed.data.lastName}`,
           email: parsed.data.email,
@@ -96,14 +96,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
-      <PageSEO title="Contact" description="Book a free 30-minute strategy meeting. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
+      <PageSEO title="Contact" description="Get a free website conversion audit. We will audit your site, identify your biggest conversion leaks, and show you the revenue you are leaving on the table." path="/contact" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
             <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Get Started</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Book your free strategy meeting.
+              Get your free website conversion audit.
             </h1>
             <p className="text-body-lg text-text-secondary">
               30 minutes. No sales pitch. We will audit your website, identify your highest-leverage conversion opportunities, and show you the revenue you are leaving on the table.
@@ -122,7 +122,7 @@ const Contact = () => {
                     <CheckCircle2 className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-heading-sm font-bold text-foreground mb-3">Thank you. We will be in touch shortly.</h3>
-                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your strategy meeting.</p>
+                  <p className="text-body text-text-secondary">Expect a response within 24 hours. We will send you a calendar link to schedule your free conversion audit.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="space-y-6">

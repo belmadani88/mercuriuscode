@@ -167,7 +167,7 @@ const Security = () => {
       </section>
       <CTABand
         heading="Questions about security or compliance?"
-        body="Bring them to a 30-minute strategy meeting. We will walk you through our stack, safeguards, and process."
+        body="Request your free website conversion audit. We will walk you through our stack, safeguards, and process."
       />
       <Footer />
     </div>

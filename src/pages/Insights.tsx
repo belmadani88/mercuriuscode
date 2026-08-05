@@ -99,7 +99,7 @@ const Insights = () => {
       </section>
       <CTABand
         heading="Want these ideas applied to your website?"
-        body="Book a 30-minute strategy meeting and we will map the highest-leverage conversion fixes for your funnel."
+        body="Request your free website conversion audit and we will map the highest-leverage conversion fixes for your funnel."
       />
       <Footer />
     </div>
