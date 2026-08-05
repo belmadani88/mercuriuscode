@@ -24,8 +24,8 @@ const footerLinks = {
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="container-wide section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+      <div className="container-wide px-6 pt-14 pb-8 md:pt-20 md:pb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 mb-10 md:mb-14">
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
@@ -72,11 +72,11 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-border pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-caption text-text-tertiary">
             © 2026 WebThangs. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <Link to="/privacy" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Terms of Service</Link>
             <Link to="/security" className="text-caption text-text-tertiary hover:text-text-secondary transition-colors">Security</Link>
