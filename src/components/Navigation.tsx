@@ -104,14 +104,14 @@ const Navigation = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-base font-medium text-foreground py-2.5 border-b border-border"
+                  className="text-body-sm font-medium text-foreground py-2 border-b border-border"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-body-sm font-semibold text-primary-foreground"
+                className="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-caption font-semibold text-primary-foreground text-center leading-tight"
               >
                 Get Your Free Website Conversion Audit
               </Link>
