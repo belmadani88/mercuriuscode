@@ -55,7 +55,7 @@ const Navigation = () => {
             <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
