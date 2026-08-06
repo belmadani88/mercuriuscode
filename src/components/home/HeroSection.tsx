@@ -87,10 +87,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8">
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center gap-2.5 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:brightness-110 hover:scale-[1.02] w-full sm:w-auto justify-center sm:justify-start"
-                style={{
-                  boxShadow: "0 4px 20px -4px hsl(79 100% 53% / 0.45)",
-                }}
+                className="btn-cta group w-full sm:w-auto"
               >
                 <span>Get Your Free Website Conversion Audit</span>
                 <ArrowRight
