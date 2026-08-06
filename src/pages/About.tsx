@@ -4,6 +4,7 @@ import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import founderImage from "@/assets/founder.jpg";
 
 const values = [
   { title: "Revenue Over Aesthetics", description: "Design that is not tied to a business outcome is decoration. Every choice we make is measured against your growth." },
@@ -62,8 +63,16 @@ const About = () => {
               viewport={{ once: true }}
               className="surface-card p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start"
             >
-              <div className="w-20 h-20 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl font-bold text-primary">WT</span>
+              {/* Founder photo: replace src/assets/founder.jpg with your own square image (same filename). */}
+              <div className="w-full max-w-[220px] sm:w-40 md:w-48 aspect-square rounded-xl overflow-hidden border border-border bg-card flex-shrink-0 mx-auto md:mx-0">
+                <img
+                  src={founderImage}
+                  alt="Oussama Bel Madani, founder of WebThangs"
+                  width={768}
+                  height={768}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="text-caption font-medium text-magenta uppercase tracking-wider mb-2 block">Founder</span>
