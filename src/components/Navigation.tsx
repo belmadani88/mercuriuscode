@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/webthangs-logo.webp.asset.json";
+import logoUrl from "@/assets/webthangs-logo.webp";
 
 const navLinks = [
   { label: "Solutions", href: "/solutions" },
@@ -50,7 +50,7 @@ const Navigation = () => {
         <div className="container-wide flex items-center justify-between h-16 md:h-18">
           <Link to="/" className="flex items-center shrink-0" aria-label="WebThangs home">
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="WebThangs"
               width={800}
               height={110}

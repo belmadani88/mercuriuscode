@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoAsset from "@/assets/webthangs-logo.webp.asset.json";
+import logoUrl from "@/assets/webthangs-logo.webp";
 
 const footerLinks = {
   Solutions: [
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center mb-4" aria-label="WebThangs home">
               <img
-                src={logoAsset.url}
+                src={logoUrl}
                 alt="WebThangs"
                 width={800}
                 height={110}
