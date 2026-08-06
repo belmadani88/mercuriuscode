@@ -156,7 +156,7 @@ const InsightArticle = () => {
             <div className="surface-card p-8 text-center">
               <h3 className="text-heading-sm font-semibold text-foreground mb-3">Ready to see what your website could be earning?</h3>
               <p className="text-body-sm text-text-secondary mb-6">Let us show you where your funnel is leaking revenue and what a conversion-focused rebuild could unlock.</p>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-body-sm font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+              <Link to="/contact" className="btn-cta">
                 Get Your Free Website Conversion Audit
               </Link>
             </div>

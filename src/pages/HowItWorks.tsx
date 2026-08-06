@@ -9,7 +9,7 @@ const steps = [
   {
     phase: "Phase 1",
     title: "Discovery & Strategy",
-    duration: "Week 1 to 2",
+    duration: "Days 1 to 3",
     details: [
       "Deep-dive on your business model, buyers, and offer",
       "Audit the current site, funnels, and conversion data",
@@ -21,7 +21,7 @@ const steps = [
   {
     phase: "Phase 2",
     title: "Positioning & Design",
-    duration: "Week 2 to 4",
+    duration: "Days 4 to 8",
     details: [
       "Sharpen positioning, messaging, and offer clarity",
       "Design every page around a specific buyer decision",
@@ -33,7 +33,7 @@ const steps = [
   {
     phase: "Phase 3",
     title: "Build & Launch",
-    duration: "Week 4 to 8",
+    duration: "Days 9 to 14",
     details: [
       "Engineer a fast, accessible, SEO-ready website",
       "Integrate CRM, analytics, and marketing tools",
@@ -59,7 +59,7 @@ const steps = [
 const HowItWorks = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="How It Works" description="From strategy to launch in 4 to 8 weeks. Our four-phase methodology delivers websites engineered for measurable revenue growth." path="/how-it-works" />
+      <PageSEO title="How It Works" description="From strategy to launch in 2 weeks. Our four-phase methodology delivers websites engineered for measurable revenue growth." path="/how-it-works" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -69,7 +69,7 @@ const HowItWorks = () => {
               A structured path from strategy to revenue.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              From the first conversation to measurable revenue lifts in weeks. Our four-phase methodology brings strategy, design, engineering, and optimization under one accountable roof.
+              From the first conversation to measurable revenue lifts in 2 weeks. Our four-phase methodology brings strategy, design, engineering, and optimization under one accountable roof.
             </p>
           </motion.div>
         </div>
@@ -127,7 +127,7 @@ const HowItWorks = () => {
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Start with a free website conversion audit.</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">We will audit your current site, identify the highest-leverage conversion wins, and show you the revenue projection before you commit to anything.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+          <Link to="/contact" className="btn-cta">
             Get Your Free Website Conversion Audit <ArrowRight size={16} />
           </Link>
         </div>

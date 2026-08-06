@@ -11,7 +11,7 @@ const outcomes = [
   },
   {
     icon: Clock,
-    metric: "4-8 weeks",
+    metric: "2 weeks",
     label: "From strategy to launch",
     detail: "Most projects go live within two months, complete with analytics and CRO instrumentation.",
   },

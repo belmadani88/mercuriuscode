@@ -153,7 +153,7 @@ const UseCases = () => {
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Not sure where to start?</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Tell us about your business. We will identify the highest-leverage web and conversion opportunities and show you the projected impact.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-body font-medium text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+          <Link to="/contact" className="btn-cta">
             Get Your Free Website Conversion Audit <ArrowRight size={16} />
           </Link>
         </div>

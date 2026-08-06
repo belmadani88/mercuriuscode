@@ -16,7 +16,7 @@ const CTABand = ({
       <p className="text-body text-text-secondary max-w-xl mx-auto mb-8">{body}</p>
       <Link
         to="/contact"
-        className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm"
+        className="btn-cta"
       >
         Get Your Free Website Conversion Audit <ArrowRight size={16} />
       </Link>

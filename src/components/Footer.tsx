@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoUrl from "@/assets/webthangs-logo.webp";
 
 const footerLinks = {
   Solutions: [
@@ -27,11 +28,15 @@ const Footer = () => {
       <div className="container-wide px-6 pt-14 pb-8 md:pt-20 md:pb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 mb-10 md:mb-14">
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">W</span>
-              </div>
-              <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
+            <Link to="/" className="flex items-center mb-4" aria-label="WebThangs home">
+              <img
+                src={logoUrl}
+                alt="WebThangs"
+                width={800}
+                height={110}
+                loading="lazy"
+                className="h-5 sm:h-6 w-auto object-contain"
+              />
             </Link>
             <p className="text-text-secondary text-body-sm max-w-xs mb-4">
             We build high-converting websites engineered to turn attention into revenue.
