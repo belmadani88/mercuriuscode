@@ -24,7 +24,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm w-full sm:w-auto"
+              className="btn-cta w-full sm:w-auto"
             >
               Get Your Free Website Conversion Audit
               <ArrowRight size={16} />

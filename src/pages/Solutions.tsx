@@ -136,7 +136,7 @@ const Solutions = () => {
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Need something different?</h2>
           <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every business grows differently. Tell us about your buyers and your offer, and we will design the right growth engine for you.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm">
+          <Link to="/contact" className="btn-cta">
             Get Your Free Website Conversion Audit <ArrowRight size={16} />
           </Link>
         </div>

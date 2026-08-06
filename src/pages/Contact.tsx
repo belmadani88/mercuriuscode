@@ -214,7 +214,7 @@ const Contact = () => {
                       </div>
                     </div>
                   )}
-                  <button type="submit" disabled={submitting} className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-body font-semibold text-primary-foreground hover:bg-primary/90 transition-all glow-sm disabled:opacity-60 disabled:cursor-not-allowed">
+                  <button type="submit" disabled={submitting} className="btn-cta w-full disabled:opacity-60 disabled:cursor-not-allowed">
                     {submitting ? "Sending…" : "Get Your Free Website Conversion Audit"} {!submitting && <ArrowRight size={16} />}
                   </button>
                   <p className="text-caption text-text-tertiary text-center">We respond within 24 hours. NDA available on request.</p>
