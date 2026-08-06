@@ -114,7 +114,7 @@ const HeroSection = () => {
             <div className="flex items-center">
               {[
                 { value: "2–3x", label: "Avg. lift" },
-                { value: "4–8 wks", label: "To launch" },
+                { value: "2 wks", label: "To launch" },
                 { value: "100%", label: "Custom-built" },
               ].map((stat, i) => (
                 <div key={stat.label} className="flex items-center">

@@ -9,7 +9,7 @@ const steps = [
   {
     phase: "Phase 1",
     title: "Discovery & Strategy",
-    duration: "Week 1 to 2",
+    duration: "Days 1 to 3",
     details: [
       "Deep-dive on your business model, buyers, and offer",
       "Audit the current site, funnels, and conversion data",
@@ -21,7 +21,7 @@ const steps = [
   {
     phase: "Phase 2",
     title: "Positioning & Design",
-    duration: "Week 2 to 4",
+    duration: "Days 4 to 8",
     details: [
       "Sharpen positioning, messaging, and offer clarity",
       "Design every page around a specific buyer decision",
@@ -33,7 +33,7 @@ const steps = [
   {
     phase: "Phase 3",
     title: "Build & Launch",
-    duration: "Week 4 to 8",
+    duration: "Days 9 to 14",
     details: [
       "Engineer a fast, accessible, SEO-ready website",
       "Integrate CRM, analytics, and marketing tools",
@@ -69,7 +69,7 @@ const HowItWorks = () => {
               A structured path from strategy to revenue.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              From the first conversation to measurable revenue lifts in weeks. Our four-phase methodology brings strategy, design, engineering, and optimization under one accountable roof.
+              From the first conversation to measurable revenue lifts in 2 weeks. Our four-phase methodology brings strategy, design, engineering, and optimization under one accountable roof.
             </p>
           </motion.div>
         </div>

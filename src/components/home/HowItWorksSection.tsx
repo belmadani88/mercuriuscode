@@ -15,7 +15,7 @@ const steps = [
   {
     number: "03",
     title: "Build & Launch",
-    description: "Fast, modern, technically flawless. Your new site ships in weeks, not months, with performance, SEO, and analytics wired in from day one.",
+    description: "Fast, modern, technically flawless. Your new site ships in 2 weeks, not months, with performance, SEO, and analytics wired in from day one.",
   },
   {
     number: "04",
@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
             Process
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            From strategy to measurable revenue in weeks.
+            From strategy to measurable revenue in 2 weeks.
           </h2>
           <p className="text-body-lg text-text-secondary">
             A structured, four-phase engagement designed for speed, precision, and measurable growth from launch onward.
