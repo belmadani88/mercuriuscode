@@ -6,7 +6,7 @@ const comparisons = [
   { metric: "Primary Goal", human: "Look good", ai: "Generate revenue" },
   { metric: "Conversion Rate", human: "1–2% (industry norm)", ai: "3–8% typical outcome" },
   { metric: "Ad Efficiency", human: "High cost per lead", ai: "Dramatically lower CPL and CAC" },
-  { metric: "Time to Launch", human: "3 to 6 months", ai: "4 to 8 weeks" },
+  { metric: "Time to Launch", human: "3 to 6 months", ai: "2 weeks" },
   { metric: "Post-Launch Support", human: "Handed off, forgotten", ai: "Continuous CRO and optimization" },
   { metric: "Measurement", human: "Vanity metrics", ai: "Revenue, pipeline, ROI" },
 ];

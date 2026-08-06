@@ -56,7 +56,7 @@ const tiers = [
 const faqs = [
   {
     q: "How long does a project take?",
-    a: "Most websites launch in 4 to 8 weeks from kickoff. Larger builds and full growth programs run longer, but you see measurable value from month one.",
+    a: "Most websites launch in 2 weeks from kickoff. Larger builds and full growth programs run longer, but you see measurable value from month one.",
   },
   {
     q: "How do you actually improve conversions?",
