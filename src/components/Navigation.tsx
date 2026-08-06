@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logoAsset from "@/assets/webthangs-logo.webp.asset.json";
 
 const navLinks = [
   { label: "Solutions", href: "/solutions" },
@@ -11,7 +12,6 @@ const navLinks = [
   { label: "Packages", href: "/packages" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const Navigation = () => {
@@ -48,11 +48,14 @@ const Navigation = () => {
         }`}
       >
         <div className="container-wide flex items-center justify-between h-16 md:h-18">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">W</span>
-            </div>
-            <span className="font-semibold text-foreground text-lg tracking-tight">WebThangs</span>
+          <Link to="/" className="flex items-center shrink-0" aria-label="WebThangs home">
+            <img
+              src={logoAsset.url}
+              alt="WebThangs"
+              width={800}
+              height={110}
+              className="h-5 sm:h-6 md:h-7 w-auto object-contain"
+            />
           </Link>
 
           <div className="hidden xl:flex items-center gap-5 xl:gap-8">
@@ -74,7 +77,7 @@ const Navigation = () => {
           <div className="hidden xl:flex items-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-caption font-semibold text-primary-foreground hover:bg-primary/90 transition-colors glow-sm text-center leading-tight"
+              className="btn-cta btn-cta-sm"
             >
               Get Your Free Website Conversion Audit
             </Link>
@@ -111,7 +114,7 @@ const Navigation = () => {
               ))}
               <Link
                 to="/contact"
-                className="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-caption font-semibold text-primary-foreground text-center leading-tight"
+                className="btn-cta btn-cta-sm mt-3 w-full"
               >
                 Get Your Free Website Conversion Audit
               </Link>
