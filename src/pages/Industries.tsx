@@ -47,7 +47,7 @@ const industries = [
 const Industries = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="Industries" description="Conversion-engineered websites for FinTech, E-Commerce, SaaS, Local Services, Healthcare, and Professional Services." path="/industries" />
+      <PageSEO title="Industries" description="Conversion-engineered websites, AI lead qualification, and accelerated landing page funnels for FinTech, E-Commerce, SaaS, Local Services, Healthcare, and Professional Services." path="/industries" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -57,7 +57,7 @@ const Industries = () => {
               Engineered around your industry and buyers.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Every industry has different buyers, decision journeys, and trust signals. We design websites and funnels that reflect those realities, not generic templates.
+              Every industry has different buyers, decision journeys, and trust signals. We design websites, accelerated landing page funnels, and AI lead qualification flows that reflect those realities, not generic templates.
             </p>
           </motion.div>
         </div>
@@ -72,7 +72,7 @@ const Industries = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="surface-card p-6 sm:p-8 h-full w-full max-w-xl mx-auto md:max-w-none flex flex-col"
+              className="surface-card p-6 sm:p-8 h-full w-full max-w-xl mx-auto md:max-w-none flex flex-col hover:border-glow transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:justify-between sm:text-left mb-5 gap-2">
                 <h3 className="text-heading-sm font-bold text-foreground text-balance">{ind.name}</h3>
@@ -125,7 +125,7 @@ const Industries = () => {
       <section className="section-padding border-t border-border">
         <div className="container-tight text-center">
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-6">Don't see your industry?</h2>
-          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every engagement is custom. Tell us about your buyers and your business and we will design the right web and growth strategy from the ground up.</p>
+          <p className="text-body-lg text-text-secondary mb-8 max-w-xl mx-auto">Every engagement is custom. Tell us about your buyers and your business and we will design the right website, funnel, and AI-powered growth strategy from the ground up.</p>
           <Link to="/contact" className="btn-cta">
             Get Your Free Website Conversion Audit <ArrowRight size={16} />
           </Link>
