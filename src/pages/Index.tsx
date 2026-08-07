@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <PageSEO
-        title="High-converting websites engineered for revenue"
-        description="WebThangs is a premium web agency. We build websites engineered around conversion psychology, buyer behavior, and measurable business outcomes."
+        title="AI-powered websites engineered for revenue"
+        description="WebThangs builds conversion-engineered websites enhanced with AI sales agents, Generative Engine Optimization, real-time personalization, CRM automation, and continuous CRO."
         path="/"
       />
       <Navigation />
