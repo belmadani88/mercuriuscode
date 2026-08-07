@@ -4,9 +4,12 @@ import logoUrl from "@/assets/webthangs-logo.webp";
 const footerLinks = {
   Solutions: [
     { label: "High-Converting Websites", href: "/solutions#sales" },
-    { label: "Landing Pages & Funnels", href: "/solutions#support" },
-    { label: "SEO & Growth Systems", href: "/solutions#operations" },
-    { label: "CRO & Optimization", href: "/solutions#research" },
+    { label: "AI Sales Agents", href: "/solutions#ai-agents" },
+    { label: "Generative Engine Optimization", href: "/solutions#geo" },
+    { label: "Real-Time Personalization", href: "/solutions#personalization" },
+    { label: "CRM Automation", href: "/solutions#automation" },
+    { label: "Landing Page Funnels", href: "/solutions#funnels" },
+    { label: "CRO Retainers", href: "/solutions#research" },
   ],
   Company: [
     { label: "About", href: "/about" },
