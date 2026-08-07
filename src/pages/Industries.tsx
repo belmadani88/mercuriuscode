@@ -64,7 +64,7 @@ const Industries = () => {
       </section>
 
       <section className="section-padding">
-        <div className="container-wide grid md:grid-cols-2 gap-6">
+        <div className="container-wide grid md:grid-cols-2 gap-6 items-stretch">
           {industries.map((ind, i) => (
             <motion.div
               key={i}
@@ -72,13 +72,13 @@ const Industries = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="surface-card p-8 hover:border-glow transition-all duration-300"
+              className="surface-card p-6 sm:p-8 h-full w-full max-w-xl mx-auto md:max-w-none flex flex-col"
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2">
-                <h3 className="text-heading-sm font-bold text-foreground">{ind.name}</h3>
-                <span className="text-caption font-medium text-accent whitespace-nowrap">{ind.metric}</span>
+              <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:justify-between sm:text-left mb-5 gap-2">
+                <h3 className="text-heading-sm font-bold text-foreground text-balance">{ind.name}</h3>
+                <span className="text-caption font-medium text-accent sm:whitespace-nowrap">{ind.metric}</span>
               </div>
-              <div className="grid sm:grid-cols-2 gap-6 mb-0">
+              <div className="grid sm:grid-cols-2 gap-6 mb-0 flex-1">
                 <div>
                   <h4 className="text-caption font-semibold text-text-tertiary uppercase tracking-wider mb-2">Pain Points</h4>
                   <ul className="space-y-1.5">

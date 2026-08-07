@@ -12,12 +12,14 @@ const tiers = [
     features: [
       "Custom-designed marketing website",
       "Conversion strategy and positioning",
+      "Accelerated landing page funnel for your main offer",
+      "GEO foundations so AI engines can read and cite you",
       "Analytics and event tracking setup",
       "SEO foundations and technical hygiene",
       "Email support",
       "Monthly performance review",
     ],
-    cta: "Get Your Free Website Conversion Audit",
+    cta: "Start With Launch",
     highlighted: false,
   },
   {
@@ -25,14 +27,17 @@ const tiers = [
     description: "For teams serious about compounding revenue from their website and paid channels.",
     features: [
       "Everything in Launch",
-      "Ongoing CRO and A/B testing program",
-      "Landing pages and funnels for paid channels",
-      "Content, SEO, and organic growth systems",
+      "Continuous CRO retainer with AI-driven A/B testing",
+      "AI sales agent trained on your offer and FAQs",
+      "Dynamic UX and real-time personalization",
+      "Automated CRM workflows and tech stack integration",
+      "Landing page funnels for every paid channel",
+      "Content, SEO, and Generative Engine Optimization",
       "Priority support with SLA",
       "Bi-weekly growth strategy calls",
       "Custom analytics dashboards",
     ],
-    cta: "Get Your Free Website Conversion Audit",
+    cta: "Scale With Growth",
     highlighted: true,
   },
   {
@@ -40,15 +45,16 @@ const tiers = [
     description: "For organizations that treat their web presence as core revenue infrastructure.",
     features: [
       "Multi-site or global rollouts",
-      "Complex integrations and custom builds",
-      "Advanced experimentation programs",
+      "Complex API integrations and custom builds",
+      "Multi-agent AI qualification and routing",
+      "Advanced experimentation and personalization programs",
       "Dedicated success manager",
       "24/7 priority support",
       "Enterprise security and compliance",
       "Custom hosting and infrastructure",
       "Executive quarterly reviews",
     ],
-    cta: "Get Your Free Website Conversion Audit",
+    cta: "Talk To Our Team",
     highlighted: false,
   },
 ];
@@ -71,6 +77,18 @@ const faqs = [
     a: "Yes. After an initial engagement, ongoing retainers are month-to-month. You retain full ownership of your site, brand assets, and everything we build with you.",
   },
   {
+    q: "What does the AI sales agent actually do?",
+    a: "It is trained on your offer, pricing logic, and objections. It engages visitors instantly, answers complex questions, qualifies on intent and budget, and books meetings into your calendar 24/7. Unqualified traffic never reaches your sales team.",
+  },
+  {
+    q: "What is Generative Engine Optimization (GEO)?",
+    a: "Buyers increasingly ask ChatGPT, Perplexity, and Google AI Overviews before they search. GEO structures your content, data, and brand entities so those systems can understand your business and cite it as the authoritative answer in your category.",
+  },
+  {
+    q: "How does personalization and automation work in practice?",
+    a: "Your pages adapt headlines, CTAs, and proof based on referral source and behavior, while your CRM, email platform, and operational tools are connected through Zapier, Make, or custom APIs so follow-up and data entry happen automatically.",
+  },
+  {
     q: "What about hosting, security, and performance?",
     a: "We build on modern, secure, high-performance infrastructure with encryption, backups, and best-practice hardening. NDA available before any engagement.",
   },
@@ -79,7 +97,7 @@ const faqs = [
 const Packages = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="Packages" description="Engagement packages for premium websites, funnels, and growth programs. Measurable ROI, no long-term lock-in." path="/packages" />
+      <PageSEO title="Packages" description="Engagement packages for conversion-engineered websites, AI sales agents, personalization, CRM automation, and continuous CRO retainers. Measurable ROI, no lock-in." path="/packages" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -89,7 +107,7 @@ const Packages = () => {
               Invest in revenue, not aesthetics.
             </h1>
             <p className="text-body-lg text-text-secondary">
-              Clear scope. Measurable ROI. Websites that pay for themselves. Every package is scoped to your goals in your free conversion audit.
+              Clear scope. Measurable ROI. Websites that pay for themselves, with AI agents, personalization, and automation layered in as you scale. Every package is scoped to your goals in your free conversion audit.
             </p>
           </motion.div>
         </div>
