@@ -8,6 +8,20 @@ import { Link } from "react-router-dom";
 
 const articles = [
   {
+    slug: "generative-engine-optimization-explained",
+    category: "AI Discovery",
+    title: "Generative Engine Optimization: Getting Cited by ChatGPT",
+    excerpt: "Buyers now ask AI assistants before they search. Here is how to structure your content, data, and brand entities so AI engines name your business as the answer.",
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-sales-agents-that-qualify-leads",
+    category: "AI Systems",
+    title: "What an AI Sales Agent Should Actually Do on Your Website",
+    excerpt: "Most website chatbots deflect. A properly trained AI sales agent qualifies on intent and budget, handles objections, and books meetings. Here is the difference.",
+    readTime: "9 min read",
+  },
+  {
     slug: "why-your-next-hire-should-be-a-digital-worker",
     category: "Conversion Strategy",
     title: "Why Your Next Growth Hire Should Be Your Website",
@@ -54,7 +68,7 @@ const articles = [
 const Insights = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="Insights" description="Research and frameworks on conversion strategy, website performance, and modern growth." path="/insights" />
+      <PageSEO title="Insights" description="Research and frameworks on conversion strategy, AI sales agents, Generative Engine Optimization, personalization, and modern growth." path="/insights" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -64,7 +78,7 @@ const Insights = () => {
               Perspectives on conversion, growth, and modern web strategy.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Research, analysis, and practical frameworks from the team building high-converting websites for growth-stage companies.
+              Research, analysis, and practical frameworks from the team building high-converting, AI-ready websites for growth-stage companies.
             </p>
           </motion.div>
         </div>
