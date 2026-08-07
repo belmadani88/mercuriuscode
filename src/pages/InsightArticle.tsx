@@ -6,6 +6,35 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 const articleContent: Record<string, { category: string; title: string; readTime: string; content: string[] }> = {
+  "generative-engine-optimization-explained": {
+    category: "AI Discovery",
+    title: "Generative Engine Optimization: Getting Cited by ChatGPT",
+    readTime: "11 min read",
+    content: [
+      "A growing share of buying research now starts inside an AI assistant. Instead of typing a query and scanning ten blue links, buyers ask ChatGPT, Perplexity, or Google AI Overviews who the best provider is, and they act on the two or three names those systems return. If your business is not one of those names, the comparison happens without you.",
+      "Generative Engine Optimization, or GEO, is the discipline of making your business legible and quotable to those systems. Classic SEO optimizes for ranking a page. GEO optimizes for being selected as the answer, which is a different problem with different mechanics.",
+      "AI engines do not reward keyword density. They reward clarity, structure, and corroboration. They need to resolve who you are, what you do, who you do it for, what it costs, where you operate, and whether other credible sources agree. When those facts are scattered, implied, or buried inside images and marketing abstractions, the model cannot safely cite you.",
+      "The technical foundation is entity clarity. Your organization, services, locations, people, and pricing logic should be expressed in structured data that matches the language on the page. Service pages should answer one question definitively rather than gesturing at five. Claims should be specific and attributable, because specific claims are the ones that get quoted.",
+      "Content structure matters as much as content quality. Direct answers placed near the top of a section, plain-language definitions, comparison tables, and genuine FAQ blocks all give a model extractable material. Long, meandering brand narratives give it nothing to lift.",
+      "Corroboration is the part most companies skip. AI systems weigh consistency across sources. If your positioning, service names, and contact details differ between your site, your directory listings, and your profiles elsewhere, the model discounts all of them. Consistency is a ranking input in this channel.",
+      "GEO does not replace search optimization, and it does not replace conversion work. It sits on top of both. Being cited creates qualified arrival, and a conversion-engineered page is what turns that arrival into pipeline. Skipping either half wastes the other.",
+      "The practical starting point is a visibility audit: ask the major AI assistants the questions your buyers ask, and record what they say about your category and about you. The gaps in those answers are your GEO roadmap, and they are usually fixable in weeks rather than quarters.",
+    ],
+  },
+  "ai-sales-agents-that-qualify-leads": {
+    category: "AI Systems",
+    title: "What an AI Sales Agent Should Actually Do on Your Website",
+    readTime: "9 min read",
+    content: [
+      "Most website chatbots are deflection tools. They exist to reduce support tickets, so they answer narrowly, escalate reluctantly, and frustrate anyone with a real buying question. An AI sales agent has the opposite mandate: it exists to advance a deal.",
+      "The difference starts with what it knows. A sales agent is trained on your actual offer, your pricing logic, your delivery timelines, your differentiators, and the objections your team hears every week. It should be able to explain the difference between two packages as confidently as a good account executive.",
+      "The second difference is qualification. Every conversation should quietly establish the things your sales team needs to know before spending an hour: what the visitor is trying to achieve, timeline, budget range, and whether they are the decision maker. That information should arrive in your CRM alongside the full conversation, not as a bare email address.",
+      "The third difference is the ask. A deflection bot ends conversations. A sales agent ends them with a booked meeting, a submitted brief, or a clearly agreed next step, and it books directly into the right calendar with the right context attached.",
+      "Availability is where the economics get compelling. A meaningful share of enquiries arrive outside working hours, and speed to first response is one of the strongest predictors of whether a deal is won. An agent that answers expertly at 11pm on a Sunday is not a novelty feature. It is coverage your competitors do not have.",
+      "Guardrails are non-negotiable. The agent should answer from approved sources only, decline confidently when it does not know, never invent pricing, and hand off to a human on any sensitive or high-value thread. Trust collapses the first time a prospect is told something untrue.",
+      "Done properly, the result is straightforward: every visitor gets an instant, expert response, unqualified traffic never reaches your calendar, and your team spends its hours on conversations that were already pre-qualified. That is not automation for its own sake. It is capacity you did not have to hire.",
+    ],
+  },
   "why-your-next-hire-should-be-a-digital-worker": {
     category: "Conversion Strategy",
     title: "Why Your Next Growth Hire Should Be Your Website",
