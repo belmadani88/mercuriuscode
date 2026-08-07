@@ -10,13 +10,13 @@ const values = [
   { title: "Revenue Over Aesthetics", description: "Design that is not tied to a business outcome is decoration. Every choice we make is measured against your growth." },
   { title: "Strategy Before Pixels", description: "We do not open a design tool until we understand your buyers, your offer, and the exact decision the site needs to earn." },
   { title: "Fewer Clients, Deeper Work", description: "We take on a small number of engagements at a time so every project gets senior attention from strategy to launch." },
-  { title: "Partnership Over Projects", description: "Launch is a milestone, not the finish line. We stay involved to keep lifting conversion rate long after the site goes live." },
+  { title: "Partnership Over Projects", description: "Launch is a milestone, not the finish line. Our continuous CRO retainers keep testing, personalizing, and refining long after the site goes live." },
 ];
 
 const About = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="About WebThangs" description="WebThangs is a premium web agency that builds high-converting websites engineered to turn attention into revenue." path="/about" />
+      <PageSEO title="About WebThangs" description="WebThangs is a premium web agency building high-converting websites enhanced with AI sales agents, personalization, automation, and continuous optimization." path="/about" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -26,7 +26,7 @@ const About = () => {
               We build websites that earn back the traffic you paid for.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              WebThangs is a premium web agency for businesses that treat their website as revenue infrastructure. We combine conversion strategy, buyer psychology, and modern web execution to turn attention into pipeline, customers, and growth.
+              WebThangs is a premium web agency for businesses that treat their website as revenue infrastructure. We combine conversion strategy, buyer psychology, and AI-powered growth systems to turn attention into pipeline, customers, and growth.
             </p>
           </motion.div>
         </div>
@@ -38,7 +38,7 @@ const About = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-heading font-bold text-foreground mb-4">Our Vision</h2>
               <p className="text-body-lg text-text-secondary mb-4">
-                The businesses that grow fastest over the next decade will be the ones that treat their website as a revenue engine, not a marketing brochure. We build for those businesses.
+                The businesses that grow fastest over the next decade will be the ones whose websites qualify leads, personalize themselves, automate follow-up, and stay visible inside AI answer engines. We build for those businesses.
               </p>
               <p className="text-body text-text-secondary">
                 We are not a design studio and we are not a template shop. We are a conversion-focused web agency that treats every project as a business problem first, and a design problem second. The site is the deliverable. Growth is the outcome.
@@ -47,10 +47,10 @@ const About = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
               <h2 className="text-heading font-bold text-foreground mb-4">Our Approach</h2>
               <p className="text-body-lg text-text-secondary mb-4">
-                We do not use templates. We do not chase trends. Every engagement starts with the buyer, the offer, and the business model.
+                We do not use templates. We do not chase trends. Every engagement starts with the buyer, the offer, and the business model, then adds only the AI, personalization, and automation layers that move a real number.
               </p>
               <p className="text-body text-text-secondary">
-                We audit first. We position second. We design third. We ship fast, measure everything, and keep lifting conversion rate long after launch. This is website work as growth work, not as a creative deliverable.
+                We audit first. We position second. We design third. We ship fast, measure everything, and keep lifting conversion rate through a continuous CRO retainer. This is website work as growth work, not as a creative deliverable.
               </p>
             </motion.div>
           </div>

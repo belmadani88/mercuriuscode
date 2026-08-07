@@ -229,6 +229,8 @@ const Contact = () => {
                   {[
                     "A focused 30-minute strategy conversation",
                     "A live audit of your site and highest-leverage conversion leaks",
+                    "A view of where AI qualification, personalization, and automation would pay off fastest",
+                    "A visibility check on how AI engines like ChatGPT currently describe your business",
                     "A custom revenue projection based on your traffic and funnel",
                     "Clear next steps with no pressure and no obligation",
                   ].map((item, i) => (

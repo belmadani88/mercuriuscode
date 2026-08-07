@@ -14,6 +14,7 @@ const steps = [
       "Deep-dive on your business model, buyers, and offer",
       "Audit the current site, funnels, and conversion data",
       "Benchmark competitors and identify strategic gaps",
+      "Check how AI engines currently describe your business",
       "Define the revenue metrics we design against",
       "Deliver a complete Conversion Strategy Blueprint",
     ],
@@ -27,6 +28,7 @@ const steps = [
       "Design every page around a specific buyer decision",
       "Copywrite headlines, sections, and CTAs for conversion",
       "Prototype flows and validate against buyer psychology",
+      "Script your AI sales agent and qualification logic",
       "Approve a design system built to scale with your brand",
     ],
   },
@@ -36,7 +38,8 @@ const steps = [
     duration: "Days 9 to 14",
     details: [
       "Engineer a fast, accessible, SEO-ready website",
-      "Integrate CRM, analytics, and marketing tools",
+      "Integrate CRM, analytics, and automated workflows",
+      "Deploy your AI sales agent and GEO structured data",
       "Instrument events, funnels, and conversion tracking",
       "QA across devices, browsers, and Core Web Vitals",
       "Ship a production launch with zero downtime",
@@ -47,7 +50,8 @@ const steps = [
     title: "Optimize & Scale",
     duration: "Ongoing",
     details: [
-      "Continuous CRO experimentation and A/B testing",
+      "Continuous CRO retainer with AI-driven A/B testing",
+      "Personalization rules refined from real behavior",
       "Session analysis, heatmaps, and buyer research",
       "Monthly growth reviews with your team",
       "New landing pages, funnels, and campaign builds",
@@ -59,7 +63,7 @@ const steps = [
 const HowItWorks = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="How It Works" description="From strategy to launch in 2 weeks. Our four-phase methodology delivers websites engineered for measurable revenue growth." path="/how-it-works" />
+      <PageSEO title="How It Works" description="From strategy to launch in 2 weeks. A four-phase methodology that ships conversion-engineered websites with AI qualification, automation, and continuous optimization." path="/how-it-works" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
