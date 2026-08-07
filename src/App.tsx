@@ -21,9 +21,13 @@ const Security = lazy(() => import("./pages/Security"));
 
 const PageLoader = () => (
   <div className="min-h-screen bg-background flex items-center justify-center">
-    <div className="w-8 h-8 rounded-lg bg-primary animate-pulse flex items-center justify-center">
-      <span className="text-primary-foreground font-bold text-sm">M</span>
-    </div>
+    <img
+      src="/favicon.png"
+      alt="WebThangs"
+      width={64}
+      height={64}
+      className="w-10 h-10 md:w-12 md:h-12 rounded-lg object-contain animate-pulse"
+    />
   </div>
 );
 

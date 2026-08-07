@@ -75,7 +75,8 @@ const Security = () => {
                   At WebThangs, we understand that your website often handles customer data, payments, and brand-critical content. We design and build every site with strict security practices, respecting your existing infrastructure, compliance requirements, and access controls.
                 </p>
                 <p className="text-body text-text-secondary">
-                  We maintain high standards for data protection, follow modern web security best practices, and stay transparent about how we handle every layer of your site and its data.
+                  We maintain high standards for data protection, follow modern web security best practices, and stay transparent about how we handle every layer of your site and its data.{" "}
+                  The same standards apply to the AI and automation layers we build. AI sales agents run on scoped, approved knowledge sources with no training on your customer data, and every CRM or workflow integration uses least-privilege credentials, encrypted transport, and full audit logging.
                 </p>
               </div>
             </div>

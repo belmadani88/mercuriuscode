@@ -18,8 +18,16 @@ const PageSEO = ({ title, description, path, jsonLd }: PageSEOProps) => {
     name: "WebThangs",
     url: "https://webthangs.site",
     logo: "https://webthangs.site/favicon.ico",
-    description: "WebThangs builds high-converting websites engineered to turn attention into revenue.",
+    description: "WebThangs builds high-converting websites enhanced with AI-powered growth systems: AI sales agents, Generative Engine Optimization, real-time personalization, CRM automation, and continuous CRO.",
     foundingDate: "2025",
+    knowsAbout: [
+      "Conversion Rate Optimization",
+      "AI-Powered Sales Agents and Lead Qualification",
+      "Generative Engine Optimization",
+      "Dynamic UX and Real-Time Personalization",
+      "Automated CRM Workflows and Tech Stack Integration",
+      "Accelerated Landing Page Funnels",
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       email: "contact@webthangs.site",

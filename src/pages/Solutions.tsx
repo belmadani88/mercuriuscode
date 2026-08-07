@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, HeadphonesIcon, Settings, Search } from "lucide-react";
+import { ArrowRight, Zap, HeadphonesIcon, Settings, Search, Bot, Sparkles, UserCog, Workflow, Rocket } from "lucide-react";
 
 const solutions = [
   {
@@ -42,22 +42,67 @@ const solutions = [
     integrations: ["GA4", "Hotjar", "Microsoft Clarity", "VWO", "Segment"],
     outcomes: ["Compounding conversion gains", "Data-backed design decisions", "A site that gets better every month, not worse"],
   },
+  {
+    id: "ai-agents",
+    icon: Bot,
+    title: "AI-Powered Sales Agents & Lead Qualification",
+    problem: "Most enquiries arrive outside business hours, and the ones that arrive during the day wait hours for a reply. By the time your team responds, the buyer has already talked to a competitor.",
+    solution: "A custom-trained AI sales agent that engages every visitor instantly, answers detailed product and pricing questions, qualifies on intent and budget, and books the meeting straight into your calendar, 24/7.",
+    integrations: ["HubSpot", "Salesforce", "Calendly", "Slack", "Custom APIs"],
+    outcomes: ["Instant response on every enquiry", "Only qualified leads reach your sales team", "Meetings booked while your team sleeps"],
+  },
+  {
+    id: "geo",
+    icon: Sparkles,
+    title: "Generative Engine Optimization (GEO)",
+    problem: "Buyers now ask ChatGPT, Perplexity, and Google AI Overviews before they ever run a search. If those systems cannot read your business clearly, they recommend someone else.",
+    solution: "We structure your content, data, and brand entities so AI systems can understand and cite you as the authoritative answer in your category, not just index you.",
+    integrations: ["Schema.org", "Google AI Overviews", "ChatGPT", "Perplexity", "GSC"],
+    outcomes: ["Cited as the answer in AI search results", "Visibility in channels competitors ignore", "Authority that compounds with classic SEO"],
+  },
+  {
+    id: "personalization",
+    icon: UserCog,
+    title: "Dynamic UX & Real-Time Personalization",
+    problem: "One static page has to serve every visitor: cold ad traffic, referrals, returning buyers, and enterprise evaluators. Generic messaging converts all of them poorly.",
+    solution: "Pages that adapt headlines, CTAs, proof, and layout in real time based on referral source, behavior, and prior interactions, so every visitor sees the most relevant version of your offer.",
+    integrations: ["GA4", "Segment", "HubSpot", "Meta Ads", "Google Ads"],
+    outcomes: ["Higher conversion from the same traffic", "Relevant messaging per audience and channel", "Better returning-visitor engagement"],
+  },
+  {
+    id: "automation",
+    icon: Workflow,
+    title: "Automated CRM Workflows & Tech Stack Integration",
+    problem: "Leads land in an inbox, get copied into a spreadsheet, and follow-up depends on someone remembering. Speed to lead collapses and revenue quietly leaks.",
+    solution: "We connect your website to your CRM, email platform, and operational tools through Zapier, Make, or custom APIs so enrichment, routing, follow-up, and reporting happen automatically.",
+    integrations: ["Zapier", "Make", "HubSpot", "Klaviyo", "Custom APIs"],
+    outcomes: ["Zero manual data entry", "Instant follow-up on every lead", "One source of truth for pipeline reporting"],
+  },
+  {
+    id: "funnels",
+    icon: Rocket,
+    title: "Accelerated Landing Page Funnels",
+    problem: "Paid campaigns deserve dedicated destinations. Sending expensive clicks to a general page dilutes the message and inflates cost per lead.",
+    solution: "Ultra-fast, single-focus landing pages built per campaign and audience, with persuasive copy, one clear action, and a frictionless conversion flow. Shipped in days, not months.",
+    integrations: ["Google Ads", "Meta Ads", "TikTok Ads", "GA4", "HubSpot"],
+    outcomes: ["Lower cost per lead on paid traffic", "Sub-second load times", "New campaign pages live in days"],
+  },
 ];
 
 const Solutions = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="Websites, Funnels, SEO & CRO for Growth" description="Custom websites, landing pages, SEO systems, and continuous CRO — engineered around your buyers and your business objectives." path="/solutions" />
+      <PageSEO title="AI-Powered Websites, Funnels, GEO & CRO" description="Conversion-engineered websites, AI sales agents, Generative Engine Optimization, real-time personalization, CRM automation, and continuous CRO retainers." path="/solutions" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-caption font-medium text-cyan uppercase tracking-wider mb-4 block">Solutions</span>
             <h1 className="text-heading md:text-display-sm lg:text-display font-bold text-foreground mb-6">
-              Websites and growth systems engineered around your business.
+              Conversion systems, powered by AI, built around your business.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              Not templates. Not aesthetics-first. Custom-built sites and funnels engineered around your buyers, your offer, and the numbers you actually care about.
+              Not templates. Not aesthetics-first. We build websites, funnels, and AI-powered growth systems engineered around your buyers, your offer, and the numbers you actually care about. Ten capabilities, one accountable partner.
             </p>
           </motion.div>
         </div>

@@ -15,7 +15,7 @@ const useCases = [
       "Positioning, messaging, and offer strategy",
       "Homepage and category-page conversion design",
       "Lead capture forms and demo funnels",
-      "CRM integration and lead routing",
+      "AI lead qualification, CRM integration, and routing",
     ],
     outcome: "Your homepage becomes a consistent source of qualified pipeline instead of a digital brochure.",
   },
@@ -40,6 +40,7 @@ const useCases = [
     capabilities: [
       "Campaign-specific landing page design",
       "Offer, messaging, and CTA optimization",
+      "Dynamic headlines and CTAs per traffic source",
       "Conversion tracking and attribution",
       "A/B testing programs",
     ],
@@ -65,6 +66,7 @@ const useCases = [
     solution: "Technical foundations, content architecture, and on-page conversion design so search demand becomes compounding revenue, not vanity traffic.",
     capabilities: [
       "Technical SEO foundations",
+      "Generative Engine Optimization for AI answer engines",
       "Programmatic and pillar content design",
       "On-page conversion optimization",
       "Rank, traffic, and pipeline reporting",
@@ -79,17 +81,44 @@ const useCases = [
     capabilities: [
       "Heatmaps, session analysis, and buyer research",
       "Prioritized experiment roadmap",
-      "Structured A/B and multivariate testing",
+      "AI-driven A/B and multivariate testing",
+      "Real-time personalization experiments",
       "Monthly experiment and revenue reports",
     ],
     outcome: "Compounding conversion gains that translate directly into revenue you did not have to buy more traffic to earn.",
+  },
+  {
+    area: "AI Sales Agents & Lead Qualification",
+    industry: "B2B, SaaS, Local Services, Healthcare",
+    problem: "Enquiries arrive at midnight, on weekends, and in bursts your team cannot answer fast enough. Slow replies lose deals to whoever answered first.",
+    solution: "A custom-trained AI sales agent embedded in your site that engages instantly, handles complex questions, qualifies on intent and budget, and books meetings directly into your calendar.",
+    capabilities: [
+      "AI agent trained on your offer, pricing, and objections",
+      "Intent and budget qualification logic",
+      "Appointment booking and calendar sync",
+      "Handoff to your CRM with full conversation context",
+    ],
+    outcome: "Every visitor gets an instant, expert response, and your sales team only spends time on leads that are already qualified.",
+  },
+  {
+    area: "Automated CRM Workflows & Integrations",
+    industry: "Growth Teams, Agencies, Multi-Location Businesses",
+    problem: "Leads sit in an inbox, get copied into spreadsheets, and follow-up depends on memory. Reporting is manual and never quite matches reality.",
+    solution: "We connect your website to your CRM, email platform, and operational tools through Zapier, Make, or custom APIs so enrichment, routing, follow-up, and reporting run automatically.",
+    capabilities: [
+      "Website to CRM and email platform integration",
+      "Zapier, Make, and custom API workflows",
+      "Automated follow-up sequences and lead routing",
+      "Unified pipeline and revenue reporting",
+    ],
+    outcome: "No manual data entry, instant follow-up on every enquiry, and one reliable source of truth for pipeline.",
   },
 ];
 
 const UseCases = () => {
   return (
     <div className="min-h-screen">
-      <PageSEO title="Use Cases" description="See how conversion-engineered websites, landing pages, SEO, and CRO drive revenue across industries." path="/use-cases" />
+      <PageSEO title="Use Cases" description="See how conversion-engineered websites, AI sales agents, landing page funnels, personalization, automation, and CRO drive revenue across industries." path="/use-cases" />
       <Navigation />
       <section className="pt-32 pb-16 hero-gradient">
         <div className="container-wide">
@@ -99,7 +128,7 @@ const UseCases = () => {
               Websites and growth systems for every kind of business.
             </h1>
             <p className="text-body-lg text-text-secondary max-w-2xl">
-              See how conversion-engineered web experiences apply to your industry, your buyers, and your growth model.
+              See how conversion-engineered web experiences, AI sales agents, personalization, and automated workflows apply to your industry, your buyers, and your growth model.
             </p>
           </motion.div>
         </div>

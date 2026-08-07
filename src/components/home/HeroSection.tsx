@@ -79,8 +79,9 @@ const HeroSection = () => {
               className="text-muted-foreground max-w-md mb-8 leading-relaxed"
               style={{ fontSize: "clamp(0.92rem, 0.7vw + 0.65rem, 1.05rem)" }}
             >
-              We combine conversion psychology, buyer behavior, and modern web
-              execution to build sites that generate leads, customers, and growth.
+              We combine conversion psychology, buyer behavior, and AI-powered
+              growth systems to build sites that qualify leads, personalize
+              themselves, and generate customers around the clock.
             </p>
 
             {/* CTAs */}

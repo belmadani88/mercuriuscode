@@ -15,13 +15,13 @@ const trustItems = [
   },
   {
     icon: Blocks,
-    title: "Modern Web Execution",
-    description: "Fast, accessible, secure, SEO-ready, and beautifully engineered. We ship on the best tools for your business, from Webflow to fully custom builds.",
+    title: "AI-Ready Web Execution",
+    description: "Fast, accessible, secure, and structured for both search engines and AI answer engines. Every build is ready for AI agents, personalization, and CRM automation from day one.",
   },
   {
     icon: RefreshCw,
-    title: "Ongoing Growth Partnership",
-    description: "Launch is the beginning, not the end. We test, refine, and evolve your site every month to keep converting more of the traffic you earn.",
+    title: "Continuous CRO Retainers",
+    description: "Launch is the beginning, not the end. Monthly AI-driven testing, heat-mapping, and UX refinement keep converting more of the traffic you already earn.",
   },
 ];
 
@@ -45,7 +45,7 @@ const TrustSection = () => {
             A partner, not a vendor.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            Serious businesses hire us because we treat their website as a revenue asset, not a marketing checkbox. Everything we do is measured against growth.
+            Serious businesses hire us because we treat their website as revenue infrastructure: conversion-engineered, AI-ready, personalized, automated, and measured against growth.
           </p>
         </motion.div>
 

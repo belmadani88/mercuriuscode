@@ -19,7 +19,7 @@ const CTASection = () => {
             Find out what your website could be earning next quarter.
           </h2>
           <p className="text-body-lg text-text-secondary max-w-xl mx-auto mb-10">
-            In your free website conversion audit, we will review your current site, identify the highest-leverage conversion opportunities, and give you a clear projection of the revenue you are leaving on the table.
+            In your free website conversion audit, we will review your current site, identify the highest-leverage conversion opportunities, show you where AI qualification, personalization, and automation would pay off fastest, and give you a clear projection of the revenue you are leaving on the table.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

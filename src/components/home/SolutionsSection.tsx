@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, HeadphonesIcon, Settings, Search } from "lucide-react";
+import { Zap, HeadphonesIcon, Settings, Search, Bot, Sparkles } from "lucide-react";
 
 const solutions = [
   {
@@ -11,20 +11,32 @@ const solutions = [
   },
   {
     icon: HeadphonesIcon,
-    title: "Landing Pages & Funnels",
-    description: "Purpose-built pages for each traffic source, offer, and audience. Turn cold clicks into qualified leads and paid ads into predictable pipeline.",
+    title: "Accelerated Landing Page Funnels",
+    description: "Ultra-fast, single-focus pages built per campaign, offer, and audience. Turn cold clicks into qualified leads and paid ads into predictable pipeline.",
     metrics: "Up to 4x ROAS",
   },
   {
+    icon: Bot,
+    title: "AI Sales Agents & Lead Qualification",
+    description: "Custom-trained AI agents that answer questions instantly, qualify visitors on intent and budget, and book meetings into your calendar around the clock.",
+    metrics: "Qualified leads, 24/7",
+  },
+  {
+    icon: Sparkles,
+    title: "Generative Engine Optimization",
+    description: "We structure your content, data, and brand entities so ChatGPT, Perplexity, and Google AI Overviews cite your business as the authoritative answer.",
+    metrics: "Visibility in AI search",
+  },
+  {
     icon: Settings,
-    title: "SEO & Growth Systems",
-    description: "Technical foundations, content architecture, and on-page signals engineered to compound rankings and organic revenue quarter after quarter.",
+    title: "Automation & Personalization",
+    description: "Pages that adapt headlines and CTAs to each visitor, plus CRM, email, and operations workflows connected so follow-up happens without anyone lifting a finger.",
     metrics: "Organic pipeline that compounds",
   },
   {
     icon: Search,
-    title: "CRO & Optimization",
-    description: "Ongoing experimentation, heatmaps, session analysis, and A/B testing to keep lifting your conversion rate long after launch. Growth as a discipline, not a project.",
+    title: "Continuous CRO Retainers",
+    description: "Monthly optimization programs with AI-driven A/B testing, heat-mapping, and continuous UX refinement to keep lifting conversion long after launch.",
     metrics: "Continuous performance gains",
   },
 ];
@@ -46,10 +58,10 @@ const SolutionsSection = () => {
             Solutions
           </span>
           <h2 className="text-heading md:text-display-sm font-bold text-foreground mb-4">
-            One partner. Every layer of your conversion stack.
+            One partner. Every layer of your AI-powered conversion stack.
           </h2>
           <p className="text-body-lg text-text-secondary">
-            From the first click to the closed deal, we design and build the entire path. Every page, every offer, every experiment is engineered to move a measurable business number.
+            From the first click to the closed deal, we design and build the entire path: conversion-engineered pages, AI agents that qualify and book, personalization that adapts in real time, and automation that removes the manual work.
           </p>
         </motion.div>
 
