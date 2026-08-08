@@ -45,6 +45,8 @@ const Contact = () => {
     e.preventDefault();
     setSubmitError("");
 
+    if (submitting || submitted) return;
+
     const parsed = contactSchema.safeParse(formData);
     if (!parsed.success) {
       const fieldErrors: Record<string, string> = {};
@@ -74,10 +76,13 @@ const Contact = () => {
 
       const result = await response.json().catch(() => null);
 
-      if (response.ok && (!result || result.success !== "false")) {
+      if (response.ok && (!result || String(result.success) !== "false")) {
         setSubmitted(true);
       } else {
-        setSubmitError("We could not send your request automatically. Use the email link below and we will reply within 24 hours.");
+        const reason = result?.message ? ` (${result.message})` : "";
+        setSubmitError(
+          `We could not send your request automatically${reason}. Use the email link below and we will reply within 24 hours.`,
+        );
       }
     } catch {
       setSubmitError("We could not send your request automatically. Use the email link below and we will reply within 24 hours.");

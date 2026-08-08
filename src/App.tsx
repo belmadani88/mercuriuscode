@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingActions from "./components/FloatingActions";
 
 const AmbientBackground = lazy(() => import("./components/AmbientBackground"));
 
@@ -56,6 +57,7 @@ const App = () => (
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
+    <FloatingActions />
   </BrowserRouter>
 );
 
