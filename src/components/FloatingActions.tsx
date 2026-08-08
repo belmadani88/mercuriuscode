@@ -47,7 +47,7 @@ const FloatingActions = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with WebThangs on WhatsApp"
-        className="fixed z-40 right-4 sm:right-6 bottom-4 sm:bottom-6 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#25D366] text-[#0D0F11] shadow-lg shadow-[#25D366]/20 transition-transform duration-200 hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-safe:animate-in"
+        className="fixed z-40 right-4 sm:right-6 bottom-4 sm:bottom-6 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#25D366] text-[#0D0F11] shadow-lg shadow-[#25D366]/20 transition-transform duration-200 hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         style={{ marginBottom: "env(safe-area-inset-bottom, 0px)" }}
       >
         <svg
